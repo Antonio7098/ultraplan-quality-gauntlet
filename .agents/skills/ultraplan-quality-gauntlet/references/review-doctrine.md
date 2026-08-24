@@ -1,0 +1,2 @@
+# Review Doctrine
+Findings are hypotheses until challenged. Concrete observable failure beats generic concern. Tests are evidence, not truth. Security requires source -> trust transition -> insufficient control -> meaningful consequence. A clean scanner/test result never proves absence. Separate severity from confidence. Record rejected hypotheses that defend important behaviour. Do not report style nits.

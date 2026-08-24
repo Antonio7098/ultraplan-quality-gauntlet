@@ -1,0 +1,2 @@
+# Surface Map Contract
+A product surface is a coherent unit of externally meaningful behaviour with identifiable entrypoints, state, dependencies, outputs, and failure semantics. Prefer behavioural scopes such as `sprint-execute-resume` over directory scopes such as `internal/sprint`. Good size: one primary workflow, a few state authorities, roughly 5-20 primary production files/symbol clusters, relevant tests and immediate dependencies. Risk: critical/high/normal/low; mappers must not report findings.

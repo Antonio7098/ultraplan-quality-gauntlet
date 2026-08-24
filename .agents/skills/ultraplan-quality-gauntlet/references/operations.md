@@ -1,0 +1,2 @@
+# Operational Contract
+Durable artifacts live in tracked `review/`; ephemeral runtime state lives under `.quality-gauntlet/`. Each AgentWrap attempt gets its own `opencode.db`; snapshots are disabled. OpenCode executable is persisted as an absolute path. `bind` relocates a review. New orchestrators recover stale `running` jobs. AgentWrap owns subprocess cancellation/process-group cleanup. Idle watchdog is event-based. State writes are fsync+rename atomic. One OS file lock protects orchestration. `scripts/orchestrate.sh` checkpoints tracked review output.

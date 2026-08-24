@@ -1,0 +1,4 @@
+# Ephemeral runtime only. Durable review output under review/ is intentionally tracked.
+.quality-gauntlet/
+bin/
+*.out

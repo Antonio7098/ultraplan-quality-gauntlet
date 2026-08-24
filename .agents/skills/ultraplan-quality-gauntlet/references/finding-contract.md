@@ -1,0 +1,2 @@
+# Finding Contract
+Preserve: id, category, severity (P0-P3), confidence (confirmed/high/medium/hypothesis), claim, observable_bad_outcome, trigger, preconditions, evidence (files/symbols/tests/contracts), execution_or_data_path, trust_boundary, existing_controls, counter_evidence, reproduction status/steps, false_positive_analysis, variants, required_fix_direction, required_regression_test, source_agents. Severity is consequence, not certainty.

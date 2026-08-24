@@ -1,0 +1,2 @@
+# Security and Correctness Review Lenses
+Correctness: trace input -> validation -> state/effect -> durable/public outcome. Concurrency/recovery: cancellation, deadlines, goroutine/process lifetime, fencing, TOCTOU, ordering, restart, backpressure, bounded resources. Security: start with trust boundaries and abuse cases; do not call something exploitable without attacker influence reaching a meaningful consequence. Verification: ask what implementation defect could be introduced while current tests remain green.
