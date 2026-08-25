@@ -1,7 +1,7 @@
 {
   "version": 1,
   "created_at": "2026-08-25T10:45:55.293948806Z",
-  "updated_at": "2026-08-25T11:19:22.607733125Z",
+  "updated_at": "2026-08-25T12:22:26.107795813Z",
   "model": "openrouter/stealth/ox-alpha",
   "target": {
     "label": "ultraplan-go",
@@ -105,14 +105,16 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map user-visible product operations and workflows. Discover coherent product surfaces from what a user can ask UltraPlan to do.",
-      "status": "running",
+      "status": "failed",
       "attempts": [
         {
           "number": 1,
-          "status": "running",
+          "status": "failed",
           "started_at": "2026-08-25T11:17:17.158031903Z",
-          "finished_at": "0001-01-01T00:00:00Z",
-          "last_activity": "2026-08-25T11:17:17.158031903Z",
+          "finished_at": "2026-08-25T11:49:02.170954817Z",
+          "last_activity": "2026-08-25T11:49:02.170954817Z",
+          "runtime_run_id": "opencode-5",
+          "error": "AgentWrap run completed without terminal output",
           "prompt_path": "jobs/map-01-user-operations/attempt-01-prompt.md",
           "result_path": "jobs/map-01-user-operations/attempt-01-result.md",
           "events_path": "jobs/map-01-user-operations/attempt-01-events.ndjson",
@@ -126,14 +128,16 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map durable and ephemeral state authorities, then group behaviours around the state they read and mutate.",
-      "status": "running",
+      "status": "failed",
       "attempts": [
         {
           "number": 1,
-          "status": "running",
+          "status": "failed",
           "started_at": "2026-08-25T11:19:22.607729284Z",
-          "finished_at": "0001-01-01T00:00:00Z",
-          "last_activity": "2026-08-25T11:19:22.607729284Z",
+          "finished_at": "2026-08-25T11:54:06.992186946Z",
+          "last_activity": "2026-08-25T11:54:06.992186946Z",
+          "runtime_run_id": "opencode-6",
+          "error": "AgentWrap run completed without terminal output",
           "prompt_path": "jobs/map-02-state-authorities/attempt-01-prompt.md",
           "result_path": "jobs/map-02-state-authorities/attempt-01-result.md",
           "events_path": "jobs/map-02-state-authorities/attempt-01-events.ndjson",
@@ -170,14 +174,16 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map actual execution lifecycles from request through runtime/process/cancellation/result/persistence/observation.",
-      "status": "running",
+      "status": "failed",
       "attempts": [
         {
           "number": 1,
-          "status": "running",
+          "status": "failed",
           "started_at": "2026-08-25T10:56:01.982847876Z",
-          "finished_at": "0001-01-01T00:00:00Z",
-          "last_activity": "2026-08-25T10:56:01.982847876Z",
+          "finished_at": "2026-08-25T11:50:36.156145376Z",
+          "last_activity": "2026-08-25T11:50:36.156145376Z",
+          "runtime_run_id": "opencode-3",
+          "error": "AgentWrap run completed without terminal output",
           "prompt_path": "jobs/map-04-execution-paths/attempt-01-prompt.md",
           "result_path": "jobs/map-04-execution-paths/attempt-01-result.md",
           "events_path": "jobs/map-04-execution-paths/attempt-01-events.ndjson",
@@ -191,7 +197,22 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map CLI, TUI, and web interface behaviours, shared use cases, and divergent interface-specific paths.",
-      "status": "pending"
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T11:49:02.17710527Z",
+          "finished_at": "2026-08-25T12:22:26.107787781Z",
+          "last_activity": "2026-08-25T12:22:26.107787781Z",
+          "runtime_run_id": "opencode-8",
+          "error": "AgentWrap run completed without terminal output",
+          "prompt_path": "jobs/map-05-interface-surfaces/attempt-01-prompt.md",
+          "result_path": "jobs/map-05-interface-surfaces/attempt-01-result.md",
+          "events_path": "jobs/map-05-interface-surfaces/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-05-interface-surfaces/attempt-01/opencode.db"
+        }
+      ]
     },
     {
       "id": "map-06-test-topology",
