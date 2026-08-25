@@ -10,6 +10,9 @@ task_timeout="${QG_TASK_TIMEOUT:-90m}"
 if [[ ! -x ./bin/qgauntlet ]]; then go build -o bin/qgauntlet ./cmd/qgauntlet || exit 1; fi
 ./bin/qgauntlet recover || exit 1
 ./bin/qgauntlet doctor || exit 1
+rebind() {
+  ./bin/qgauntlet bind --target ../ultraplan-go --workspace ../ultraplan-workspace --allow-drift >/dev/null 2>&1 || true
+}
 while true; do
   stage="$(./bin/qgauntlet next)" || exit 1
   if [[ "$stage" == "complete" ]]; then
@@ -30,6 +33,7 @@ while true; do
   if [[ "$stage" == "surface-review" ]]; then max_passes=30; max_attempts=30; fi
   pass=1
   while [[ $pass -le $max_passes ]]; do
+    rebind
     ./bin/qgauntlet run --stage "$stage" --runner "$runner" --parallel "$parallel" --retry-failed --max-attempts "$max_attempts" --idle-timeout "$idle_timeout" --task-timeout "$task_timeout"
     rc=$?
     ./bin/qgauntlet index || true
