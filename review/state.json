@@ -1,11 +1,11 @@
 {
   "version": 1,
   "created_at": "2026-08-25T10:45:55.293948806Z",
-  "updated_at": "2026-08-25T13:39:51.677203186Z",
+  "updated_at": "2026-08-25T14:08:23.714229653Z",
   "model": "openrouter/stealth/ox-alpha",
   "target": {
     "label": "ultraplan-go",
-    "commit": "f73c4dc659ba1492c16382be26ffcbce1a5ea84a",
+    "commit": "8eef70f4903b25580719960009a170945bdad9ad",
     "dirty": false
   },
   "workspace": {
@@ -242,7 +242,7 @@
       "stage": "map-arbiter",
       "agent": "quality-surface-arbiter",
       "kind": "surface-map-arbiter",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "map-01-user-operations",
         "map-02-state-authorities",
@@ -250,6 +250,22 @@
         "map-04-execution-paths",
         "map-05-interface-surfaces",
         "map-06-test-topology"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T13:57:06.966127554Z",
+          "finished_at": "2026-08-25T14:08:23.713437374Z",
+          "last_activity": "2026-08-25T14:08:23.713437374Z",
+          "runtime_run_id": "opencode-1",
+          "error_category": "invalid_surface_map",
+          "error": "invalid character 's' after array element",
+          "prompt_path": "jobs/map-arbiter/attempt-01-prompt.md",
+          "result_path": "jobs/map-arbiter/attempt-01-result.md",
+          "events_path": "jobs/map-arbiter/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-arbiter/attempt-01/opencode.db"
+        }
       ]
     }
   ],
