@@ -85,11 +85,16 @@ func (AgentwrapExecutor) Execute(ctx context.Context, review Review, job Job, at
 
 	activity := make(chan struct{}, 1)
 	eventsDone := make(chan struct{})
+	var lastText strings.Builder
 	go func() {
 		defer close(eventsDone)
 		enc := json.NewEncoder(w)
 		for ev := range run.Events() {
 			ev.Raw = nil
+			if t := eventText(ev.Payload); t != "" {
+				lastText.Reset()
+				lastText.WriteString(t)
+			}
 			_ = enc.Encode(ev)
 			_ = w.Flush()
 			select {
@@ -144,6 +149,9 @@ func (AgentwrapExecutor) Execute(ctx context.Context, review Review, job Job, at
 		case o := <-waitCh:
 			waitChannel(eventsDone, 10*time.Second)
 			result.Output = o.result.TerminalOutput
+			if strings.TrimSpace(result.Output) == "" {
+				result.Output = lastText.String()
+			}
 			if o.result.RunID != "" {
 				result.RuntimeRunID = string(o.result.RunID)
 			}
@@ -162,6 +170,22 @@ func (AgentwrapExecutor) Execute(ctx context.Context, review Review, job Job, at
 			return result, nil
 		}
 	}
+}
+
+func eventText(payload any) string {
+	m, ok := payload.(map[string]any)
+	if !ok {
+		return ""
+	}
+	if kind, _ := m["event_kind"].(string); kind != "message" {
+		return ""
+	}
+	part, ok := m["part"].(map[string]any)
+	if !ok {
+		return ""
+	}
+	t, _ := part["text"].(string)
+	return strings.TrimSpace(t)
 }
 
 func splitModel(model string) (string, string) {
