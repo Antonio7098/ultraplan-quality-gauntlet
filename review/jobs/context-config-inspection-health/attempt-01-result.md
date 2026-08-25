@@ -1,0 +1,9 @@
+I'm the context-builder for this surface. Let me explore the target implementation first — verifying the frozen commit and reading the primary files.Commits verified clean. Reading primary files now.Now let me check the planning workspace for authoritative contracts on this surface.I have a complete picture now. Writing the context pack to the job directory.Context pack written to `review/jobs/context-config-inspection-health/attempt-01-result.md` (199 lines, neutral/descriptive, no findings).
+
+Contents:
+- **Control flow**: dispatch → `discoverWorkspace`/`loadEffectiveConfig` (app.go:287-319) → 4-layer `config.Load` pipeline with the hand-rolled YAML line parser, 55 env override keys (27 explicit + 28 generated `ULTRAPLAN_QA_*`), full `Validate` bounds table, marker-based redaction, and the three command renderers (`config show`, `health`, `version`) including health's degraded-mode check aggregation, exit-code precedence (config > runtime > structure), and the `runtimeHealthChecks` test seam.
+- **Invariants/trust boundaries**: precedence + fail-closed admission, double-redaction of health output, free-form fields that pass through unenumerated (`agentwrap.sandbox`, `permission_mode`, `agentwrap.env`).
+- **Downstream map**: every `loadEffectiveConfig` consumer plus `RequestFromConfig`/`NewOpenCode` sandbox/permission/retry/fallback mapping and `qaSettings` fallback chain.
+- **Contracts**: configuration contract, CLI contract (CLI-CONFIG-001 etc.), sprint-02 acceptance criteria, target `docs/configuration.md`.
+- **Neutral divergence facts** recorded without judgment: docs omit `ULTRAPLAN_CODE_CONTEXT_*` and all QA env vars; scaffold YAML lacks `git:`/`run_control:` sections shown in doc's default listing; sprint-02 file names differ from actual tree; `CLIOverrides.JSON` unread by `Load`; no ldflags version wiring.
+- **Six explicit unknowns**, mostly agentwrap-library internals.

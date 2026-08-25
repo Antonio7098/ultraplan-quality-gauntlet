@@ -1,0 +1,14 @@
+Frozen commits verified. Let me check the artifact layout and any context-pack conventions.Attempt 01 stalled mid-run (ends at `step_start`, no result). I'll re-execute the context job. First, let me match the established pack format.The stalled attempt needs a full re-run. I have the format template. Now let me explore the target surface in depth.All four primary files read. Now let me map every caller and the shared-DB relationship with run-control.No direct matches — let me broaden the test search to find indirect coverage.Now the workspace contracts. Let me search the planning docs.One last determinism check on project discovery, then I'll write the pack.All evidence gathered. Writing the context pack now.Pack written. Now the job result summary.Context pack for `product-state-mirror` complete. Attempt-01 had stalled mid-run with no result, so I re-executed the job from scratch against the frozen commit (verified: target `8eef70f4`, workspace `ab12dc38`).
+
+Artifacts:
+- `review/surfaces/context-product-state-mirror.md` — 145-line descriptive pack, matching the established format
+- `review/jobs/context-product-state-mirror/result.md` — coverage summary
+
+Key descriptive facts captured:
+
+1. **Authority model**: row-presence in `.ultraplan/run-control.db` alone flips authority (file stat + `(kind,scope)` row; no config/marker/version gate). Loads are unconditionally row-wins; saves route to DB and only rewrite JSON checkpoints at terminal states via per-type predicates (`state.go:219-240`, `execute_state.go:105-130`, `study/state.go:59-70`). No export/demote path exists.
+2. **Full control-flow map**: store primitives (WAL+FULL+immediate+busy5000 DSN, process-wide never-closed ≤4-conn pool, hash-guarded upserts, stale-item sweep in one immediate tx), all six Load/Save routing sites with file:line, and the complete `storage migrate` algorithm including exit classes 0/2/4/8.
+3. **Trust-relevant asymmetries** (stated neutrally): DB branches decode with plain `json.Unmarshal` while flow files use strict grammar; `header_hash`/`payload_hash` are upsert-guard-only and never verified on read; permission/symlink enforcement is asymmetric vs runcontrol on the same file; every store call site uses `context.Background()`.
+4. **Contracts**: `docs/migration-product-state.md` as primary CURRENT-CONTRACT; factual implemented-vs-planned divergence from experiment-plan §D4/D5 (no storage-mode config, implicit authority flip); HISTORY pinned to commits `02e2ec4` + `8ee9d9c`.
+5. **Coverage fact**: zero direct test coverage — no test file in `internal/productstate`, repo-wide no test references any mirror symbol or the migrate command; DB-authoritative branches unexercised at freeze.
+6. **11 explicit unknowns** left for downstream reviewers, unanchored to any judgment.

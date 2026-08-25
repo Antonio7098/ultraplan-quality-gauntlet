@@ -1,0 +1,10 @@
+The frozen commit differs from HEAD only in `internal/sprint/smoke_*` files, so working-tree reads are faithful for this surface. I have the format template from sibling packs. Now reading the primary sources.Source and tests mapped. Now the authoritative planning contracts in the workspace.All sources mapped. Verifying baseline coverage evidence, then writing the pack.Verifying one citation (baseline coverage line numbers) before finalizing.Context pack written to `review/surfaces/context-run-recovery-retention.md` (173 lines), matching the sibling pack format.
+
+Coverage summary:
+- **Control flow mapped end-to-end**: OpenSQLite → migrateSchema decision table (version gates, O_EXCL lock with probe-proven stale reclaim, checkpoint+backup before first-time schema creation, prune-to-3), RestoreBackup offline path, Reconcile two-phase (unclaimed-after-grace / expired-lease with exact birth-identity decisions), Compact three-stage aging plus inline per-run compaction, quota gates at accept/append/heartbeat, support export, local log, sanitize allowlist.
+- **State/invariants/trust boundaries**: dual schema-version records, lock-file-as-identity-proof posture (fails closed to Busy on uncertainty), corrupt-DB preservation, replay-boundary preservation, private-mode discipline.
+- **Contracts**: recovery.md:203-247 runbook, cli-reference diagnostics/export exclusions, TRD §18C durability clauses (with a note that TRD §25 "migration" is the unrelated prototype migration).
+- **Tests**: 20+ evidence citations incl. process-integration and fault tests; factual coverage gaps noted.
+- **15 explicit unknowns** for reviewers — notably that `Compact` is production-reachable only via Accept's 80%-pressure branch, backups counting toward quota math, restore leaving `-wal`/`-shm` untouched, discarded reconciliation-evidence errors, and non-linux stub semantics.
+
+Target/workspace commits were verified read-only; no files outside `review/surfaces/` were touched by this job.

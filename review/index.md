@@ -3,7 +3,7 @@
 - Target commit: `8eef70f4903b25580719960009a170945bdad9ad`
 - Workspace commit: `ab12dc38059c9bf485f9aced9075bcd7d924cac5`
 - Model: `openrouter/stealth/ox-alpha`
-- Generated: 2026-08-25T14:32:08Z
+- Generated: 2026-08-25T17:24:42Z
 
 ## Progress
 
@@ -15,7 +15,7 @@ opencode: /home/antonioborgerees/.opencode/bin/opencode
 baseline: passed
 map               6 total |   6 passed   0 running   0 failed   0 pending
 map-arbiter       1 total |   1 passed   0 running   0 failed   0 pending
-context          28 total |   0 passed   0 running   0 failed  28 pending
+context          28 total |  26 passed   0 running   2 failed   0 pending
 surface-review  133 total |   0 passed   0 running   0 failed 133 pending
 seam             28 total |   0 passed   0 running   0 failed  28 pending
 invariant        12 total |   0 passed   0 running   0 failed  12 pending
@@ -67,34 +67,34 @@ next: context
 - `map` **map-05-interface-surfaces** — passed — [result.md](jobs/map-05-interface-surfaces/result.md)
 - `map` **map-06-test-topology** — passed — [result.md](jobs/map-06-test-topology/result.md)
 - `map-arbiter` **map-arbiter** — passed — [result.md](jobs/map-arbiter/result.md)
-- `context` **context-cli-dispatch-exit-contract** — pending
-- `context` **context-code-extraction** — pending
-- `context` **context-config-inspection-health** — pending
-- `context` **context-durable-operation-spine** — pending
-- `context` **context-opencode-agent-runtime** — pending
-- `context` **context-process-execution** — pending
-- `context` **context-product-state-mirror** — pending
-- `context` **context-project-catalog** — pending
-- `context` **context-repo-publication** — pending
-- `context` **context-run-cli-observation** — pending
-- `context` **context-run-journal-fencing** — pending
-- `context` **context-run-recovery-retention** — pending
-- `context` **context-shared-usecase-vocabulary** — pending
-- `context` **context-sprint-conformance-review** — pending
-- `context` **context-sprint-execute-resume** — pending
-- `context` **context-sprint-flow-state** — pending
-- `context` **context-sprint-planning-chain** — pending
-- `context` **context-sprint-qa-investigation** — pending
-- `context` **context-sprint-smoke-gate** — pending
-- `context` **context-sprint-verify-transition** — pending
-- `context` **context-study-authoring** — pending
-- `context` **context-study-runloop-scheduler** — pending
-- `context` **context-study-task-execution** — pending
-- `context` **context-tui-console** — pending
-- `context` **context-web-operation-hub-sse** — pending
-- `context` **context-web-routing-projection** — pending
-- `context` **context-web-security-boundary** — pending
-- `context` **context-workspace-scaffold-defaults** — pending
+- `context` **context-cli-dispatch-exit-contract** — passed — [result.md](jobs/context-cli-dispatch-exit-contract/result.md)
+- `context` **context-code-extraction** — passed — [result.md](jobs/context-code-extraction/result.md)
+- `context` **context-config-inspection-health** — passed — [result.md](jobs/context-config-inspection-health/result.md)
+- `context` **context-durable-operation-spine** — failed
+- `context` **context-opencode-agent-runtime** — passed — [result.md](jobs/context-opencode-agent-runtime/result.md)
+- `context` **context-process-execution** — passed — [result.md](jobs/context-process-execution/result.md)
+- `context` **context-product-state-mirror** — passed — [result.md](jobs/context-product-state-mirror/result.md)
+- `context` **context-project-catalog** — passed — [result.md](jobs/context-project-catalog/result.md)
+- `context` **context-repo-publication** — failed
+- `context` **context-run-cli-observation** — passed — [result.md](jobs/context-run-cli-observation/result.md)
+- `context` **context-run-journal-fencing** — passed — [result.md](jobs/context-run-journal-fencing/result.md)
+- `context` **context-run-recovery-retention** — passed — [result.md](jobs/context-run-recovery-retention/result.md)
+- `context` **context-shared-usecase-vocabulary** — passed — [result.md](jobs/context-shared-usecase-vocabulary/result.md)
+- `context` **context-sprint-conformance-review** — passed — [result.md](jobs/context-sprint-conformance-review/result.md)
+- `context` **context-sprint-execute-resume** — passed — [result.md](jobs/context-sprint-execute-resume/result.md)
+- `context` **context-sprint-flow-state** — passed — [result.md](jobs/context-sprint-flow-state/result.md)
+- `context` **context-sprint-planning-chain** — passed — [result.md](jobs/context-sprint-planning-chain/result.md)
+- `context` **context-sprint-qa-investigation** — passed — [result.md](jobs/context-sprint-qa-investigation/result.md)
+- `context` **context-sprint-smoke-gate** — passed — [result.md](jobs/context-sprint-smoke-gate/result.md)
+- `context` **context-sprint-verify-transition** — passed — [result.md](jobs/context-sprint-verify-transition/result.md)
+- `context` **context-study-authoring** — passed — [result.md](jobs/context-study-authoring/result.md)
+- `context` **context-study-runloop-scheduler** — passed — [result.md](jobs/context-study-runloop-scheduler/result.md)
+- `context` **context-study-task-execution** — passed — [result.md](jobs/context-study-task-execution/result.md)
+- `context` **context-tui-console** — passed — [result.md](jobs/context-tui-console/result.md)
+- `context` **context-web-operation-hub-sse** — passed — [result.md](jobs/context-web-operation-hub-sse/result.md)
+- `context` **context-web-routing-projection** — passed — [result.md](jobs/context-web-routing-projection/result.md)
+- `context` **context-web-security-boundary** — passed — [result.md](jobs/context-web-security-boundary/result.md)
+- `context` **context-workspace-scaffold-defaults** — passed — [result.md](jobs/context-workspace-scaffold-defaults/result.md)
 - `surface-review` **review-cli-dispatch-exit-contract-adversarial** — pending
 - `surface-review` **review-cli-dispatch-exit-contract-correctness** — pending
 - `surface-review` **review-cli-dispatch-exit-contract-failure** — pending

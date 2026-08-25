@@ -1,7 +1,7 @@
 {
   "version": 1,
   "created_at": "2026-08-25T10:45:55.293948806Z",
-  "updated_at": "2026-08-25T14:32:08.404587041Z",
+  "updated_at": "2026-08-25T17:24:42.290343559Z",
   "model": "openrouter/stealth/ox-alpha",
   "target": {
     "label": "ultraplan-go",
@@ -1420,7 +1420,22 @@
       "kind": "surface-context",
       "surface_id": "run-journal-fencing",
       "domain_id": "durability-core",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:44:55.658890467Z",
+          "finished_at": "2026-08-25T17:07:05.964608339Z",
+          "last_activity": "2026-08-25T17:07:05.964608339Z",
+          "runtime_run_id": "opencode-23",
+          "prompt_path": "jobs/context-run-journal-fencing/attempt-01-prompt.md",
+          "result_path": "jobs/context-run-journal-fencing/attempt-01-result.md",
+          "events_path": "jobs/context-run-journal-fencing/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-run-journal-fencing/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-run-journal-fencing/result.md"
     },
     {
       "id": "review-run-journal-fencing-correctness",
@@ -1507,7 +1522,22 @@
       "kind": "surface-context",
       "surface_id": "run-recovery-retention",
       "domain_id": "durability-core",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:46:17.983176998Z",
+          "finished_at": "2026-08-25T16:58:59.404248902Z",
+          "last_activity": "2026-08-25T16:58:59.404248902Z",
+          "runtime_run_id": "opencode-24",
+          "prompt_path": "jobs/context-run-recovery-retention/attempt-01-prompt.md",
+          "result_path": "jobs/context-run-recovery-retention/attempt-01-result.md",
+          "events_path": "jobs/context-run-recovery-retention/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-run-recovery-retention/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-run-recovery-retention/result.md"
     },
     {
       "id": "review-run-recovery-retention-correctness",
@@ -1581,7 +1611,23 @@
       "kind": "surface-context",
       "surface_id": "durable-operation-spine",
       "domain_id": "durability-core",
-      "status": "pending"
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T15:53:04.680350132Z",
+          "finished_at": "2026-08-25T16:15:29.439578434Z",
+          "last_activity": "2026-08-25T16:15:29.439578434Z",
+          "runtime_run_id": "policy-15",
+          "error_category": "cancellation",
+          "error": "idle watchdog: no AgentWrap event for 20m0s",
+          "prompt_path": "jobs/context-durable-operation-spine/attempt-01-prompt.md",
+          "result_path": "jobs/context-durable-operation-spine/attempt-01-result.md",
+          "events_path": "jobs/context-durable-operation-spine/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-durable-operation-spine/attempt-01/opencode.db"
+        }
+      ]
     },
     {
       "id": "review-durable-operation-spine-correctness",
@@ -1668,7 +1714,22 @@
       "kind": "surface-context",
       "surface_id": "product-state-mirror",
       "domain_id": "durability-core",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:27:52.48677773Z",
+          "finished_at": "2026-08-25T16:44:55.649565814Z",
+          "last_activity": "2026-08-25T16:44:55.649565814Z",
+          "runtime_run_id": "opencode-21",
+          "prompt_path": "jobs/context-product-state-mirror/attempt-01-prompt.md",
+          "result_path": "jobs/context-product-state-mirror/attempt-01-result.md",
+          "events_path": "jobs/context-product-state-mirror/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-product-state-mirror/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-product-state-mirror/result.md"
     },
     {
       "id": "review-product-state-mirror-correctness",
@@ -1742,7 +1803,22 @@
       "kind": "surface-context",
       "surface_id": "study-authoring",
       "domain_id": "study-analysis",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T15:23:18.192803098Z",
+          "finished_at": "2026-08-25T15:53:04.663976614Z",
+          "last_activity": "2026-08-25T15:53:04.663976614Z",
+          "runtime_run_id": "opencode-10",
+          "prompt_path": "jobs/context-study-authoring/attempt-01-prompt.md",
+          "result_path": "jobs/context-study-authoring/attempt-01-result.md",
+          "events_path": "jobs/context-study-authoring/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-study-authoring/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-study-authoring/result.md"
     },
     {
       "id": "review-study-authoring-correctness",
@@ -1803,7 +1879,22 @@
       "kind": "surface-context",
       "surface_id": "study-task-execution",
       "domain_id": "study-analysis",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T15:33:46.61777048Z",
+          "finished_at": "2026-08-25T15:49:57.09181365Z",
+          "last_activity": "2026-08-25T15:49:57.09181365Z",
+          "runtime_run_id": "opencode-12",
+          "prompt_path": "jobs/context-study-task-execution/attempt-01-prompt.md",
+          "result_path": "jobs/context-study-task-execution/attempt-01-result.md",
+          "events_path": "jobs/context-study-task-execution/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-study-task-execution/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-study-task-execution/result.md"
     },
     {
       "id": "review-study-task-execution-correctness",
@@ -1877,7 +1968,22 @@
       "kind": "surface-context",
       "surface_id": "study-runloop-scheduler",
       "domain_id": "study-analysis",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T15:30:19.327116832Z",
+          "finished_at": "2026-08-25T15:51:00.580645249Z",
+          "last_activity": "2026-08-25T15:51:00.580645249Z",
+          "runtime_run_id": "opencode-11",
+          "prompt_path": "jobs/context-study-runloop-scheduler/attempt-01-prompt.md",
+          "result_path": "jobs/context-study-runloop-scheduler/attempt-01-result.md",
+          "events_path": "jobs/context-study-runloop-scheduler/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-study-runloop-scheduler/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-study-runloop-scheduler/result.md"
     },
     {
       "id": "review-study-runloop-scheduler-correctness",
@@ -1964,7 +2070,22 @@
       "kind": "surface-context",
       "surface_id": "sprint-planning-chain",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T14:51:33.188925158Z",
+          "finished_at": "2026-08-25T15:08:30.628426926Z",
+          "last_activity": "2026-08-25T15:08:30.628426926Z",
+          "runtime_run_id": "opencode-6",
+          "prompt_path": "jobs/context-sprint-planning-chain/attempt-01-prompt.md",
+          "result_path": "jobs/context-sprint-planning-chain/attempt-01-result.md",
+          "events_path": "jobs/context-sprint-planning-chain/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-sprint-planning-chain/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-sprint-planning-chain/result.md"
     },
     {
       "id": "review-sprint-planning-chain-correctness",
@@ -2038,7 +2159,22 @@
       "kind": "surface-context",
       "surface_id": "sprint-execute-resume",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T14:47:55.579604225Z",
+          "finished_at": "2026-08-25T15:08:52.178981954Z",
+          "last_activity": "2026-08-25T15:08:52.178981954Z",
+          "runtime_run_id": "opencode-4",
+          "prompt_path": "jobs/context-sprint-execute-resume/attempt-01-prompt.md",
+          "result_path": "jobs/context-sprint-execute-resume/attempt-01-result.md",
+          "events_path": "jobs/context-sprint-execute-resume/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-sprint-execute-resume/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-sprint-execute-resume/result.md"
     },
     {
       "id": "review-sprint-execute-resume-correctness",
@@ -2112,7 +2248,22 @@
       "kind": "surface-context",
       "surface_id": "sprint-conformance-review",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:34:46.665700987Z",
+          "finished_at": "2026-08-25T16:49:14.24298941Z",
+          "last_activity": "2026-08-25T16:49:14.24298941Z",
+          "runtime_run_id": "opencode-22",
+          "prompt_path": "jobs/context-sprint-conformance-review/attempt-01-prompt.md",
+          "result_path": "jobs/context-sprint-conformance-review/attempt-01-result.md",
+          "events_path": "jobs/context-sprint-conformance-review/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-sprint-conformance-review/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-sprint-conformance-review/result.md"
     },
     {
       "id": "review-sprint-conformance-review-correctness",
@@ -2186,7 +2337,22 @@
       "kind": "surface-context",
       "surface_id": "sprint-smoke-gate",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T15:08:30.647778454Z",
+          "finished_at": "2026-08-25T15:30:19.306274262Z",
+          "last_activity": "2026-08-25T15:30:19.306274262Z",
+          "runtime_run_id": "opencode-8",
+          "prompt_path": "jobs/context-sprint-smoke-gate/attempt-01-prompt.md",
+          "result_path": "jobs/context-sprint-smoke-gate/attempt-01-result.md",
+          "events_path": "jobs/context-sprint-smoke-gate/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-sprint-smoke-gate/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-sprint-smoke-gate/result.md"
     },
     {
       "id": "review-sprint-smoke-gate-correctness",
@@ -2260,7 +2426,22 @@
       "kind": "surface-context",
       "surface_id": "sprint-verify-transition",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T15:08:52.197953125Z",
+          "finished_at": "2026-08-25T15:23:18.177136934Z",
+          "last_activity": "2026-08-25T15:23:18.177136934Z",
+          "runtime_run_id": "opencode-9",
+          "prompt_path": "jobs/context-sprint-verify-transition/attempt-01-prompt.md",
+          "result_path": "jobs/context-sprint-verify-transition/attempt-01-result.md",
+          "events_path": "jobs/context-sprint-verify-transition/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-sprint-verify-transition/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-sprint-verify-transition/result.md"
     },
     {
       "id": "review-sprint-verify-transition-correctness",
@@ -2334,7 +2515,22 @@
       "kind": "surface-context",
       "surface_id": "sprint-qa-investigation",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T15:06:52.684108888Z",
+          "finished_at": "2026-08-25T15:33:46.595664688Z",
+          "last_activity": "2026-08-25T15:33:46.595664688Z",
+          "runtime_run_id": "opencode-7",
+          "prompt_path": "jobs/context-sprint-qa-investigation/attempt-01-prompt.md",
+          "result_path": "jobs/context-sprint-qa-investigation/attempt-01-result.md",
+          "events_path": "jobs/context-sprint-qa-investigation/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-sprint-qa-investigation/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-sprint-qa-investigation/result.md"
     },
     {
       "id": "review-sprint-qa-investigation-correctness",
@@ -2408,7 +2604,22 @@
       "kind": "surface-context",
       "surface_id": "sprint-flow-state",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T14:50:36.422406831Z",
+          "finished_at": "2026-08-25T15:06:52.675088166Z",
+          "last_activity": "2026-08-25T15:06:52.675088166Z",
+          "runtime_run_id": "opencode-5",
+          "prompt_path": "jobs/context-sprint-flow-state/attempt-01-prompt.md",
+          "result_path": "jobs/context-sprint-flow-state/attempt-01-result.md",
+          "events_path": "jobs/context-sprint-flow-state/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-sprint-flow-state/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-sprint-flow-state/result.md"
     },
     {
       "id": "review-sprint-flow-state-correctness",
@@ -2482,7 +2693,23 @@
       "kind": "surface-context",
       "surface_id": "repo-publication",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending"
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T17:02:10.538277599Z",
+          "finished_at": "2026-08-25T17:24:42.290335457Z",
+          "last_activity": "2026-08-25T17:24:42.290335457Z",
+          "runtime_run_id": "policy-26",
+          "error_category": "cancellation",
+          "error": "idle watchdog: no AgentWrap event for 20m0s",
+          "prompt_path": "jobs/context-repo-publication/attempt-01-prompt.md",
+          "result_path": "jobs/context-repo-publication/attempt-01-result.md",
+          "events_path": "jobs/context-repo-publication/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-repo-publication/attempt-01/opencode.db"
+        }
+      ]
     },
     {
       "id": "review-repo-publication-correctness",
@@ -2543,7 +2770,22 @@
       "kind": "surface-context",
       "surface_id": "cli-dispatch-exit-contract",
       "domain_id": "operator-interfaces",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T17:07:05.974739792Z",
+          "finished_at": "2026-08-25T17:17:31.126982234Z",
+          "last_activity": "2026-08-25T17:17:31.126982234Z",
+          "runtime_run_id": "opencode-28",
+          "prompt_path": "jobs/context-cli-dispatch-exit-contract/attempt-01-prompt.md",
+          "result_path": "jobs/context-cli-dispatch-exit-contract/attempt-01-result.md",
+          "events_path": "jobs/context-cli-dispatch-exit-contract/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-cli-dispatch-exit-contract/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-cli-dispatch-exit-contract/result.md"
     },
     {
       "id": "review-cli-dispatch-exit-contract-correctness",
@@ -2617,7 +2859,22 @@
       "kind": "surface-context",
       "surface_id": "run-cli-observation",
       "domain_id": "operator-interfaces",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:27:21.468349459Z",
+          "finished_at": "2026-08-25T16:46:17.974619273Z",
+          "last_activity": "2026-08-25T16:46:17.974619273Z",
+          "runtime_run_id": "opencode-20",
+          "prompt_path": "jobs/context-run-cli-observation/attempt-01-prompt.md",
+          "result_path": "jobs/context-run-cli-observation/attempt-01-result.md",
+          "events_path": "jobs/context-run-cli-observation/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-run-cli-observation/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-run-cli-observation/result.md"
     },
     {
       "id": "review-run-cli-observation-correctness",
@@ -2678,7 +2935,22 @@
       "kind": "surface-context",
       "surface_id": "web-routing-projection",
       "domain_id": "operator-interfaces",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:15:29.454200207Z",
+          "finished_at": "2026-08-25T16:27:52.46513892Z",
+          "last_activity": "2026-08-25T16:27:52.46513892Z",
+          "runtime_run_id": "opencode-17",
+          "prompt_path": "jobs/context-web-routing-projection/attempt-01-prompt.md",
+          "result_path": "jobs/context-web-routing-projection/attempt-01-result.md",
+          "events_path": "jobs/context-web-routing-projection/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-web-routing-projection/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-web-routing-projection/result.md"
     },
     {
       "id": "review-web-routing-projection-correctness",
@@ -2752,7 +3024,22 @@
       "kind": "surface-context",
       "surface_id": "web-operation-hub-sse",
       "domain_id": "operator-interfaces",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T15:51:00.590622913Z",
+          "finished_at": "2026-08-25T16:16:38.525909794Z",
+          "last_activity": "2026-08-25T16:16:38.525909794Z",
+          "runtime_run_id": "opencode-14",
+          "prompt_path": "jobs/context-web-operation-hub-sse/attempt-01-prompt.md",
+          "result_path": "jobs/context-web-operation-hub-sse/attempt-01-result.md",
+          "events_path": "jobs/context-web-operation-hub-sse/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-web-operation-hub-sse/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-web-operation-hub-sse/result.md"
     },
     {
       "id": "review-web-operation-hub-sse-correctness",
@@ -2826,7 +3113,22 @@
       "kind": "surface-context",
       "surface_id": "web-security-boundary",
       "domain_id": "operator-interfaces",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:16:38.541288517Z",
+          "finished_at": "2026-08-25T16:27:21.452999584Z",
+          "last_activity": "2026-08-25T16:27:21.452999584Z",
+          "runtime_run_id": "opencode-18",
+          "prompt_path": "jobs/context-web-security-boundary/attempt-01-prompt.md",
+          "result_path": "jobs/context-web-security-boundary/attempt-01-result.md",
+          "events_path": "jobs/context-web-security-boundary/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-web-security-boundary/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-web-security-boundary/result.md"
     },
     {
       "id": "review-web-security-boundary-correctness",
@@ -2900,7 +3202,22 @@
       "kind": "surface-context",
       "surface_id": "tui-console",
       "domain_id": "operator-interfaces",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T15:49:57.108330344Z",
+          "finished_at": "2026-08-25T16:08:35.427663947Z",
+          "last_activity": "2026-08-25T16:08:35.427663947Z",
+          "runtime_run_id": "opencode-13",
+          "prompt_path": "jobs/context-tui-console/attempt-01-prompt.md",
+          "result_path": "jobs/context-tui-console/attempt-01-result.md",
+          "events_path": "jobs/context-tui-console/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-tui-console/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-tui-console/result.md"
     },
     {
       "id": "review-tui-console-correctness",
@@ -2961,7 +3278,22 @@
       "kind": "surface-context",
       "surface_id": "shared-usecase-vocabulary",
       "domain_id": "operator-interfaces",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:49:14.252306869Z",
+          "finished_at": "2026-08-25T17:02:10.522307764Z",
+          "last_activity": "2026-08-25T17:02:10.522307764Z",
+          "runtime_run_id": "opencode-25",
+          "prompt_path": "jobs/context-shared-usecase-vocabulary/attempt-01-prompt.md",
+          "result_path": "jobs/context-shared-usecase-vocabulary/attempt-01-result.md",
+          "events_path": "jobs/context-shared-usecase-vocabulary/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-shared-usecase-vocabulary/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-shared-usecase-vocabulary/result.md"
     },
     {
       "id": "review-shared-usecase-vocabulary-correctness",
@@ -3035,7 +3367,22 @@
       "kind": "surface-context",
       "surface_id": "opencode-agent-runtime",
       "domain_id": "agent-execution-platform",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:08:35.443484409Z",
+          "finished_at": "2026-08-25T16:34:46.651381004Z",
+          "last_activity": "2026-08-25T16:34:46.651381004Z",
+          "runtime_run_id": "opencode-19",
+          "prompt_path": "jobs/context-opencode-agent-runtime/attempt-01-prompt.md",
+          "result_path": "jobs/context-opencode-agent-runtime/attempt-01-result.md",
+          "events_path": "jobs/context-opencode-agent-runtime/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-opencode-agent-runtime/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-opencode-agent-runtime/result.md"
     },
     {
       "id": "review-opencode-agent-runtime-correctness",
@@ -3109,7 +3456,22 @@
       "kind": "surface-context",
       "surface_id": "process-execution",
       "domain_id": "agent-execution-platform",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T14:32:12.208297262Z",
+          "finished_at": "2026-08-25T14:50:36.411396764Z",
+          "last_activity": "2026-08-25T14:50:36.411396764Z",
+          "runtime_run_id": "opencode-3",
+          "prompt_path": "jobs/context-process-execution/attempt-01-prompt.md",
+          "result_path": "jobs/context-process-execution/attempt-01-result.md",
+          "events_path": "jobs/context-process-execution/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-process-execution/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-process-execution/result.md"
     },
     {
       "id": "review-process-execution-correctness",
@@ -3183,7 +3545,22 @@
       "kind": "surface-context",
       "surface_id": "workspace-scaffold-defaults",
       "domain_id": "foundation",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T14:32:12.205211169Z",
+          "finished_at": "2026-08-25T14:51:33.178397603Z",
+          "last_activity": "2026-08-25T14:51:33.178397603Z",
+          "runtime_run_id": "opencode-2",
+          "prompt_path": "jobs/context-workspace-scaffold-defaults/attempt-01-prompt.md",
+          "result_path": "jobs/context-workspace-scaffold-defaults/attempt-01-result.md",
+          "events_path": "jobs/context-workspace-scaffold-defaults/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-workspace-scaffold-defaults/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-workspace-scaffold-defaults/result.md"
     },
     {
       "id": "review-workspace-scaffold-defaults-correctness",
@@ -3244,7 +3621,22 @@
       "kind": "surface-context",
       "surface_id": "config-inspection-health",
       "domain_id": "foundation",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T14:32:12.203579388Z",
+          "finished_at": "2026-08-25T14:47:55.569049119Z",
+          "last_activity": "2026-08-25T14:47:55.569049119Z",
+          "runtime_run_id": "opencode-1",
+          "prompt_path": "jobs/context-config-inspection-health/attempt-01-prompt.md",
+          "result_path": "jobs/context-config-inspection-health/attempt-01-result.md",
+          "events_path": "jobs/context-config-inspection-health/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-config-inspection-health/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-config-inspection-health/result.md"
     },
     {
       "id": "review-config-inspection-health-correctness",
@@ -3305,7 +3697,22 @@
       "kind": "surface-context",
       "surface_id": "project-catalog",
       "domain_id": "foundation",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T17:09:37.644261999Z",
+          "finished_at": "2026-08-25T17:21:09.137461582Z",
+          "last_activity": "2026-08-25T17:21:09.137461582Z",
+          "runtime_run_id": "opencode-29",
+          "prompt_path": "jobs/context-project-catalog/attempt-01-prompt.md",
+          "result_path": "jobs/context-project-catalog/attempt-01-result.md",
+          "events_path": "jobs/context-project-catalog/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-project-catalog/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-project-catalog/result.md"
     },
     {
       "id": "review-project-catalog-correctness",
@@ -3366,7 +3773,22 @@
       "kind": "surface-context",
       "surface_id": "code-extraction",
       "domain_id": "foundation",
-      "status": "pending"
+      "status": "passed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T16:58:59.420369943Z",
+          "finished_at": "2026-08-25T17:09:37.632859225Z",
+          "last_activity": "2026-08-25T17:09:37.632859225Z",
+          "runtime_run_id": "opencode-26",
+          "prompt_path": "jobs/context-code-extraction/attempt-01-prompt.md",
+          "result_path": "jobs/context-code-extraction/attempt-01-result.md",
+          "events_path": "jobs/context-code-extraction/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/context-code-extraction/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/context-code-extraction/result.md"
     },
     {
       "id": "review-code-extraction-correctness",

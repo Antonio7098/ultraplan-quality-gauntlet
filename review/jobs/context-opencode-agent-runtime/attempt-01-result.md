@@ -1,0 +1,9 @@
+Prior attempt for this job was interrupted mid-flight (events end on a `step_start`, no result written). I'll re-run it as attempt-02 using the dedicated context-builder subagent.Pack written (175 lines). Spot-checking a sample of cited line numbers against the frozen source to verify accuracy before recording results:Spot-checked references all match frozen source exactly. Recording job artifacts now:Job `context-opencode-agent-runtime` complete. Attempt-01 had died mid-run (no result); re-ran as attempt-02 via the quality-context-builder subagent.
+
+Artifacts written:
+- `review/surfaces/context-opencode-agent-runtime.md` — 175-line neutral context pack
+- `review/jobs/context-opencode-agent-runtime/{attempt-02-prompt.md, attempt-02-result.md, result.md}`
+
+Pack coverage (descriptive only): `Adapter.StartRun` flow (runtime.go:310-419), request/policy mapping into agentwrap v0.0.0-20260825130518 (verified in module cache), SDK binary invocation with `OPENCODE_DB` isolation and snapshots-disabled env, 200-event ring with 8KiB/64-field/depth-3 sanitize bounds, retry/backoff/backup-model policy incl. metadata-preserving fallback, ≤5s-grace synthesized-cancelled branch abandoning teardown observation, session deletion via `<exe> db` interpolated SQL behind quote-doubling `sqliteString` + WAL checkpoint×20/VACUUM/checkpoint, sha256-hashed per-owner stores with `store.json` lifecycle and dead-PID retention GC, XDG log pruning. Contracts pinned to TRD §11/§12.3 + sprints 09/12/26; all 24 test functions mapped with factual coverage gaps; 12 explicit unknowns recorded.
+
+Spot-checked cited line numbers against the frozen commit — all accurate.

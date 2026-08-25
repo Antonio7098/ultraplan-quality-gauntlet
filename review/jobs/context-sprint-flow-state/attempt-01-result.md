@@ -1,0 +1,10 @@
+One more check on platform constraints before writing the pack:I have full coverage of the surface. Writing the context pack now:Context pack written: `review/surfaces/context-sprint-flow-state.md` (163 lines, descriptive only, no defect claims).
+
+Coverage summary:
+
+- **Purpose/entrypoints**: `LoadFlowState` (DB-first, strict v2, read-time-only v1 migration + pre-code-context interpretation), `SaveFlowState` (evidence-preserving backfill of nil Review/Smoke/QA; DB-authoritative routing with terminal-stage file checkpoints; temp+fsync+rename+dir-sync atomicity with test-injectable `BeforeRename` hook), `Status`/statusWrites gating (`WithoutStatusWrites` callers identified), the layered lease (`sync.Map` → O_EXCL pidfile with kill(0)/EPERM liveness, ownership-checked release, context-marker composite reuse), `ReconcileInterruptedMutation` (execute tasks, review/smoke attempt expiry via dead-PID-or-2h-heartbeat, QA phase interruption, cleanup-uncertain consumption rules), and marker recording (lease-free by design, `server_shutdown`-only reason).
+- **State**: file vs `.ultraplan/run-control.db` authority selection and migrate command; lock file; `.cleanup-uncertain.json`; legacy v0/version-1 strata excluded from mutation.
+- **Invariants/trust**: full load/save validation grammar (stage order, path containment, attempt/resume/QA-pointer validators), sanitized diagnostics, decision-time digest/content revalidation as gate mitigation.
+- **Dependencies**: all 8 flow-state writers and 6 gate readers mapped with file:line; product-state-mirror seam described.
+- **Contracts/tests**: TRD §18.5 + ARCHITECTURE L708 CURRENT-CONTRACT evidence; 16 pinned tests itemized; coverage gaps noted factually.
+- **10 explicit unknowns** for later reviewers (DB-branch legacy records, Status-vs-writer race posture, PID reuse, ignored save errors on failure paths, unix-only `syscall.Kill`, etc.).

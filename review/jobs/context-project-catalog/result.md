@@ -1,0 +1,10 @@
+I'm executing job `context-project-catalog`. Now let me research the target surface at the frozen commit.HEAD isn't the frozen commit; I'll verify drift for this surface's paths before reading files.Clean for this surface's paths (only untracked `.ultraplan/`; one non-surface commit ahead). Reading all primary files now.Package read complete. Now mapping consumers, wiring, tests, and contract docs.All research complete. Writing the context pack now.Context pack written to `review/surfaces/context-project-catalog.md` (140 lines), verified against the frozen commit (working tree clean for all surface paths).
+
+Summary of what it documents:
+
+- **Scope**: `internal/project/*` + `internal/app/project_commands.go` — CLI `project list|<p> status|<p> validate`, plus non-CLI doors (`validate` operation subject, dashboard/web summaries).
+- **Control flow**: discovery/safe-name admission/prefix resolution; six-section catalog parser with column aliasing and link-to-path rewriting; closed-world roadmap grammar; three-tier reasoning-default chain (project → workspace → builtin); the package's single write path `MarkRoadmapSprintDelivered` (atomic, mode-preserving, called only from smoke success).
+- **Key descriptive observations flagged as unknowns** for later reviewers (not judgments): warn-only validation exits 5 while printing `Validation: ok`; rows under unrecognized sections silently dropped; lexical-only containment vs EvalSymlinks divergence on harness paths; one-sided area-reasoning catalog enforcement; last-writer-wins roadmap rewrite semantics; no size bounds on catalog reads.
+- **Dependencies mapped**: sprint-planning-chain hard-fails on malformed catalog rows; review/smoke/handbook/reasoning join selections against catalog sections; reconcile/metrics/storage-migrate enumerate projects via this package.
+- **Contracts cited**: cli-reference.md:119-143, user-guide.md:66-72/269-279, plan-sprint-protocol.md, deep-smoke-sprint-protocol.md, and in-tree doc comments.
+- **Test evidence map**: all four test files with what each pins (discovery filters, grammar issues, delivery-marking idempotence/mode preservation, CLI exit/stderr formats).

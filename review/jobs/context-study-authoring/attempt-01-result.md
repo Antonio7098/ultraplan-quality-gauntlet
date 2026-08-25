@@ -1,0 +1,7 @@
+Frozen commits verified. Let me check the reference docs for context pack guidance and start exploring the target.Now let me look at an existing context pack as a format reference, and my exact prompt.I have the format template. Now let me read the primary source files for this surface.Now the test files for this surface:I have complete coverage of the surface. Writing the context pack now:Context pack for `study-authoring` complete.
+
+**Artifacts:**
+- `review/surfaces/context-study-authoring.md` — 178-line neutral pack: purpose, per-command control flow (init/clone/redaction, discovery/normalization, prompt rendering, validation/rating ladder, summary.csv, runs-ledger sync, publication gates), inputs/outputs, authoritative state (incl. the DB-first `LoadRunState` inheritance from product-state-mirror), invariants, trust boundaries, lifecycle semantics, dependencies, TRD/PRD contract evidence, ~40 tests mapped, and 12 explicit unknowns.
+- `review/jobs/context-study-authoring/result.md` — coverage summary.
+
+Notable descriptive facts surfaced for later reviewers (no defect claims): `DisableCodeCitations` is sniffed transiently at prompt time but never visible to validators/web; TRD's skip-existing-clone rule isn't implemented; assisted completion is explicitly deferred; init writes are non-atomic; clone URLs/YAML input paths are unvalidated; `publishRunLoopState` has no status gate.

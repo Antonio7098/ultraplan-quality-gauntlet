@@ -1,0 +1,10 @@
+Now let me look at the tests for this surface and the workspace planning context.All source, tests, and contracts are gathered. Writing the context pack now.Context pack complete: `review/surfaces/context-web-operation-hub-sse.md` (234 lines).
+
+Coverage summary:
+
+- **Purpose & scope**: two-phase prepare/start with TTL'd (2 m) single-use confirmation tokens bound to session + canonical request + governed-input fingerprint; bounded ephemeral hub; SSE progress with replay-gap accounting and slow-subscriber eviction; graceful 10 s drain persisting cleanup-uncertain markers before in-memory `cleanup_uncertain` projection.
+- **Control flow traced end-to-end** with file:line citations: `handleOperationPrepare/Start` (operation_handlers.go:78/:132), `hub.startConfirmed` gate order incl. dedup-before-draining/capacity (operations.go:150-166), durable accept path via `DurableOperationManager` (durable_operations.go:97), `publishAppEvent` durable-first fan-out (:245), `finish` terminal arbitration (:279), `subscribe`/`appendEventLocked` bounds (:376/:428), `drainAndWait` → `persistCleanupUncertain` → `markCleanupUncertain` ordering (:479-557), and the `web.Run` shutdown block (server.go:131-153).
+- **State, invariants, trust boundaries, external effects**, cancellation/retry/restart/error semantics — all descriptive, including timing facts (detached 30 s FinishOperation budget vs 10 s drain window; semaphore slots held by SSE streams) stated without judgment.
+- **Contracts cited**: docs/local-web.md, web-compatibility-baseline.md, server-shutdown-run-cancellation-contract.md, workspace Sprints 31/35 (CURRENT vs FUTURE-INTENT distinguished).
+- **Tests inventoried** (operations_test.go, operations_contract_test.go, sse_test.go, server_test.go) with what each actually pins.
+- **Unknowns flagged**: orphaned `eventIDHeader` helper, non-durable embedder modes, untraced JS client, runcontrol timing constants deferred to the durable spine surface.

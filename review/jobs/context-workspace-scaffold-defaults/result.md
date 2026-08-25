@@ -1,0 +1,13 @@
+I'm the attempt for this job. Now let me explore the target implementation deeply.I have full coverage of the surface. Writing the neutral context pack to the review artifacts now.Verifying two factual claims in the pack before finalizing:Context pack for `workspace-scaffold-defaults` written to `review/surfaces/context-workspace-scaffold-defaults.md` (141 lines, descriptive only).
+
+Summary of what it documents:
+
+- **Purpose**: three scaffold commands (`init-workspace`, `defaults install`, `skills materialise`) plus two shared primitives (`Discover`, `ResolveInside`) and the override-resolution rule (workspace file → embedded default) consumed at prompt-render time.
+- **Control flow**: full CLI dispatch from `cmd/ultraplan/main.go` through `internal/app/app.go:144-177` into `workspace_commands.go:10`, `defaults_commands.go:25`, `skills_commands.go:25`; plan/execute split with create/equal-skip/differ→confirm-or-force semantics; byte-compare against 27 embedded `//go:embed` assets (14 prompts + 13 templates) and 11 rendered stage skills (`SKILL.md` + `agents/openai.yaml` each).
+- **Key mechanics captured**: discovery precedence explicit > `ULTRAPLAN_WORKSPACE` > upward marker walk; lexical (non-symlink-evaluating) containment; idempotency; fail-safe confirm direction (read/answer failure keeps customizations); truncate-style non-atomic overwrite; no locking/cancellation on these paths; exit-code taxonomy (2 usage / 4 workspace).
+- **Consumers mapped**: render-time fallback consumers in sprint prompts/review/smoke, study prompts, project reasoning defaults; containment consumers across study/sprint/project/app; `discoverWorkspace` callers (10 commands — notably *not* the three scaffold commands).
+- **Contracts**: TRD §5.1–5.3/§10.2, ARCHITECTURE.md L473–480 (init must not export prompts — supersedes Sprint-02), PRD L233/L1018, CLI-SAFE-001, Sprint-34 skill contracts, plus in-repo `docs/stage-skills.md`.
+- **Tests mapped**: workspace_test.go, skills_test.go, app_test.go, skills_commands_test.go, with what each actually asserts.
+- **Explicit unknowns** (8): external `.agents/skills` convention, symlink semantics, concurrency support, init-workspace ignoring global `--workspace`, defaults-vs-skills dir-stat error asymmetry, Windows depth, reconcile skill's harness references, undocumented project-level override chain.
+
+One factual correction made during verification: embedded `prompts/execute-sprint.md`, `meta-plan.md`, `meta-synthesize.md` are materialisable but have no in-repo render-time consumer (execute prompts are composed by `internal/sprint/execute.go:452`).
