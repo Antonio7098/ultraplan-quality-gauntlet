@@ -1,11 +1,11 @@
 {
   "version": 1,
   "created_at": "2026-08-25T10:45:55.293948806Z",
-  "updated_at": "2026-08-25T12:22:26.107795813Z",
+  "updated_at": "2026-08-25T12:35:59.238219353Z",
   "model": "openrouter/stealth/ox-alpha",
   "target": {
     "label": "ultraplan-go",
-    "commit": "f0fcd0c2107a8e8d69e1283f9e8d5e2c6da94025",
+    "commit": "f73c4dc659ba1492c16382be26ffcbce1a5ea84a",
     "dirty": false
   },
   "workspace": {
@@ -105,22 +105,8 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map user-visible product operations and workflows. Discover coherent product surfaces from what a user can ask UltraPlan to do.",
-      "status": "failed",
-      "attempts": [
-        {
-          "number": 1,
-          "status": "failed",
-          "started_at": "2026-08-25T11:17:17.158031903Z",
-          "finished_at": "2026-08-25T11:49:02.170954817Z",
-          "last_activity": "2026-08-25T11:49:02.170954817Z",
-          "runtime_run_id": "opencode-5",
-          "error": "AgentWrap run completed without terminal output",
-          "prompt_path": "jobs/map-01-user-operations/attempt-01-prompt.md",
-          "result_path": "jobs/map-01-user-operations/attempt-01-result.md",
-          "events_path": "jobs/map-01-user-operations/attempt-01-events.ndjson",
-          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-01-user-operations/attempt-01/opencode.db"
-        }
-      ]
+      "status": "pending",
+      "attempts": []
     },
     {
       "id": "map-02-state-authorities",
@@ -128,22 +114,8 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map durable and ephemeral state authorities, then group behaviours around the state they read and mutate.",
-      "status": "failed",
-      "attempts": [
-        {
-          "number": 1,
-          "status": "failed",
-          "started_at": "2026-08-25T11:19:22.607729284Z",
-          "finished_at": "2026-08-25T11:54:06.992186946Z",
-          "last_activity": "2026-08-25T11:54:06.992186946Z",
-          "runtime_run_id": "opencode-6",
-          "error": "AgentWrap run completed without terminal output",
-          "prompt_path": "jobs/map-02-state-authorities/attempt-01-prompt.md",
-          "result_path": "jobs/map-02-state-authorities/attempt-01-result.md",
-          "events_path": "jobs/map-02-state-authorities/attempt-01-events.ndjson",
-          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-02-state-authorities/attempt-01/opencode.db"
-        }
-      ]
+      "status": "pending",
+      "attempts": []
     },
     {
       "id": "map-03-trust-boundaries",
@@ -151,22 +123,8 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map all untrusted/external inputs and capability transitions, then identify product surfaces around those trust boundaries.",
-      "status": "failed",
-      "attempts": [
-        {
-          "number": 1,
-          "status": "failed",
-          "started_at": "2026-08-25T10:56:01.978375587Z",
-          "finished_at": "2026-08-25T11:17:17.152146517Z",
-          "last_activity": "2026-08-25T11:17:17.152146517Z",
-          "runtime_run_id": "opencode-1",
-          "error": "AgentWrap run completed without terminal output",
-          "prompt_path": "jobs/map-03-trust-boundaries/attempt-01-prompt.md",
-          "result_path": "jobs/map-03-trust-boundaries/attempt-01-result.md",
-          "events_path": "jobs/map-03-trust-boundaries/attempt-01-events.ndjson",
-          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-03-trust-boundaries/attempt-01/opencode.db"
-        }
-      ]
+      "status": "pending",
+      "attempts": []
     },
     {
       "id": "map-04-execution-paths",
@@ -174,22 +132,8 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map actual execution lifecycles from request through runtime/process/cancellation/result/persistence/observation.",
-      "status": "failed",
-      "attempts": [
-        {
-          "number": 1,
-          "status": "failed",
-          "started_at": "2026-08-25T10:56:01.982847876Z",
-          "finished_at": "2026-08-25T11:50:36.156145376Z",
-          "last_activity": "2026-08-25T11:50:36.156145376Z",
-          "runtime_run_id": "opencode-3",
-          "error": "AgentWrap run completed without terminal output",
-          "prompt_path": "jobs/map-04-execution-paths/attempt-01-prompt.md",
-          "result_path": "jobs/map-04-execution-paths/attempt-01-result.md",
-          "events_path": "jobs/map-04-execution-paths/attempt-01-events.ndjson",
-          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-04-execution-paths/attempt-01/opencode.db"
-        }
-      ]
+      "status": "pending",
+      "attempts": []
     },
     {
       "id": "map-05-interface-surfaces",
@@ -197,22 +141,8 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map CLI, TUI, and web interface behaviours, shared use cases, and divergent interface-specific paths.",
-      "status": "failed",
-      "attempts": [
-        {
-          "number": 1,
-          "status": "failed",
-          "started_at": "2026-08-25T11:49:02.17710527Z",
-          "finished_at": "2026-08-25T12:22:26.107787781Z",
-          "last_activity": "2026-08-25T12:22:26.107787781Z",
-          "runtime_run_id": "opencode-8",
-          "error": "AgentWrap run completed without terminal output",
-          "prompt_path": "jobs/map-05-interface-surfaces/attempt-01-prompt.md",
-          "result_path": "jobs/map-05-interface-surfaces/attempt-01-result.md",
-          "events_path": "jobs/map-05-interface-surfaces/attempt-01-events.ndjson",
-          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-05-interface-surfaces/attempt-01/opencode.db"
-        }
-      ]
+      "status": "pending",
+      "attempts": []
     },
     {
       "id": "map-06-test-topology",
@@ -220,22 +150,8 @@
       "agent": "quality-surface-mapper",
       "kind": "surface-map",
       "lens": "Map tests, fault harnesses, smoke paths, and the product behaviours each actually protects; infer surface boundaries from behavioural coverage.",
-      "status": "failed",
-      "attempts": [
-        {
-          "number": 1,
-          "status": "failed",
-          "started_at": "2026-08-25T10:56:01.978914343Z",
-          "finished_at": "2026-08-25T11:19:22.603313359Z",
-          "last_activity": "2026-08-25T11:19:22.603313359Z",
-          "runtime_run_id": "opencode-2",
-          "error": "AgentWrap run completed without terminal output",
-          "prompt_path": "jobs/map-06-test-topology/attempt-01-prompt.md",
-          "result_path": "jobs/map-06-test-topology/attempt-01-result.md",
-          "events_path": "jobs/map-06-test-topology/attempt-01-events.ndjson",
-          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-06-test-topology/attempt-01/opencode.db"
-        }
-      ]
+      "status": "pending",
+      "attempts": []
     },
     {
       "id": "map-arbiter",
