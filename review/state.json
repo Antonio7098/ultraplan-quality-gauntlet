@@ -1,7 +1,7 @@
 {
   "version": 1,
   "created_at": "2026-08-25T10:45:55.293948806Z",
-  "updated_at": "2026-08-25T10:47:56.606056012Z",
+  "updated_at": "2026-08-25T10:47:59.05795052Z",
   "model": "openrouter/stealth/ox-alpha",
   "target": {
     "label": "ultraplan-go",
@@ -148,6 +148,20 @@
           "result_path": "jobs/map-01-user-operations/attempt-03-result.md",
           "events_path": "jobs/map-01-user-operations/attempt-03-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-01-user-operations/attempt-03/opencode.db"
+        },
+        {
+          "number": 4,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:59.009361493Z",
+          "finished_at": "2026-08-25T10:47:59.022346811Z",
+          "last_activity": "2026-08-25T10:47:59.022346811Z",
+          "runtime_run_id": "policy-3",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-01-user-operations/attempt-04-prompt.md",
+          "result_path": "jobs/map-01-user-operations/attempt-04-result.md",
+          "events_path": "jobs/map-01-user-operations/attempt-04-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-01-user-operations/attempt-04/opencode.db"
         }
       ]
     },
@@ -200,6 +214,20 @@
           "result_path": "jobs/map-02-state-authorities/attempt-03-result.md",
           "events_path": "jobs/map-02-state-authorities/attempt-03-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-02-state-authorities/attempt-03/opencode.db"
+        },
+        {
+          "number": 4,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:59.026798985Z",
+          "finished_at": "2026-08-25T10:47:59.041281352Z",
+          "last_activity": "2026-08-25T10:47:59.041281352Z",
+          "runtime_run_id": "policy-4",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-02-state-authorities/attempt-04-prompt.md",
+          "result_path": "jobs/map-02-state-authorities/attempt-04-result.md",
+          "events_path": "jobs/map-02-state-authorities/attempt-04-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-02-state-authorities/attempt-04/opencode.db"
         }
       ]
     },
@@ -252,6 +280,20 @@
           "result_path": "jobs/map-03-trust-boundaries/attempt-03-result.md",
           "events_path": "jobs/map-03-trust-boundaries/attempt-03-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-03-trust-boundaries/attempt-03/opencode.db"
+        },
+        {
+          "number": 4,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:59.008762254Z",
+          "finished_at": "2026-08-25T10:47:59.017755512Z",
+          "last_activity": "2026-08-25T10:47:59.017755512Z",
+          "runtime_run_id": "policy-2",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-03-trust-boundaries/attempt-04-prompt.md",
+          "result_path": "jobs/map-03-trust-boundaries/attempt-04-result.md",
+          "events_path": "jobs/map-03-trust-boundaries/attempt-04-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-03-trust-boundaries/attempt-04/opencode.db"
         }
       ]
     },
@@ -304,6 +346,20 @@
           "result_path": "jobs/map-04-execution-paths/attempt-03-result.md",
           "events_path": "jobs/map-04-execution-paths/attempt-03-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-04-execution-paths/attempt-03/opencode.db"
+        },
+        {
+          "number": 4,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:59.041812914Z",
+          "finished_at": "2026-08-25T10:47:59.049389021Z",
+          "last_activity": "2026-08-25T10:47:59.049389021Z",
+          "runtime_run_id": "policy-5",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-04-execution-paths/attempt-04-prompt.md",
+          "result_path": "jobs/map-04-execution-paths/attempt-04-result.md",
+          "events_path": "jobs/map-04-execution-paths/attempt-04-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-04-execution-paths/attempt-04/opencode.db"
         }
       ]
     },
@@ -356,6 +412,20 @@
           "result_path": "jobs/map-05-interface-surfaces/attempt-03-result.md",
           "events_path": "jobs/map-05-interface-surfaces/attempt-03-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-05-interface-surfaces/attempt-03/opencode.db"
+        },
+        {
+          "number": 4,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:59.04247068Z",
+          "finished_at": "2026-08-25T10:47:59.054704645Z",
+          "last_activity": "2026-08-25T10:47:59.054704645Z",
+          "runtime_run_id": "policy-6",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-05-interface-surfaces/attempt-04-prompt.md",
+          "result_path": "jobs/map-05-interface-surfaces/attempt-04-result.md",
+          "events_path": "jobs/map-05-interface-surfaces/attempt-04-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-05-interface-surfaces/attempt-04/opencode.db"
         }
       ]
     },
@@ -408,6 +478,20 @@
           "result_path": "jobs/map-06-test-topology/attempt-03-result.md",
           "events_path": "jobs/map-06-test-topology/attempt-03-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-06-test-topology/attempt-03/opencode.db"
+        },
+        {
+          "number": 4,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:59.007768692Z",
+          "finished_at": "2026-08-25T10:47:59.013876665Z",
+          "last_activity": "2026-08-25T10:47:59.013876665Z",
+          "runtime_run_id": "policy-1",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-06-test-topology/attempt-04-prompt.md",
+          "result_path": "jobs/map-06-test-topology/attempt-04-result.md",
+          "events_path": "jobs/map-06-test-topology/attempt-04-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-06-test-topology/attempt-04/opencode.db"
         }
       ]
     },
