@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "created_at": "2026-08-25T10:45:55.293948806Z",
+  "updated_at": "2026-08-25T10:47:51.283308458Z",
+  "model": "openrouter/stealth/ox-alpha",
+  "target": {
+    "label": "ultraplan-go",
+    "commit": "31c55aa71271d89b095fe0e520fe730a0d5e60d6",
+    "dirty": false
+  },
+  "workspace": {
+    "label": "ultraplan-workspace",
+    "commit": "ab12dc38059c9bf485f9aced9075bcd7d924cac5",
+    "dirty": false
+  },
+  "bindings": {
+    "target_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-go",
+    "workspace_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-workspace",
+    "opencode_path": "/home/antonioborgerees/.opencode/bin/opencode"
+  },
+  "baseline": {
+    "status": "passed",
+    "started_at": "2026-08-25T10:46:22.873318214Z",
+    "finished_at": "2026-08-25T10:47:33.763976073Z",
+    "commands": [
+      {
+        "name": "go-test",
+        "command": [
+          "go",
+          "test",
+          "./..."
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "started_at": "2026-08-25T10:46:22.879552949Z",
+        "finished_at": "2026-08-25T10:46:30.614928055Z",
+        "duration": 7735375106,
+        "output_path": "baseline/go-test.txt"
+      },
+      {
+        "name": "go-test-race",
+        "command": [
+          "go",
+          "test",
+          "-race",
+          "./..."
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "started_at": "2026-08-25T10:46:30.624632437Z",
+        "finished_at": "2026-08-25T10:47:05.215993429Z",
+        "duration": 34591360992,
+        "output_path": "baseline/go-test-race.txt"
+      },
+      {
+        "name": "go-vet",
+        "command": [
+          "go",
+          "vet",
+          "./..."
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "started_at": "2026-08-25T10:47:05.220400487Z",
+        "finished_at": "2026-08-25T10:47:05.628497301Z",
+        "duration": 408096814,
+        "output_path": "baseline/go-vet.txt"
+      },
+      {
+        "name": "go-test-cover",
+        "command": [
+          "go",
+          "test",
+          "-cover",
+          "./..."
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "started_at": "2026-08-25T10:47:05.63239326Z",
+        "finished_at": "2026-08-25T10:47:33.531361936Z",
+        "duration": 27898968676,
+        "output_path": "baseline/go-test-cover.txt"
+      },
+      {
+        "name": "go-list",
+        "command": [
+          "go",
+          "list",
+          "./..."
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "started_at": "2026-08-25T10:47:33.537285319Z",
+        "finished_at": "2026-08-25T10:47:33.759413689Z",
+        "duration": 222128370,
+        "output_path": "baseline/go-list.txt"
+      }
+    ]
+  },
+  "expanded": false,
+  "jobs": [
+    {
+      "id": "map-01-user-operations",
+      "stage": "map",
+      "agent": "quality-surface-mapper",
+      "kind": "surface-map",
+      "lens": "Map user-visible product operations and workflows. Discover coherent product surfaces from what a user can ask UltraPlan to do.",
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:51.24590815Z",
+          "finished_at": "2026-08-25T10:47:51.252207628Z",
+          "last_activity": "2026-08-25T10:47:51.252207628Z",
+          "runtime_run_id": "policy-1",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-01-user-operations/attempt-01-prompt.md",
+          "result_path": "jobs/map-01-user-operations/attempt-01-result.md",
+          "events_path": "jobs/map-01-user-operations/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-01-user-operations/attempt-01/opencode.db"
+        }
+      ]
+    },
+    {
+      "id": "map-02-state-authorities",
+      "stage": "map",
+      "agent": "quality-surface-mapper",
+      "kind": "surface-map",
+      "lens": "Map durable and ephemeral state authorities, then group behaviours around the state they read and mutate.",
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:51.269652803Z",
+          "finished_at": "2026-08-25T10:47:51.273744806Z",
+          "last_activity": "2026-08-25T10:47:51.273744806Z",
+          "runtime_run_id": "policy-5",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-02-state-authorities/attempt-01-prompt.md",
+          "result_path": "jobs/map-02-state-authorities/attempt-01-result.md",
+          "events_path": "jobs/map-02-state-authorities/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-02-state-authorities/attempt-01/opencode.db"
+        }
+      ]
+    },
+    {
+      "id": "map-03-trust-boundaries",
+      "stage": "map",
+      "agent": "quality-surface-mapper",
+      "kind": "surface-map",
+      "lens": "Map all untrusted/external inputs and capability transitions, then identify product surfaces around those trust boundaries.",
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:51.260759838Z",
+          "finished_at": "2026-08-25T10:47:51.269650848Z",
+          "last_activity": "2026-08-25T10:47:51.269650848Z",
+          "runtime_run_id": "policy-4",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-03-trust-boundaries/attempt-01-prompt.md",
+          "result_path": "jobs/map-03-trust-boundaries/attempt-01-result.md",
+          "events_path": "jobs/map-03-trust-boundaries/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-03-trust-boundaries/attempt-01/opencode.db"
+        }
+      ]
+    },
+    {
+      "id": "map-04-execution-paths",
+      "stage": "map",
+      "agent": "quality-surface-mapper",
+      "kind": "surface-map",
+      "lens": "Map actual execution lifecycles from request through runtime/process/cancellation/result/persistence/observation.",
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:51.246671935Z",
+          "finished_at": "2026-08-25T10:47:51.257673689Z",
+          "last_activity": "2026-08-25T10:47:51.257673689Z",
+          "runtime_run_id": "policy-3",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-04-execution-paths/attempt-01-prompt.md",
+          "result_path": "jobs/map-04-execution-paths/attempt-01-result.md",
+          "events_path": "jobs/map-04-execution-paths/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-04-execution-paths/attempt-01/opencode.db"
+        }
+      ]
+    },
+    {
+      "id": "map-05-interface-surfaces",
+      "stage": "map",
+      "agent": "quality-surface-mapper",
+      "kind": "surface-map",
+      "lens": "Map CLI, TUI, and web interface behaviours, shared use cases, and divergent interface-specific paths.",
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:51.269703368Z",
+          "finished_at": "2026-08-25T10:47:51.280380221Z",
+          "last_activity": "2026-08-25T10:47:51.280380221Z",
+          "runtime_run_id": "policy-6",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-05-interface-surfaces/attempt-01-prompt.md",
+          "result_path": "jobs/map-05-interface-surfaces/attempt-01-result.md",
+          "events_path": "jobs/map-05-interface-surfaces/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-05-interface-surfaces/attempt-01/opencode.db"
+        }
+      ]
+    },
+    {
+      "id": "map-06-test-topology",
+      "stage": "map",
+      "agent": "quality-surface-mapper",
+      "kind": "surface-map",
+      "lens": "Map tests, fault harnesses, smoke paths, and the product behaviours each actually protects; infer surface boundaries from behavioural coverage.",
+      "status": "failed",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T10:47:51.246112716Z",
+          "finished_at": "2026-08-25T10:47:51.254550525Z",
+          "last_activity": "2026-08-25T10:47:51.254550525Z",
+          "runtime_run_id": "policy-2",
+          "error_category": "configuration",
+          "error": "opencode model: configuration: model must be either a model id or provider/model",
+          "prompt_path": "jobs/map-06-test-topology/attempt-01-prompt.md",
+          "result_path": "jobs/map-06-test-topology/attempt-01-result.md",
+          "events_path": "jobs/map-06-test-topology/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/map-06-test-topology/attempt-01/opencode.db"
+        }
+      ]
+    },
+    {
+      "id": "map-arbiter",
+      "stage": "map-arbiter",
+      "agent": "quality-surface-arbiter",
+      "kind": "surface-map-arbiter",
+      "status": "pending",
+      "depends_on": [
+        "map-01-user-operations",
+        "map-02-state-authorities",
+        "map-03-trust-boundaries",
+        "map-04-execution-paths",
+        "map-05-interface-surfaces",
+        "map-06-test-topology"
+      ]
+    }
+  ],
+  "project_root": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet",
+  "review_root": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/review",
+  "runtime_root": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet",
+  "agentwrap_sha": "3d1e4cbb6e036bc5cd288ffcb9423bbd0bf4b1b9"
+}

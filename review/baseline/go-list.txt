@@ -1,0 +1,17 @@
+github.com/Antonio7098/ultraplan-go/cmd/ultraplan
+github.com/Antonio7098/ultraplan-go/internal/app
+github.com/Antonio7098/ultraplan-go/internal/codeextract
+github.com/Antonio7098/ultraplan-go/internal/platform/config
+github.com/Antonio7098/ultraplan-go/internal/platform/filesystem
+github.com/Antonio7098/ultraplan-go/internal/platform/gitpublish
+github.com/Antonio7098/ultraplan-go/internal/platform/logging
+github.com/Antonio7098/ultraplan-go/internal/platform/process
+github.com/Antonio7098/ultraplan-go/internal/platform/runtime
+github.com/Antonio7098/ultraplan-go/internal/productstate
+github.com/Antonio7098/ultraplan-go/internal/project
+github.com/Antonio7098/ultraplan-go/internal/runcontrol
+github.com/Antonio7098/ultraplan-go/internal/sprint
+github.com/Antonio7098/ultraplan-go/internal/study
+github.com/Antonio7098/ultraplan-go/internal/tui
+github.com/Antonio7098/ultraplan-go/internal/web
+github.com/Antonio7098/ultraplan-go/internal/workspace

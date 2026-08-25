@@ -1,0 +1,80 @@
+{
+  "commands": [
+    {
+      "name": "go-test",
+      "command": [
+        "go",
+        "test",
+        "./..."
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "started_at": "2026-08-25T10:46:22.879552949Z",
+      "finished_at": "2026-08-25T10:46:30.614928055Z",
+      "duration": 7735375106,
+      "output_path": "baseline/go-test.txt"
+    },
+    {
+      "name": "go-test-race",
+      "command": [
+        "go",
+        "test",
+        "-race",
+        "./..."
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "started_at": "2026-08-25T10:46:30.624632437Z",
+      "finished_at": "2026-08-25T10:47:05.215993429Z",
+      "duration": 34591360992,
+      "output_path": "baseline/go-test-race.txt"
+    },
+    {
+      "name": "go-vet",
+      "command": [
+        "go",
+        "vet",
+        "./..."
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "started_at": "2026-08-25T10:47:05.220400487Z",
+      "finished_at": "2026-08-25T10:47:05.628497301Z",
+      "duration": 408096814,
+      "output_path": "baseline/go-vet.txt"
+    },
+    {
+      "name": "go-test-cover",
+      "command": [
+        "go",
+        "test",
+        "-cover",
+        "./..."
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "started_at": "2026-08-25T10:47:05.63239326Z",
+      "finished_at": "2026-08-25T10:47:33.531361936Z",
+      "duration": 27898968676,
+      "output_path": "baseline/go-test-cover.txt"
+    },
+    {
+      "name": "go-list",
+      "command": [
+        "go",
+        "list",
+        "./..."
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "started_at": "2026-08-25T10:47:33.537285319Z",
+      "finished_at": "2026-08-25T10:47:33.759413689Z",
+      "duration": 222128370,
+      "output_path": "baseline/go-list.txt"
+    }
+  ],
+  "notes": [
+    "A failing baseline command is evidence for reviewers, not an automatic gauntlet failure.",
+    "Optional analyzers are recorded only when present on PATH."
+  ]
+}

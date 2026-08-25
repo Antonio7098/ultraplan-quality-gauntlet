@@ -1,0 +1,17 @@
+	github.com/Antonio7098/ultraplan-go/cmd/ultraplan		coverage: 0.0% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/app	4.865s	coverage: 57.8% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/codeextract	0.007s	coverage: 78.9% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/config	0.019s	coverage: 71.3% of statements
+?   	github.com/Antonio7098/ultraplan-go/internal/platform/filesystem	[no test files]
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/gitpublish	0.264s	coverage: 70.9% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/logging	0.005s	coverage: 82.1% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/process	0.304s	coverage: 88.9% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/runtime	0.027s	coverage: 58.7% of statements
+	github.com/Antonio7098/ultraplan-go/internal/productstate		coverage: 0.0% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/project	0.018s	coverage: 81.9% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/runcontrol	5.225s	coverage: 68.7% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/sprint	1.417s	coverage: 70.9% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/study	19.157s	coverage: 75.0% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/tui	0.070s	coverage: 68.3% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/web	1.922s	coverage: 77.6% of statements
+ok  	github.com/Antonio7098/ultraplan-go/internal/workspace	0.033s	coverage: 79.5% of statements

@@ -1,0 +1,17 @@
+?   	github.com/Antonio7098/ultraplan-go/cmd/ultraplan	[no test files]
+ok  	github.com/Antonio7098/ultraplan-go/internal/app	11.032s
+ok  	github.com/Antonio7098/ultraplan-go/internal/codeextract	1.040s
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/config	1.047s
+?   	github.com/Antonio7098/ultraplan-go/internal/platform/filesystem	[no test files]
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/gitpublish	1.283s
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/logging	1.035s
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/process	1.335s
+ok  	github.com/Antonio7098/ultraplan-go/internal/platform/runtime	1.062s
+?   	github.com/Antonio7098/ultraplan-go/internal/productstate	[no test files]
+ok  	github.com/Antonio7098/ultraplan-go/internal/project	1.064s
+ok  	github.com/Antonio7098/ultraplan-go/internal/runcontrol	16.677s
+ok  	github.com/Antonio7098/ultraplan-go/internal/sprint	5.246s
+ok  	github.com/Antonio7098/ultraplan-go/internal/study	19.836s
+ok  	github.com/Antonio7098/ultraplan-go/internal/tui	1.339s
+ok  	github.com/Antonio7098/ultraplan-go/internal/web	5.981s
+ok  	github.com/Antonio7098/ultraplan-go/internal/workspace	1.057s
