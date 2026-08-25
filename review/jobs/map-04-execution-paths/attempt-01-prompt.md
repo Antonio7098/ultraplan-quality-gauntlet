@@ -1,7 +1,7 @@
 # UltraPlan Quality Gauntlet
 
 Target implementation: `/home/antonioborgerees/coding/ultraplan/ultraplan-go`
-Frozen target commit: `f0fcd0c2107a8e8d69e1283f9e8d5e2c6da94025`
+Frozen target commit: `f73c4dc659ba1492c16382be26ffcbce1a5ea84a`
 Authoritative planning/architecture context: `/home/antonioborgerees/coding/ultraplan/ultraplan-workspace`
 Frozen workspace commit: `ab12dc38059c9bf485f9aced9075bcd7d924cac5`
 Review artifacts: `/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/review`
