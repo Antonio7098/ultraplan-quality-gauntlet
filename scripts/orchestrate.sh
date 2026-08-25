@@ -8,11 +8,12 @@ runner="${QG_RUNNER:-agentwrap}"
 idle_timeout="${QG_IDLE_TIMEOUT:-20m}"
 task_timeout="${QG_TASK_TIMEOUT:-90m}"
 if [[ ! -x ./bin/qgauntlet ]]; then go build -o bin/qgauntlet ./cmd/qgauntlet || exit 1; fi
-./bin/qgauntlet recover || exit 1
-./bin/qgauntlet doctor || exit 1
 rebind() {
   ./bin/qgauntlet bind --target ../ultraplan-go --workspace ../ultraplan-workspace --allow-drift >/dev/null 2>&1 || true
 }
+rebind
+./bin/qgauntlet recover || exit 1
+./bin/qgauntlet doctor || exit 1
 while true; do
   stage="$(./bin/qgauntlet next)" || exit 1
   if [[ "$stage" == "complete" ]]; then
