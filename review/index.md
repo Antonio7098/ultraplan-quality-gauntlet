@@ -1,21 +1,21 @@
 # UltraPlan Quality Gauntlet — Review Index
 
-- Target commit: `8eef70f4903b25580719960009a170945bdad9ad`
+- Target commit: `50d6f0d25ff273f4cb956f11e6030376108110bc`
 - Workspace commit: `ab12dc38059c9bf485f9aced9075bcd7d924cac5`
 - Model: `openrouter/stealth/ox-alpha`
-- Generated: 2026-08-25T17:24:42Z
+- Generated: 2026-08-25T17:39:27Z
 
 ## Progress
 
 ```text
 model: openrouter/stealth/ox-alpha
-target: /home/antonioborgerees/coding/ultraplan/ultraplan-go @ 8eef70f4903b dirty_at_init=false
+target: /home/antonioborgerees/coding/ultraplan/ultraplan-go @ 50d6f0d25ff2 dirty_at_init=true
 workspace: /home/antonioborgerees/coding/ultraplan/ultraplan-workspace @ ab12dc38059c dirty_at_init=false
 opencode: /home/antonioborgerees/.opencode/bin/opencode
 baseline: passed
 map               6 total |   6 passed   0 running   0 failed   0 pending
 map-arbiter       1 total |   1 passed   0 running   0 failed   0 pending
-context          28 total |  26 passed   0 running   2 failed   0 pending
+context          28 total |  28 passed   0 running   0 failed   0 pending
 surface-review  133 total |   0 passed   0 running   0 failed 133 pending
 seam             28 total |   0 passed   0 running   0 failed  28 pending
 invariant        12 total |   0 passed   0 running   0 failed  12 pending
@@ -24,7 +24,7 @@ domain            6 total |   0 passed   0 running   0 failed   6 pending
 synth             3 total |   0 passed   0 running   0 failed   3 pending
 arbiter           1 total |   0 passed   0 running   0 failed   1 pending
 surfaces: 28 | seams: 28 | domains: 6
-next: context
+next: surface-review
 ```
 
 ## Product surfaces
@@ -70,12 +70,12 @@ next: context
 - `context` **context-cli-dispatch-exit-contract** — passed — [result.md](jobs/context-cli-dispatch-exit-contract/result.md)
 - `context` **context-code-extraction** — passed — [result.md](jobs/context-code-extraction/result.md)
 - `context` **context-config-inspection-health** — passed — [result.md](jobs/context-config-inspection-health/result.md)
-- `context` **context-durable-operation-spine** — failed
+- `context` **context-durable-operation-spine** — passed — [result.md](jobs/context-durable-operation-spine/result.md)
 - `context` **context-opencode-agent-runtime** — passed — [result.md](jobs/context-opencode-agent-runtime/result.md)
 - `context` **context-process-execution** — passed — [result.md](jobs/context-process-execution/result.md)
 - `context` **context-product-state-mirror** — passed — [result.md](jobs/context-product-state-mirror/result.md)
 - `context` **context-project-catalog** — passed — [result.md](jobs/context-project-catalog/result.md)
-- `context` **context-repo-publication** — failed
+- `context` **context-repo-publication** — passed — [result.md](jobs/context-repo-publication/result.md)
 - `context` **context-run-cli-observation** — passed — [result.md](jobs/context-run-cli-observation/result.md)
 - `context` **context-run-journal-fencing** — passed — [result.md](jobs/context-run-journal-fencing/result.md)
 - `context` **context-run-recovery-retention** — passed — [result.md](jobs/context-run-recovery-retention/result.md)

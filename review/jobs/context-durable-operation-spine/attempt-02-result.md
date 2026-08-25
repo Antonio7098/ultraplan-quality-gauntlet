@@ -1,0 +1,10 @@
+I'm the context-builder for this job. The prior attempt didn't complete; I'll build the pack now. First, verify frozen state and read the primary files.Now let me pull contract evidence from the planning workspace and check remaining details (constants, web hub gating, degradation seam).Two more wiring checks — who constructs the single durable manager for TUI/web processes:I have complete coverage of the surface. Writing the context pack now.Verifying a few cited line numbers before finalizing:Context pack complete: `review/surfaces/context-durable-operation-spine.md` (134 lines, 11 sections).
+
+**Coverage summary:**
+- **Purpose & tiers**: outer `operation` runs (`durableOperationManager`) vs inner `runtime` runs (`controlledRuntime`), correlated via `WithParentRun` → `Correlation.ProductRunID`.
+- **Control flow**: process wiring (`runControlState`, one owner/pool per workspace), accept→claim→fence→first-append→ctx handoff (durable_operations.go:97-138), persistence-gated event delivery in both tiers, 1s/5s/10s control cadences, terminal mapping tables as implemented, QA writer-token handoff via context value + `WithoutCancel` heartbeat fence.
+- **Three digest regimes**: CLI empty / TUI sha256(canonical+NUL+fingerprint) / web sha256(session+NUL+token), converging on one alias table; fingerprint authority pinned to server side (operations.go:129-132, :376-386).
+- **Trust boundaries**: runtime payload sanitization pipeline (denylist→redaction→bounds→30-entry cap) feeding the storage sanitizer; detached-30s terminal discipline; fail-closed acceptance semantics.
+- **Evidence**: 15 unknowns for reviewers (manager-instance ownership scoping vs repo-wide dedup, silent manager-tier tick failures, dual coalescing implementations, degrade-to-in-memory web mode, etc.), test map incl. inventory pinning mechanics, TRD/sprint-35 contract citations.
+
+Target and workspace untouched; verified at frozen commits `50d6f0d2` / `ab12dc38`.
