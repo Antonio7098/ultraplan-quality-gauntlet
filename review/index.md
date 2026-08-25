@@ -3,7 +3,7 @@
 - Target commit: `8eef70f4903b25580719960009a170945bdad9ad`
 - Workspace commit: `ab12dc38059c9bf485f9aced9075bcd7d924cac5`
 - Model: `openrouter/stealth/ox-alpha`
-- Generated: 2026-08-25T14:08:23Z
+- Generated: 2026-08-25T14:32:08Z
 
 ## Progress
 
@@ -14,9 +14,49 @@ workspace: /home/antonioborgerees/coding/ultraplan/ultraplan-workspace @ ab12dc3
 opencode: /home/antonioborgerees/.opencode/bin/opencode
 baseline: passed
 map               6 total |   6 passed   0 running   0 failed   0 pending
-map-arbiter       1 total |   0 passed   0 running   1 failed   0 pending
-next: map-arbiter
+map-arbiter       1 total |   1 passed   0 running   0 failed   0 pending
+context          28 total |   0 passed   0 running   0 failed  28 pending
+surface-review  133 total |   0 passed   0 running   0 failed 133 pending
+seam             28 total |   0 passed   0 running   0 failed  28 pending
+invariant        12 total |   0 passed   0 running   0 failed  12 pending
+tribunal         28 total |   0 passed   0 running   0 failed  28 pending
+domain            6 total |   0 passed   0 running   0 failed   6 pending
+synth             3 total |   0 passed   0 running   0 failed   3 pending
+arbiter           1 total |   0 passed   0 running   0 failed   1 pending
+surfaces: 28 | seams: 28 | domains: 6
+next: context
 ```
+
+## Product surfaces
+
+- **cli-dispatch-exit-contract** — CLI dispatch and exit-code envelope contract (`operator-interfaces`, high)
+- **code-extraction** — Code citation extraction (`foundation`, low)
+- **config-inspection-health** — Config admission, inspection, and health (`foundation`, normal)
+- **durable-operation-spine** — App durable operation spine (`durability-core`, critical)
+- **opencode-agent-runtime** — OpenCode agent runtime adapter and session stores (`agent-execution-platform`, high)
+- **process-execution** — Subprocess control and spawn policies (`agent-execution-platform`, high)
+- **product-state-mirror** — Product-state SQLite mirror and storage migrate (`durability-core`, high)
+- **project-catalog** — Project discovery, catalog, roadmap (`foundation`, normal)
+- **repo-publication** — Git stage publication (`governed-sprint-delivery`, normal)
+- **run-cli-observation** — Run observation and cancellation CLI (`operator-interfaces`, normal)
+- **run-journal-fencing** — Run-control SQLite journal and fencing (`durability-core`, critical)
+- **run-recovery-retention** — Run-control recovery, migration, retention (`durability-core`, high)
+- **shared-usecase-vocabulary** — Cross-interface operation vocabulary and parity (`operator-interfaces`, high)
+- **sprint-conformance-review** — Sprint conformance review fan-out (`governed-sprint-delivery`, high)
+- **sprint-execute-resume** — Sprint execute queue and resume (`governed-sprint-delivery`, high)
+- **sprint-flow-state** — Sprint flow-state authority and mutation locks (`governed-sprint-delivery`, high)
+- **sprint-planning-chain** — Sprint planning stage chain (`governed-sprint-delivery`, high)
+- **sprint-qa-investigation** — QA adversarial investigation (`governed-sprint-delivery`, high)
+- **sprint-smoke-gate** — Smoke harness gate (`governed-sprint-delivery`, high)
+- **sprint-verify-transition** — Verify review-to-smoke transition (`governed-sprint-delivery`, high)
+- **study-authoring** — Study scaffolding, validation, summary (`study-analysis`, normal)
+- **study-runloop-scheduler** — Study durable run-loop scheduler (`study-analysis`, critical)
+- **study-task-execution** — Study single-task execution (`study-analysis`, high)
+- **tui-console** — TUI console dashboard and operations (`operator-interfaces`, normal)
+- **web-operation-hub-sse** — Web operation hub, SSE, and shutdown drain (`operator-interfaces`, high)
+- **web-routing-projection** — Web routing, pages, and API projection (`operator-interfaces`, high)
+- **web-security-boundary** — Web security, session, and origin controls (`operator-interfaces`, high)
+- **workspace-scaffold-defaults** — Workspace bootstrap, defaults, skills (`foundation`, normal)
 
 ## Jobs
 
@@ -26,4 +66,243 @@ next: map-arbiter
 - `map` **map-04-execution-paths** — passed — [result.md](jobs/map-04-execution-paths/result.md)
 - `map` **map-05-interface-surfaces** — passed — [result.md](jobs/map-05-interface-surfaces/result.md)
 - `map` **map-06-test-topology** — passed — [result.md](jobs/map-06-test-topology/result.md)
-- `map-arbiter` **map-arbiter** — failed
+- `map-arbiter` **map-arbiter** — passed — [result.md](jobs/map-arbiter/result.md)
+- `context` **context-cli-dispatch-exit-contract** — pending
+- `context` **context-code-extraction** — pending
+- `context` **context-config-inspection-health** — pending
+- `context` **context-durable-operation-spine** — pending
+- `context` **context-opencode-agent-runtime** — pending
+- `context` **context-process-execution** — pending
+- `context` **context-product-state-mirror** — pending
+- `context` **context-project-catalog** — pending
+- `context` **context-repo-publication** — pending
+- `context` **context-run-cli-observation** — pending
+- `context` **context-run-journal-fencing** — pending
+- `context` **context-run-recovery-retention** — pending
+- `context` **context-shared-usecase-vocabulary** — pending
+- `context` **context-sprint-conformance-review** — pending
+- `context` **context-sprint-execute-resume** — pending
+- `context` **context-sprint-flow-state** — pending
+- `context` **context-sprint-planning-chain** — pending
+- `context` **context-sprint-qa-investigation** — pending
+- `context` **context-sprint-smoke-gate** — pending
+- `context` **context-sprint-verify-transition** — pending
+- `context` **context-study-authoring** — pending
+- `context` **context-study-runloop-scheduler** — pending
+- `context` **context-study-task-execution** — pending
+- `context` **context-tui-console** — pending
+- `context` **context-web-operation-hub-sse** — pending
+- `context` **context-web-routing-projection** — pending
+- `context` **context-web-security-boundary** — pending
+- `context` **context-workspace-scaffold-defaults** — pending
+- `surface-review` **review-cli-dispatch-exit-contract-adversarial** — pending
+- `surface-review` **review-cli-dispatch-exit-contract-correctness** — pending
+- `surface-review` **review-cli-dispatch-exit-contract-failure** — pending
+- `surface-review` **review-cli-dispatch-exit-contract-security** — pending
+- `surface-review` **review-cli-dispatch-exit-contract-verification** — pending
+- `surface-review` **review-code-extraction-assurance** — pending
+- `surface-review` **review-code-extraction-correctness** — pending
+- `surface-review` **review-config-inspection-health-correctness** — pending
+- `surface-review` **review-config-inspection-health-failure** — pending
+- `surface-review` **review-config-inspection-health-security** — pending
+- `surface-review` **review-config-inspection-health-verification** — pending
+- `surface-review` **review-durable-operation-spine-correctness** — pending
+- `surface-review` **review-durable-operation-spine-correctness-b** — pending
+- `surface-review` **review-durable-operation-spine-failure** — pending
+- `surface-review` **review-durable-operation-spine-security** — pending
+- `surface-review` **review-durable-operation-spine-security-b** — pending
+- `surface-review` **review-durable-operation-spine-verification** — pending
+- `surface-review` **review-opencode-agent-runtime-adversarial** — pending
+- `surface-review` **review-opencode-agent-runtime-correctness** — pending
+- `surface-review` **review-opencode-agent-runtime-failure** — pending
+- `surface-review` **review-opencode-agent-runtime-security** — pending
+- `surface-review` **review-opencode-agent-runtime-verification** — pending
+- `surface-review` **review-process-execution-adversarial** — pending
+- `surface-review` **review-process-execution-correctness** — pending
+- `surface-review` **review-process-execution-failure** — pending
+- `surface-review` **review-process-execution-security** — pending
+- `surface-review` **review-process-execution-verification** — pending
+- `surface-review` **review-product-state-mirror-adversarial** — pending
+- `surface-review` **review-product-state-mirror-correctness** — pending
+- `surface-review` **review-product-state-mirror-failure** — pending
+- `surface-review` **review-product-state-mirror-security** — pending
+- `surface-review` **review-product-state-mirror-verification** — pending
+- `surface-review` **review-project-catalog-correctness** — pending
+- `surface-review` **review-project-catalog-failure** — pending
+- `surface-review` **review-project-catalog-security** — pending
+- `surface-review` **review-project-catalog-verification** — pending
+- `surface-review` **review-repo-publication-correctness** — pending
+- `surface-review` **review-repo-publication-failure** — pending
+- `surface-review` **review-repo-publication-security** — pending
+- `surface-review` **review-repo-publication-verification** — pending
+- `surface-review` **review-run-cli-observation-correctness** — pending
+- `surface-review` **review-run-cli-observation-failure** — pending
+- `surface-review` **review-run-cli-observation-security** — pending
+- `surface-review` **review-run-cli-observation-verification** — pending
+- `surface-review` **review-run-journal-fencing-correctness** — pending
+- `surface-review` **review-run-journal-fencing-correctness-b** — pending
+- `surface-review` **review-run-journal-fencing-failure** — pending
+- `surface-review` **review-run-journal-fencing-security** — pending
+- `surface-review` **review-run-journal-fencing-security-b** — pending
+- `surface-review` **review-run-journal-fencing-verification** — pending
+- `surface-review` **review-run-recovery-retention-adversarial** — pending
+- `surface-review` **review-run-recovery-retention-correctness** — pending
+- `surface-review` **review-run-recovery-retention-failure** — pending
+- `surface-review` **review-run-recovery-retention-security** — pending
+- `surface-review` **review-run-recovery-retention-verification** — pending
+- `surface-review` **review-shared-usecase-vocabulary-adversarial** — pending
+- `surface-review` **review-shared-usecase-vocabulary-correctness** — pending
+- `surface-review` **review-shared-usecase-vocabulary-failure** — pending
+- `surface-review` **review-shared-usecase-vocabulary-security** — pending
+- `surface-review` **review-shared-usecase-vocabulary-verification** — pending
+- `surface-review` **review-sprint-conformance-review-adversarial** — pending
+- `surface-review` **review-sprint-conformance-review-correctness** — pending
+- `surface-review` **review-sprint-conformance-review-failure** — pending
+- `surface-review` **review-sprint-conformance-review-security** — pending
+- `surface-review` **review-sprint-conformance-review-verification** — pending
+- `surface-review` **review-sprint-execute-resume-adversarial** — pending
+- `surface-review` **review-sprint-execute-resume-correctness** — pending
+- `surface-review` **review-sprint-execute-resume-failure** — pending
+- `surface-review` **review-sprint-execute-resume-security** — pending
+- `surface-review` **review-sprint-execute-resume-verification** — pending
+- `surface-review` **review-sprint-flow-state-adversarial** — pending
+- `surface-review` **review-sprint-flow-state-correctness** — pending
+- `surface-review` **review-sprint-flow-state-failure** — pending
+- `surface-review` **review-sprint-flow-state-security** — pending
+- `surface-review` **review-sprint-flow-state-verification** — pending
+- `surface-review` **review-sprint-planning-chain-adversarial** — pending
+- `surface-review` **review-sprint-planning-chain-correctness** — pending
+- `surface-review` **review-sprint-planning-chain-failure** — pending
+- `surface-review` **review-sprint-planning-chain-security** — pending
+- `surface-review` **review-sprint-planning-chain-verification** — pending
+- `surface-review` **review-sprint-qa-investigation-adversarial** — pending
+- `surface-review` **review-sprint-qa-investigation-correctness** — pending
+- `surface-review` **review-sprint-qa-investigation-failure** — pending
+- `surface-review` **review-sprint-qa-investigation-security** — pending
+- `surface-review` **review-sprint-qa-investigation-verification** — pending
+- `surface-review` **review-sprint-smoke-gate-adversarial** — pending
+- `surface-review` **review-sprint-smoke-gate-correctness** — pending
+- `surface-review` **review-sprint-smoke-gate-failure** — pending
+- `surface-review` **review-sprint-smoke-gate-security** — pending
+- `surface-review` **review-sprint-smoke-gate-verification** — pending
+- `surface-review` **review-sprint-verify-transition-adversarial** — pending
+- `surface-review` **review-sprint-verify-transition-correctness** — pending
+- `surface-review` **review-sprint-verify-transition-failure** — pending
+- `surface-review` **review-sprint-verify-transition-security** — pending
+- `surface-review` **review-sprint-verify-transition-verification** — pending
+- `surface-review` **review-study-authoring-correctness** — pending
+- `surface-review` **review-study-authoring-failure** — pending
+- `surface-review` **review-study-authoring-security** — pending
+- `surface-review` **review-study-authoring-verification** — pending
+- `surface-review` **review-study-runloop-scheduler-correctness** — pending
+- `surface-review` **review-study-runloop-scheduler-correctness-b** — pending
+- `surface-review` **review-study-runloop-scheduler-failure** — pending
+- `surface-review` **review-study-runloop-scheduler-security** — pending
+- `surface-review` **review-study-runloop-scheduler-security-b** — pending
+- `surface-review` **review-study-runloop-scheduler-verification** — pending
+- `surface-review` **review-study-task-execution-adversarial** — pending
+- `surface-review` **review-study-task-execution-correctness** — pending
+- `surface-review` **review-study-task-execution-failure** — pending
+- `surface-review` **review-study-task-execution-security** — pending
+- `surface-review` **review-study-task-execution-verification** — pending
+- `surface-review` **review-tui-console-correctness** — pending
+- `surface-review` **review-tui-console-failure** — pending
+- `surface-review` **review-tui-console-security** — pending
+- `surface-review` **review-tui-console-verification** — pending
+- `surface-review` **review-web-operation-hub-sse-adversarial** — pending
+- `surface-review` **review-web-operation-hub-sse-correctness** — pending
+- `surface-review` **review-web-operation-hub-sse-failure** — pending
+- `surface-review` **review-web-operation-hub-sse-security** — pending
+- `surface-review` **review-web-operation-hub-sse-verification** — pending
+- `surface-review` **review-web-routing-projection-adversarial** — pending
+- `surface-review` **review-web-routing-projection-correctness** — pending
+- `surface-review` **review-web-routing-projection-failure** — pending
+- `surface-review` **review-web-routing-projection-security** — pending
+- `surface-review` **review-web-routing-projection-verification** — pending
+- `surface-review` **review-web-security-boundary-adversarial** — pending
+- `surface-review` **review-web-security-boundary-correctness** — pending
+- `surface-review` **review-web-security-boundary-failure** — pending
+- `surface-review` **review-web-security-boundary-security** — pending
+- `surface-review` **review-web-security-boundary-verification** — pending
+- `surface-review` **review-workspace-scaffold-defaults-correctness** — pending
+- `surface-review` **review-workspace-scaffold-defaults-failure** — pending
+- `surface-review` **review-workspace-scaffold-defaults-security** — pending
+- `surface-review` **review-workspace-scaffold-defaults-verification** — pending
+- `seam` **seam-agent-runtime-seam-fakes** — pending
+- `seam` **seam-atomicity-tier-divergence** — pending
+- `seam` **seam-cancellation-reason-parity** — pending
+- `seam` **seam-cli-acceptance-empty-digest** — pending
+- `seam` **seam-commit-then-publish** — pending
+- `seam` **seam-containment-helper-divergence** — pending
+- `seam` **seam-drain-marker-sprint-reconcile** — pending
+- `seam` **seam-drain-marker-study-reconcile** — pending
+- `seam` **seam-execute-evidence-review-input** — pending
+- `seam` **seam-flow-state-multi-writer** — pending
+- `seam` **seam-lease-layering-divergent-liveness** — pending
+- `seam` **seam-observation-replay-parity** — pending
+- `seam` **seam-outer-inner-double-fencing** — pending
+- `seam` **seam-persistence-gated-delivery** — pending
+- `seam` **seam-productstate-sprint-mirror** — pending
+- `seam` **seam-productstate-study-mirror** — pending
+- `seam` **seam-prompt-override-chain** — pending
+- `seam` **seam-qa-approved-check-policy** — pending
+- `seam` **seam-qa-review-freshness** — pending
+- `seam` **seam-qa-writer-fence-handoff** — pending
+- `seam` **seam-review-digest-gates-smoke** — pending
+- `seam` **seam-sandbox-policy-grant** — pending
+- `seam` **seam-session-continuity-policy** — pending
+- `seam` **seam-shutdown-ordering-chain** — pending
+- `seam` **seam-smoke-manifest-runner** — pending
+- `seam` **seam-sse-vocabulary-freeze** — pending
+- `seam` **seam-three-acceptance-regimes-one-alias** — pending
+- `seam` **seam-verify-promotion-chain** — pending
+- `invariant` **invariant-cancellation** — pending
+- `invariant` **invariant-capability-containment** — pending
+- `invariant` **invariant-durability** — pending
+- `invariant` **invariant-error-truth** — pending
+- `invariant` **invariant-identity** — pending
+- `invariant` **invariant-interface-parity** — pending
+- `invariant` **invariant-migration-compat** — pending
+- `invariant` **invariant-observability** — pending
+- `invariant` **invariant-resource-bounds** — pending
+- `invariant` **invariant-retry-idempotency** — pending
+- `invariant` **invariant-secrets** — pending
+- `invariant` **invariant-trust-flow** — pending
+- `tribunal` **tribunal-cli-dispatch-exit-contract** — pending
+- `tribunal` **tribunal-code-extraction** — pending
+- `tribunal` **tribunal-config-inspection-health** — pending
+- `tribunal` **tribunal-durable-operation-spine** — pending
+- `tribunal` **tribunal-opencode-agent-runtime** — pending
+- `tribunal` **tribunal-process-execution** — pending
+- `tribunal` **tribunal-product-state-mirror** — pending
+- `tribunal` **tribunal-project-catalog** — pending
+- `tribunal` **tribunal-repo-publication** — pending
+- `tribunal` **tribunal-run-cli-observation** — pending
+- `tribunal` **tribunal-run-journal-fencing** — pending
+- `tribunal` **tribunal-run-recovery-retention** — pending
+- `tribunal` **tribunal-shared-usecase-vocabulary** — pending
+- `tribunal` **tribunal-sprint-conformance-review** — pending
+- `tribunal` **tribunal-sprint-execute-resume** — pending
+- `tribunal` **tribunal-sprint-flow-state** — pending
+- `tribunal` **tribunal-sprint-planning-chain** — pending
+- `tribunal` **tribunal-sprint-qa-investigation** — pending
+- `tribunal` **tribunal-sprint-smoke-gate** — pending
+- `tribunal` **tribunal-sprint-verify-transition** — pending
+- `tribunal` **tribunal-study-authoring** — pending
+- `tribunal` **tribunal-study-runloop-scheduler** — pending
+- `tribunal` **tribunal-study-task-execution** — pending
+- `tribunal` **tribunal-tui-console** — pending
+- `tribunal` **tribunal-web-operation-hub-sse** — pending
+- `tribunal` **tribunal-web-routing-projection** — pending
+- `tribunal` **tribunal-web-security-boundary** — pending
+- `tribunal` **tribunal-workspace-scaffold-defaults** — pending
+- `domain` **domain-agent-execution-platform** — pending
+- `domain` **domain-durability-core** — pending
+- `domain` **domain-foundation** — pending
+- `domain` **domain-governed-sprint-delivery** — pending
+- `domain` **domain-operator-interfaces** — pending
+- `domain` **domain-study-analysis** — pending
+- `synth` **synth-assurance** — pending
+- `synth` **synth-correctness** — pending
+- `synth` **synth-security-reliability** — pending
+- `arbiter` **arbiter** — pending
