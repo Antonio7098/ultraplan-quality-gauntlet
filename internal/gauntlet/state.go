@@ -143,6 +143,10 @@ func Bind(reviewRoot, target, workspace, opencodePath string, allowDrift bool) (
 			return nil, fmt.Errorf("target commit %s does not match frozen commit %s", snap.Commit, r.Target.Commit)
 		}
 		r.Bindings.TargetPath = p
+		if r.Target.Commit != "" && snap.Commit != r.Target.Commit {
+			snap.Dirty = snap.Dirty || r.Target.Dirty
+			r.Target = snap
+		}
 	}
 	if workspace != "" {
 		p, snap, err := inspectRepo(r.Workspace.Label, workspace)
@@ -153,6 +157,10 @@ func Bind(reviewRoot, target, workspace, opencodePath string, allowDrift bool) (
 			return nil, fmt.Errorf("workspace commit %s does not match frozen commit %s", snap.Commit, r.Workspace.Commit)
 		}
 		r.Bindings.WorkspacePath = p
+		if r.Workspace.Commit != "" && snap.Commit != r.Workspace.Commit {
+			snap.Dirty = snap.Dirty || r.Workspace.Dirty
+			r.Workspace = snap
+		}
 	}
 	if opencodePath != "" {
 		p, err := resolveExecutable(opencodePath)

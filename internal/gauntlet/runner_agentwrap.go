@@ -55,8 +55,9 @@ func (AgentwrapExecutor) Execute(ctx context.Context, review Review, job Job, at
 		UnsupportedBehavior: agentwrap.PermissionUnsupportedBestEffort,
 		Metadata:            map[string]string{"purpose": "read-only quality review"},
 	}
+	provider, model := splitModel(review.Model)
 	req := agentwrap.RunRequest{
-		Prompt: prompt, WorkDir: review.ProjectRoot, Model: agentwrap.ModelID(review.Model), Timeout: opts.TaskTimeout,
+		Prompt: prompt, WorkDir: review.ProjectRoot, Provider: agentwrap.ProviderID(provider), Model: agentwrap.ModelID(model), Timeout: opts.TaskTimeout,
 		PermissionPolicy: perm,
 		Metadata: map[string]string{
 			awopencode.MetadataDatabasePath: dbPath,
@@ -161,6 +162,13 @@ func (AgentwrapExecutor) Execute(ctx context.Context, review Review, job Job, at
 			return result, nil
 		}
 	}
+}
+
+func splitModel(model string) (string, string) {
+	if i := strings.Index(model, "/"); i >= 0 {
+		return model[:i], model[i+1:]
+	}
+	return "", model
 }
 
 func waitChannel(ch <-chan struct{}, timeout time.Duration) bool {
