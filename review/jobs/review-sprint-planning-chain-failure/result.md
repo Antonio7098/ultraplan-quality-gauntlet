@@ -1,0 +1,55 @@
+Context pack read. Note: pack cites commit `8eef70f` while the assignment freezes `c6f01cf`; HEAD is one commit past. Let me verify the sprint package is unchanged since the frozen commit, then read the source.Sprint package is unchanged since the frozen commit except qa files (not in my surface). Reading the primary sources now.Initial scan done. Several threads to pull. Now reading service.go (the core), then reasoning.go for partial-progress behavior.Core service read. Key leads: dual `flowFailedStages` implementations (one self-recursing), cache/live interplay, checkpoint semantics. Reading prompt_context.go and context_pack.go next.The cache-freeze of source evidence is documented as intentional. But I found a gating asymmetry worth chasing (`prepareSharedPromptContext` returns empty prefix when code-context is absent). Continuing with locks, state, publication.Lock analysis done — noted a PID-reuse liveness concern. Now reading state.go/state_database.go and publication.go.Reachability of the single-stage path via TUI/web confirmed. Now reading prompts.go, direct_inputs.go, handbook.go, plan.go, input_contract.go.The InputContract declares code-context REQUIRED for handbook/reasoning/plan — good evidence for the gating gap. Checking tests for counter-evidence on the empty-prefix compat path.Web/TUI single-stage confirmed reachable with arbitrary stages. Verifying remaining details: atomicWriteFile, readOptionalDir, and key tests.Verifying the authoritative contract language in the workspace for citation, and checking how execute consumes the chain (consequence path for the governance bypass).Running the sprint package tests to confirm the green baseline before writing up findings.Review complete. Baseline `go test ./internal/sprint/` green at the reviewed tree (sprint package identical to frozen `c6f01cf` except out-of-scope qa files).
+
+# Findings — `sprint-planning-chain` (failure/concurrency lens)
+
+## F1 — Downstream stages run without the shared governance prefix and without code-context completion gating when `code-context.md` is absent; single-stage success then fabricates `Complete` state for never-run stages
+
+**Severity:** High · **Confidence:** High
+
+**Claim.** `prepareSharedPromptContext` short-circuits to an *empty* prefix before any prerequisite check whenever the code-context artifact is missing (prompt_context.go:97-99), skipping both `codeContextPrerequisite` (prompt_context.go:100) and target resolution. Only `FlowSprintIndex` enforces the prerequisite independently (service.go:654). `FlowTechnicalHandbook`, `FlowReasoning`, and `FlowPlan` do not (service.go:815-946, 732-813), so through `Service.FlowStage` — the TUI/web single-stage operation path (operation_runner.go:22-30; web/operation_handlers.go:639-644 passes any stage; `validatePlanningStageTarget` allows handbook/reasoning/plan) — these stages invoke the agent with **no shared instructions, no exact requirements/code-context embedding, no framed source evidence**, whenever `inputs.CodeContext == ""` (which `ReadPlanningInputs` yields as optional-missing-ok, store_fs.go:106-114).
+
+**Observable bad outcomes.**
+1. Governance bypass: handbook/reasoning/plan artifacts are generated without the mandated foundation and are then treated as valid by skip-if-valid (`flowStageAlreadyValid`, flow.go:284-316), so later governed flows never regenerate them — the ungoverned bytes become permanent governing inputs embedded verbatim in downstream prefixes and consumed by plan→execute.
+2. Fabricated state: success persists `flowTechnicalHandbookSuccessStages` (flow.go:349-357) which marks `CodeContext` and `SprintIndex` `Complete` even though neither artifact exists. The plain-variant failure recorder (flow.go:385-396) produces the same fabrication on post-prerequisite failures.
+3. The persisted request metadata lies: `prompt_required_inputs` still advertises `requirements,code-context,resolved-source-evidence,…` (input_contract.go:16-34, service.go:1168) while the prompt contains none of them.
+
+**Contract breach.** TRD L449 (workspace docs): "Sprint index, technical handbook, area/final reasoning, plan … must receive it whenever they invoke an agent." Unconditional.
+
+**Trigger/preconditions.** Sprint workspace with valid `requirements.md` and no `code-context.md`; operator invokes single-stage technical-handbook / reasoning / plan in TUI/web. No lease or ordering gate prevents it.
+
+**Counter-evidence searched.** Cumulative CLI `flow` self-heals (code-context stage reruns because `codeContextPrerequisite` fails without artifact+Complete); the "pre-code-context compatibility" comment (prompt_context.go:94-96) claims intent, but (a) there is no workspace-era marker distinguishing legacy from broken — legacy detection exists separately at state.go:83-126 and is not used here; (b) sprint-index *is* gated explicitly, showing gating is otherwise the rule; (c) no test pins empty-prefix behavior (all `pre-code-context` tests cover state migration only).
+
+**Regression test.** Fixture with valid requirements.md, no code-context.md: `FlowStage(To: StageTechnicalHandbook)` must fail (or refuse composition); today it succeeds, and assertions that the composed prompt contains exactly one `sharedPromptStageBoundary` plus the exact requirements/code-context frames, and that flow-state gains no `Complete` entries for absent artifacts, will fail against current behavior. Fix direction: enforce `codeContextPrerequisite` in handbook/reasoning/plan (as sprint-index does) instead of inferring legacy status from artifact absence.
+
+## F2 — Unbounded recursion in `Service.flowFailedStages` on persistent artifact-snapshot read failure → process abort instead of failed-state persistence
+
+**Severity:** Medium-low · **Confidence:** High (logic certain; trigger requires a filesystem fault)
+
+**Claim.** service.go:1216-1218: `if snapErr != nil { return s.flowFailedStages(sp, target, err, now) }` — unconditional self-call with identical arguments. `ReadArtifacts` (store_fs.go:35-93) errors on any non-NotExist `Stat`/`ReadFile` failure (e.g., `requirements.md` or `reasoning/` made unreadable mid-flight by an agent/tool/NFS condition) and on `ReadDir` errors of `reasoning/` (discovery.go:69-75). While that error persists, the first code-context failure — including a mere cancellation, since `failCodeContext` (code_context.go:428) always builds failure state — recurses without limit: Go fatal stack overflow, process dies, no failed-state record, no publish, deferred lease release skipped (lock file left; recoverable only via dead-PID reclaim), durable op left without terminal event.
+
+**Counter-evidence searched.** No `recover()` in the flow path (qa.go:796/review.go:901 recover elsewhere); no depth guard; no fallback to the plain recorder. Transient single-shot errors just cost one wasted cycle; the defect requires persistence of the error, which permission-bit and stale-NFS conditions produce.
+
+**Regression test.** Make `reasoning/` unreadable (chmod 000) after fixtures are written, run `FlowCodeContext` with a failing runtime, and assert a returned error with persisted Failed state; today this never returns.
+
+**Secondary note (non-issue, defended).** The plain variant (flow.go:385) marks all pre-target stages `Complete` unconditionally, but every call site that can reach it sits behind prerequisites that force genuine artifact/completion evidence (and its residual mislabeling under the F1 hole is subsumed by F1's fix).
+
+## F3 — Stale mutation lock becomes permanently unreclaimable when the dead owner's PID is recycled
+
+**Severity:** Low-medium · **Confidence:** Mechanism high, reachability medium
+
+**Claim.** Reclamation of a stale lease (verification_lock.go:49-58) relies solely on `kill(pid, 0)` liveness. After owner death, if the OS recycles that PID to any live unrelated process, `verificationProcessAlive` returns true and acquisition fails with `ErrVerificationConflict` forever — there is no lock-age/TTL fallback anywhere (`acquireMutation`, locks.go:89-110; `ReconcileInterruptedMutation` takes the same lock, locks.go:26). All subsequent flow/execute/review/smoke/QA operations for that sprint fail with ExitPartial until someone manually deletes `.ultraplan/locks/sprint/<p>--<s>.lock`. Probability scales with PID churn; small PID namespaces (containers) make wraparound realistic.
+
+**Counter-evidence searched.** Release-path ownership comparison (verification_lock.go:89) correctly prevents stealing a recreated lock, but nothing bounds how long a dead-owner file can block. EPERM-as-alive handling is correct for foreign-UID holders.
+
+**Verification.** Unit test: create lock with PID of a killed process, spawn a sleeper that reuses that PID (or inject the liveness predicate), assert acquisition still succeeds after a configurable max-age — currently impossible; conflict is returned indefinitely.
+
+## Defended / non-issues examined (lens: cancellation, restart, races, liveness)
+
+- **Source-evidence freezing in context packs** (cache hit skips live TOCTOU re-resolution across stages): deliberate and documented (context_pack.go:18-20); byte-stability is the TRD requirement; cache identity binds req+cc+target digests, writes are temp+fsync+rename with prune-to-8, read-only surfaces never persist (`composeSharedPrompt` persistCache=false), and misses fall back to fully checked live rendering.
+- **`.stage-sessions.json` rename-without-fsync**: worst case loses a checkpoint write or deletion; lost checkpoint ⇒ fresh session; lost deletion ⇒ stale session detected by "session not found" ⇒ one fresh restart (session_state.go:146-154). Liveness preserved, bounded cost.
+- **`planningSessionNotFound` substring heuristic**: a false positive on agent prose costs at most one extra bounded regeneration, not a loop (single retry block).
+- **Cancellation windows in `promoteCodeContext`**: pre-rename ctx check, post-rename cancel rolls back prior bytes (pinned by code_context_test.go:496); restore-temp inherits 0600 mode — cosmetic only.
+- **Empty/unknown runtime status accepted as success**: every stage gates on artifact read-back + validators + resolvability dry-render; unknown outcomes fail closed on output.
+- **Checkpoint compatibility ignoring variant, checksum diagnostic-only** (session_state.go:87-92): deliberate, continuation instructs reread; model/provider/workDir still must match.
+- **Area-reasoning partial progress**: per-entry checkpoints keyed `area-reasoning:::<area>`; completed entries skip on rerun (service.go:1296-1298); entry-completed-but-run-errored is salvaged via artifact proof (service.go:1317-1323). Earlier entries' runtime stores leak only until the 72h/2GiB sweep.
+- **Worktree lifecycle**: record-write failure removes worktree+branch (execute_target.go:175-179); reuse re-validates source-root/common-dir/branch; crash between add and record leaves recoverable residue; same-sprint races excluded by the lease.

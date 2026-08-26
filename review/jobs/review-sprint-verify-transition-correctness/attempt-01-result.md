@@ -1,0 +1,52 @@
+Surface files identical between frozen commit and HEAD. Now reading the smoke gate, flow delegation, locks, and types.Now let me examine the remaining wiring: web operation runner, flow CLI args, migration code, and helpers.The web runner derives `OverrideConfirmed` from `req.ForceReview`. Now I need to verify the web/TUI confirmation handshake actually gates `ForceReview` before this point.Web/TUI force-review goes through prepare→confirm-token. Now checking migration code, flow CLI parse, error mapping, and the lock/process-alive helpers.Migration stamps `Stale=true` unconditionally, yet `VerificationStatus` never reads it. Let me check who consumes the persisted `Stale` flag, plus the flow CLI wiring and error mapping.`qa_map.go:63` honors the persisted `Stale` flag while Verify ignores it. Let me see the third staleness site in service.go and the migration's history.`Status` re-persists the recomputed stale verdict, so the migration flag is transient — Verify's ignore is consistent with the documented freshness contract. Now checking flow arg parsing parity and error mapping.Flow's parser rejects `--level/--suite/--test/--timeout`. The TRD reportedly promises those for flow — verifying against the frozen workspace contract now, plus the in-repo help text.Let me look at the app-level verify command tests and the smoke test fixtures to understand the fake harness seams before writing probe tests.The app-level parity test confirms flow intentionally omits smoke selection flags. Now let me set up a probe environment (clone to /tmp so the target stays untouched) and check the review fixture.Now writing probe tests in the clone. First, checking `reviewResultProblems` validation rules so my synthetic fail-finding passes.P1/P2/P4 confirmed; the dry-run hypothesis came back different than predicted — verification shows `incomplete`, not zero. Checking why:`writeCompletedCodeContext` in the fixture creates flow-state.json — my missing-state probe never hit `ErrFlowStateMissing`. Redoing it properly:The empty-assessment path is refuted — inner review dry-run fails first on the missing code-context outcome. One last check: `prepareSharedPromptContext(ctx, …, true)` in dry-run review — whether the trailing bool triggers writes during supposedly read-only paths.The cache write is a documented disposable acceleration layer — not a gate issue. Now binding the diagnostic-commit finding end-to-end through `Verify` itself:All probes complete. Cleaning up the scratch clone and writing up.# Review: `sprint-verify-transition` — Verify review-to-smoke transition
+
+Reviewed at frozen content (surface files identical between `c6f01cf` and HEAD; HEAD's delta touches only `qa*.go`). Context pack read; every hypothesis below was chased through source, callers, and tests; key claims were verified empirically with probe tests run against a scratch clone of the repo (since removed from `/tmp/opencode`).
+
+---
+
+## Finding 1 (Low severity, High confidence): Diagnostic continuation canonically commits blocked/not-applicable smoke results that are simultaneously flagged diagnostic-only
+
+**Claim.** In the smoke continuation, when selection classifies the sprint as `blocked` or `not_applicable`, `commitSmoke` runs unconditionally — including when `result.DiagnosticOnly == true`. The DiagnosticOnly commit guard exists only on the harness-run path (`internal/sprint/smoke.go:180-182`), not on the preflight-classification branch (`internal/sprint/smoke.go:129-135`). A related sub-case: `ReviewOverride` is set unconditionally from `req.ForceReview` (`smoke.go:79`), so any canonical run invoked with `--force-review` even against a **passing** review records a confirmed-override audit block.
+
+**Observable bad outcome (reproduced end-to-end through `Service.Verify`).** Fixture: real failing review (fresh, completed, verdict=fail) via fake reviewer runtime; discovery returns no sprint mapping. Then:
+
+```
+Verify{To: smoke, Smoke:{ForceReview, OverrideConfirmed, Rationale}} →
+  err=<nil> assessment=fail smoke_status=completed smoke_verdict=blocked diagnostic_only=true
+  smoke.md written, contains "Diagnostic only: `true`" and the rationale
+  durable flow-state Smoke: status=completed verdict=blocked lastComplete=true override.confirmed=true
+```
+
+The transition writes canonical `smoke.md` and a canonical `LastComplete` flow-state record for an invocation the artifact itself declares diagnostic — contradicting the surface's stated guarantee ("override … remains diagnostic"; context-pack invariant "DiagnosticOnly results return before commitSmoke so no smoke.md/state occurs"). The persisted record self-contradicts: canonical completion + diagnostic-only flag + override audit in one record.
+
+**Trigger/preconditions.** Review verdict fail-or-blocked at the gate + ForceReview ∧ OverrideConfirmed ∧ non-empty rationale (i.e., exactly the `allowDiagnosticContinuation` ladder, verify.go:74) + harness discovery classifying the sprint blocked (missing/incomplete mapping) or not_applicable. Sub-case: `--force-review` supplied while review passes.
+
+**Exact evidence.**
+- `internal/sprint/smoke.go:128` — `DiagnosticOnly = selection.DiagnosticOnly || (ForceReview && verdict∈{fail,blocked})`
+- `internal/sprint/smoke.go:129-135` — `blocked|not_applicable` → `commitSmoke(prepared, result)` with no DiagnosticOnly check
+- `internal/sprint/smoke.go:180-182` — the guard exists only on the run path
+- `internal/sprint/smoke.go:469-471` — Override block written whenever `result.ReviewOverride`
+- `internal/sprint/verify.go:74-77` — continuation swallows the review error and proceeds to smoke
+
+**Execution path.** Verify → allowDiagnosticContinuation → RunSmoke → saveSmokeAttempt(running) → prepareSmokeStatic gate passes → discovery → selectSmoke returns `{Verdict: blocked|not_applicable}` → DiagnosticOnly=true → branch at :129 → commitSmoke → atomic `smoke.md` write → SaveFlowState with LastComplete+Override.
+
+**Controls/counter-evidence searched.** Roadmap marking excluded (verdict≠pass ∧ DiagnosticOnly, smoke.go:39-48); publication excluded (`!DiagnosticOnly`, :49); `deriveAssessment` lets fresh fail/blocked reviews dominate (pinned by TestDeriveAssessmentPrecedence / TestDiagnosticOverrideCannotPromoteCanonicalSmoke), so **no wrong promotion is possible** — overall stays fail/blocked/incomplete. TestLegacyMappingsDoNotBlockAuthoredSprintButCannotPass pins blocked-selection semantics but never combines it with the override trio; no test covers override × preflight classification. That gap is why this survived.
+
+**Severity/confidence.** Low severity (audit-truth and invariant breach; no assessment laundering), high confidence (deterministic path, reproduced).
+
+**Regression test.** Assert: for a diagnostic-flagged invocation (`DiagnosticOnly==true`) whose selection verdict is blocked/not_applicable, no `smoke.md` is written and `state.Smoke.LastComplete == nil` — or, if canonicalizing preflight classifications under override is intended, assert the committed record carries neither `DiagnosticOnly` nor an Override block. Fix shape: hoist the `result.DiagnosticOnly` early-return above the selection-verdict branch (keeping the DryRun return), and/or condition `ReviewOverride` on the gate actually having admitted an override (verdict ∈ {fail, blocked}).
+
+---
+
+## Defended non-issues (hypotheses raised, then refuted)
+
+1. **`verify --to review` reuses a fresh failing review and returns nil error** (verify.go:65, 81-85). Probed: err=nil, no rerun, assessment=fail. Defended: reuse is the command's purpose; CLI exits 5 via the assessment check (:325-327) and renders fail in text and JSON. Idempotent, not misleading.
+2. **Continuation-ladder asymmetry (fail-only at verify.go:74 vs fail/blocked at the smoke gate).** Completed+blocked reviews are unreachable from `Service.Review` (blocked coverage → `persistReviewFailure` with Status=failed, review.go:618-621); hand-crafted completed/blocked states still require the full flag trio at the gate. Not exploitable.
+3. **allowDiagnosticContinuation swallowing non-verdict errors.** Only publish/save errors after Completed+fail qualify (review.go:644-651). The saveErr variant leaves a stale recorded digest, so prepareSmokeStatic's recompute marks the review stale and refuses ("stale reviews cannot be overridden") — fails closed. Verified gate refusal without the trio (probe: `smoke review_gate: review verdict blocks smoke`, no smoke.md).
+4. **Tolerated ErrFlowStateMissing yields zero-valued Verification with nil error** (verify.go:59-64). Refuted by probe: with truly missing flow state the inner review dry-run fails closed on the code-context prerequisite ("flow state missing"), so nil-error-with-empty-assessment is unreachable via real request shapes.
+5. **Migration stamps `Stale=true` but VerificationStatus never reads it.** Freshness policy deliberately recomputes from bytes/digest/content (freshness_policy.go); `Status` re-persists the recomputed verdict (service.go:271-295); QA consulting the raw flag (qa_map.go:63) is transiently stricter — conservative direction.
+6. **Dry-run `--to smoke` never previews the smoke gate.** Matches documented dry-run semantics and help text; nothing promises gate evaluation pre-confirmation.
+7. **TRD "Flow options" lists smoke level/suite/test + timeout that parseSprintFlowArgs rejects.** The same stale menu lists `--from`, `--force`, `--no-skip`, which also never shipped; the shipped help text (pinned by TestVerifyHelpExplainsGateAndRecovery) defines flow's surface, and verify carries the selection flags per PRD "convenience orchestration". Stale contract prose, not a behavior defect.
+8. **Discarded VerificationStatus refresh errors (:83, :93).** Requires external interference between a successful state write and the immediate re-read under held lease; worst case is a stale `status` field in one envelope with the error/result fields still truthful.
+9. **Dead-PID/2h attempt expiry, EPERM-alive, PID reuse (verification_lock.go:95-101).** All failure directions are conservative (false-blocks availability, never false-expires evidence); reconcile is in-memory only.
+10. **VerifyRequest.Progress not forwarded to inner Review/RunSmoke; dry-run writes the disposable context-pack cache.** Presentation/acceleration-layer only; no gate or durability impact.

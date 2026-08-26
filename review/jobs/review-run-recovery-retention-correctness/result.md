@@ -1,0 +1,12 @@
+Context pack loaded. Let me verify which commit the working tree matches for this surface's files.Working tree matches the frozen commit for this surface's files. Now reading the core sources in parallel.Now the probe implementations and interfaces.Now let me verify two mechanical hypotheses empirically in `/tmp/opencode`: (a) SQLite replays a stale `-wal` over a replaced main DB file (the RestoreBackup hazard), and (b) SQLite's `julianday()` parses the exact RFC3339Nano timestamps this code stores (production reconcile predicates depend on it).Confirmed: the restore is silently undone by stale-WAL replay, with `integrity_check` still reporting "ok". Now the `julianday()` predicate check:Both mechanics verified. Now closing remaining loops: who calls `Compact`, any pruning of `reconciliation_log`, the support-export test assertions, and the ID grammar.All findings verified against counter-evidence. Two final greps to pin down caller sets before writing up.All verification complete. Writing the final result.Review complete. Result written to `review/jobs/review-run-recovery-retention-correctness/result.md`.
+
+**6 findings** (target tree untouched; baseline green):
+
+- **F1 (high, reproduction-proven):** `RestoreBackup` renames over `run-control.db` but leaves stranded `-wal`/`-shm`; SQLite replays the stale WAL over the restored image — the restore is silently undone and `integrity_check` still says "ok". Proven empirically in `/tmp/opencode`.
+- **F2 (medium):** restore validates physical integrity only; a retained pre-migration `user_version=0` backup (which migration itself creates) restores "successfully" and wipes the live store on next open.
+- **F3 (low-medium):** `reconciliation_log` gains a row per reconcile pass per exact-live stalled owner (no liveness filter, no pruning), plus `updated_at` churn from repeated `markStalled`.
+- **F4 (low):** `Accept` aborts on any inline-`Compact` error, including a compaction/expiry race typed as retryable conflict; no caller retries.
+- **F5 (low):** lexicographic backup pruning prunes the newest backup first after a backward clock step.
+- **F6 (low):** one >4 KiB line in `run-control.log` fails the entire support export (`bufio.ErrTooLong`).
+
+**Notable defended non-issue:** production `julianday('now', …)` expiry predicates correctly parse the stored RFC3339Nano timestamps (verified against SQLite 3.51) — that would otherwise have silently disabled reconciliation.

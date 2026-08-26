@@ -1,22 +1,22 @@
 # UltraPlan Quality Gauntlet — Review Index
 
-- Target commit: `50d6f0d25ff273f4cb956f11e6030376108110bc`
+- Target commit: `c6f01cf8ebfcfea19fe771dbf7552d838e3b8ca0`
 - Workspace commit: `ab12dc38059c9bf485f9aced9075bcd7d924cac5`
 - Model: `openrouter/stealth/ox-alpha`
-- Generated: 2026-08-25T17:39:27Z
+- Generated: 2026-08-26T14:11:03Z
 
 ## Progress
 
 ```text
 model: openrouter/stealth/ox-alpha
-target: /home/antonioborgerees/coding/ultraplan/ultraplan-go @ 50d6f0d25ff2 dirty_at_init=true
+target: /home/antonioborgerees/coding/ultraplan/ultraplan-go @ c6f01cf8ebfc dirty_at_init=true
 workspace: /home/antonioborgerees/coding/ultraplan/ultraplan-workspace @ ab12dc38059c dirty_at_init=false
 opencode: /home/antonioborgerees/.opencode/bin/opencode
 baseline: passed
 map               6 total |   6 passed   0 running   0 failed   0 pending
 map-arbiter       1 total |   1 passed   0 running   0 failed   0 pending
 context          28 total |  28 passed   0 running   0 failed   0 pending
-surface-review  133 total |   0 passed   0 running   0 failed 133 pending
+surface-review  133 total |  93 passed   0 running  40 failed   0 pending
 seam             28 total |   0 passed   0 running   0 failed  28 pending
 invariant        12 total |   0 passed   0 running   0 failed  12 pending
 tribunal         28 total |   0 passed   0 running   0 failed  28 pending
@@ -95,139 +95,139 @@ next: surface-review
 - `context` **context-web-routing-projection** — passed — [result.md](jobs/context-web-routing-projection/result.md)
 - `context` **context-web-security-boundary** — passed — [result.md](jobs/context-web-security-boundary/result.md)
 - `context` **context-workspace-scaffold-defaults** — passed — [result.md](jobs/context-workspace-scaffold-defaults/result.md)
-- `surface-review` **review-cli-dispatch-exit-contract-adversarial** — pending
-- `surface-review` **review-cli-dispatch-exit-contract-correctness** — pending
-- `surface-review` **review-cli-dispatch-exit-contract-failure** — pending
-- `surface-review` **review-cli-dispatch-exit-contract-security** — pending
-- `surface-review` **review-cli-dispatch-exit-contract-verification** — pending
-- `surface-review` **review-code-extraction-assurance** — pending
-- `surface-review` **review-code-extraction-correctness** — pending
-- `surface-review` **review-config-inspection-health-correctness** — pending
-- `surface-review` **review-config-inspection-health-failure** — pending
-- `surface-review` **review-config-inspection-health-security** — pending
-- `surface-review` **review-config-inspection-health-verification** — pending
-- `surface-review` **review-durable-operation-spine-correctness** — pending
-- `surface-review` **review-durable-operation-spine-correctness-b** — pending
-- `surface-review` **review-durable-operation-spine-failure** — pending
-- `surface-review` **review-durable-operation-spine-security** — pending
-- `surface-review` **review-durable-operation-spine-security-b** — pending
-- `surface-review` **review-durable-operation-spine-verification** — pending
-- `surface-review` **review-opencode-agent-runtime-adversarial** — pending
-- `surface-review` **review-opencode-agent-runtime-correctness** — pending
-- `surface-review` **review-opencode-agent-runtime-failure** — pending
-- `surface-review` **review-opencode-agent-runtime-security** — pending
-- `surface-review` **review-opencode-agent-runtime-verification** — pending
-- `surface-review` **review-process-execution-adversarial** — pending
-- `surface-review` **review-process-execution-correctness** — pending
-- `surface-review` **review-process-execution-failure** — pending
-- `surface-review` **review-process-execution-security** — pending
-- `surface-review` **review-process-execution-verification** — pending
-- `surface-review` **review-product-state-mirror-adversarial** — pending
-- `surface-review` **review-product-state-mirror-correctness** — pending
-- `surface-review` **review-product-state-mirror-failure** — pending
-- `surface-review` **review-product-state-mirror-security** — pending
-- `surface-review` **review-product-state-mirror-verification** — pending
-- `surface-review` **review-project-catalog-correctness** — pending
-- `surface-review` **review-project-catalog-failure** — pending
-- `surface-review` **review-project-catalog-security** — pending
-- `surface-review` **review-project-catalog-verification** — pending
-- `surface-review` **review-repo-publication-correctness** — pending
-- `surface-review` **review-repo-publication-failure** — pending
-- `surface-review` **review-repo-publication-security** — pending
-- `surface-review` **review-repo-publication-verification** — pending
-- `surface-review` **review-run-cli-observation-correctness** — pending
-- `surface-review` **review-run-cli-observation-failure** — pending
-- `surface-review` **review-run-cli-observation-security** — pending
-- `surface-review` **review-run-cli-observation-verification** — pending
-- `surface-review` **review-run-journal-fencing-correctness** — pending
-- `surface-review` **review-run-journal-fencing-correctness-b** — pending
-- `surface-review` **review-run-journal-fencing-failure** — pending
-- `surface-review` **review-run-journal-fencing-security** — pending
-- `surface-review` **review-run-journal-fencing-security-b** — pending
-- `surface-review` **review-run-journal-fencing-verification** — pending
-- `surface-review` **review-run-recovery-retention-adversarial** — pending
-- `surface-review` **review-run-recovery-retention-correctness** — pending
-- `surface-review` **review-run-recovery-retention-failure** — pending
-- `surface-review` **review-run-recovery-retention-security** — pending
-- `surface-review` **review-run-recovery-retention-verification** — pending
-- `surface-review` **review-shared-usecase-vocabulary-adversarial** — pending
-- `surface-review` **review-shared-usecase-vocabulary-correctness** — pending
-- `surface-review` **review-shared-usecase-vocabulary-failure** — pending
-- `surface-review` **review-shared-usecase-vocabulary-security** — pending
-- `surface-review` **review-shared-usecase-vocabulary-verification** — pending
-- `surface-review` **review-sprint-conformance-review-adversarial** — pending
-- `surface-review` **review-sprint-conformance-review-correctness** — pending
-- `surface-review` **review-sprint-conformance-review-failure** — pending
-- `surface-review` **review-sprint-conformance-review-security** — pending
-- `surface-review` **review-sprint-conformance-review-verification** — pending
-- `surface-review` **review-sprint-execute-resume-adversarial** — pending
-- `surface-review` **review-sprint-execute-resume-correctness** — pending
-- `surface-review` **review-sprint-execute-resume-failure** — pending
-- `surface-review` **review-sprint-execute-resume-security** — pending
-- `surface-review` **review-sprint-execute-resume-verification** — pending
-- `surface-review` **review-sprint-flow-state-adversarial** — pending
-- `surface-review` **review-sprint-flow-state-correctness** — pending
-- `surface-review` **review-sprint-flow-state-failure** — pending
-- `surface-review` **review-sprint-flow-state-security** — pending
-- `surface-review` **review-sprint-flow-state-verification** — pending
-- `surface-review` **review-sprint-planning-chain-adversarial** — pending
-- `surface-review` **review-sprint-planning-chain-correctness** — pending
-- `surface-review` **review-sprint-planning-chain-failure** — pending
-- `surface-review` **review-sprint-planning-chain-security** — pending
-- `surface-review` **review-sprint-planning-chain-verification** — pending
-- `surface-review` **review-sprint-qa-investigation-adversarial** — pending
-- `surface-review` **review-sprint-qa-investigation-correctness** — pending
-- `surface-review` **review-sprint-qa-investigation-failure** — pending
-- `surface-review` **review-sprint-qa-investigation-security** — pending
-- `surface-review` **review-sprint-qa-investigation-verification** — pending
-- `surface-review` **review-sprint-smoke-gate-adversarial** — pending
-- `surface-review` **review-sprint-smoke-gate-correctness** — pending
-- `surface-review` **review-sprint-smoke-gate-failure** — pending
-- `surface-review` **review-sprint-smoke-gate-security** — pending
-- `surface-review` **review-sprint-smoke-gate-verification** — pending
-- `surface-review` **review-sprint-verify-transition-adversarial** — pending
-- `surface-review` **review-sprint-verify-transition-correctness** — pending
-- `surface-review` **review-sprint-verify-transition-failure** — pending
-- `surface-review` **review-sprint-verify-transition-security** — pending
-- `surface-review` **review-sprint-verify-transition-verification** — pending
-- `surface-review` **review-study-authoring-correctness** — pending
-- `surface-review` **review-study-authoring-failure** — pending
-- `surface-review` **review-study-authoring-security** — pending
-- `surface-review` **review-study-authoring-verification** — pending
-- `surface-review` **review-study-runloop-scheduler-correctness** — pending
-- `surface-review` **review-study-runloop-scheduler-correctness-b** — pending
-- `surface-review` **review-study-runloop-scheduler-failure** — pending
-- `surface-review` **review-study-runloop-scheduler-security** — pending
-- `surface-review` **review-study-runloop-scheduler-security-b** — pending
-- `surface-review` **review-study-runloop-scheduler-verification** — pending
-- `surface-review` **review-study-task-execution-adversarial** — pending
-- `surface-review` **review-study-task-execution-correctness** — pending
-- `surface-review` **review-study-task-execution-failure** — pending
-- `surface-review` **review-study-task-execution-security** — pending
-- `surface-review` **review-study-task-execution-verification** — pending
-- `surface-review` **review-tui-console-correctness** — pending
-- `surface-review` **review-tui-console-failure** — pending
-- `surface-review` **review-tui-console-security** — pending
-- `surface-review` **review-tui-console-verification** — pending
-- `surface-review` **review-web-operation-hub-sse-adversarial** — pending
-- `surface-review` **review-web-operation-hub-sse-correctness** — pending
-- `surface-review` **review-web-operation-hub-sse-failure** — pending
-- `surface-review` **review-web-operation-hub-sse-security** — pending
-- `surface-review` **review-web-operation-hub-sse-verification** — pending
-- `surface-review` **review-web-routing-projection-adversarial** — pending
-- `surface-review` **review-web-routing-projection-correctness** — pending
-- `surface-review` **review-web-routing-projection-failure** — pending
-- `surface-review` **review-web-routing-projection-security** — pending
-- `surface-review` **review-web-routing-projection-verification** — pending
-- `surface-review` **review-web-security-boundary-adversarial** — pending
-- `surface-review` **review-web-security-boundary-correctness** — pending
-- `surface-review` **review-web-security-boundary-failure** — pending
-- `surface-review` **review-web-security-boundary-security** — pending
-- `surface-review` **review-web-security-boundary-verification** — pending
-- `surface-review` **review-workspace-scaffold-defaults-correctness** — pending
-- `surface-review` **review-workspace-scaffold-defaults-failure** — pending
-- `surface-review` **review-workspace-scaffold-defaults-security** — pending
-- `surface-review` **review-workspace-scaffold-defaults-verification** — pending
+- `surface-review` **review-cli-dispatch-exit-contract-adversarial** — passed — [result.md](jobs/review-cli-dispatch-exit-contract-adversarial/result.md)
+- `surface-review` **review-cli-dispatch-exit-contract-correctness** — passed — [result.md](jobs/review-cli-dispatch-exit-contract-correctness/result.md)
+- `surface-review` **review-cli-dispatch-exit-contract-failure** — passed — [result.md](jobs/review-cli-dispatch-exit-contract-failure/result.md)
+- `surface-review` **review-cli-dispatch-exit-contract-security** — passed — [result.md](jobs/review-cli-dispatch-exit-contract-security/result.md)
+- `surface-review` **review-cli-dispatch-exit-contract-verification** — passed — [result.md](jobs/review-cli-dispatch-exit-contract-verification/result.md)
+- `surface-review` **review-code-extraction-assurance** — passed — [result.md](jobs/review-code-extraction-assurance/result.md)
+- `surface-review` **review-code-extraction-correctness** — passed — [result.md](jobs/review-code-extraction-correctness/result.md)
+- `surface-review` **review-config-inspection-health-correctness** — passed — [result.md](jobs/review-config-inspection-health-correctness/result.md)
+- `surface-review` **review-config-inspection-health-failure** — passed — [result.md](jobs/review-config-inspection-health-failure/result.md)
+- `surface-review` **review-config-inspection-health-security** — passed — [result.md](jobs/review-config-inspection-health-security/result.md)
+- `surface-review` **review-config-inspection-health-verification** — passed — [result.md](jobs/review-config-inspection-health-verification/result.md)
+- `surface-review` **review-durable-operation-spine-correctness** — passed — [result.md](jobs/review-durable-operation-spine-correctness/result.md)
+- `surface-review` **review-durable-operation-spine-correctness-b** — passed — [result.md](jobs/review-durable-operation-spine-correctness-b/result.md)
+- `surface-review` **review-durable-operation-spine-failure** — passed — [result.md](jobs/review-durable-operation-spine-failure/result.md)
+- `surface-review` **review-durable-operation-spine-security** — passed — [result.md](jobs/review-durable-operation-spine-security/result.md)
+- `surface-review` **review-durable-operation-spine-security-b** — passed — [result.md](jobs/review-durable-operation-spine-security-b/result.md)
+- `surface-review` **review-durable-operation-spine-verification** — passed — [result.md](jobs/review-durable-operation-spine-verification/result.md)
+- `surface-review` **review-opencode-agent-runtime-adversarial** — passed — [result.md](jobs/review-opencode-agent-runtime-adversarial/result.md)
+- `surface-review` **review-opencode-agent-runtime-correctness** — passed — [result.md](jobs/review-opencode-agent-runtime-correctness/result.md)
+- `surface-review` **review-opencode-agent-runtime-failure** — passed — [result.md](jobs/review-opencode-agent-runtime-failure/result.md)
+- `surface-review` **review-opencode-agent-runtime-security** — passed — [result.md](jobs/review-opencode-agent-runtime-security/result.md)
+- `surface-review` **review-opencode-agent-runtime-verification** — passed — [result.md](jobs/review-opencode-agent-runtime-verification/result.md)
+- `surface-review` **review-process-execution-adversarial** — passed — [result.md](jobs/review-process-execution-adversarial/result.md)
+- `surface-review` **review-process-execution-correctness** — passed — [result.md](jobs/review-process-execution-correctness/result.md)
+- `surface-review` **review-process-execution-failure** — passed — [result.md](jobs/review-process-execution-failure/result.md)
+- `surface-review` **review-process-execution-security** — passed — [result.md](jobs/review-process-execution-security/result.md)
+- `surface-review` **review-process-execution-verification** — passed — [result.md](jobs/review-process-execution-verification/result.md)
+- `surface-review` **review-product-state-mirror-adversarial** — passed — [result.md](jobs/review-product-state-mirror-adversarial/result.md)
+- `surface-review` **review-product-state-mirror-correctness** — passed — [result.md](jobs/review-product-state-mirror-correctness/result.md)
+- `surface-review` **review-product-state-mirror-failure** — passed — [result.md](jobs/review-product-state-mirror-failure/result.md)
+- `surface-review` **review-product-state-mirror-security** — passed — [result.md](jobs/review-product-state-mirror-security/result.md)
+- `surface-review` **review-product-state-mirror-verification** — passed — [result.md](jobs/review-product-state-mirror-verification/result.md)
+- `surface-review` **review-project-catalog-correctness** — passed — [result.md](jobs/review-project-catalog-correctness/result.md)
+- `surface-review` **review-project-catalog-failure** — passed — [result.md](jobs/review-project-catalog-failure/result.md)
+- `surface-review` **review-project-catalog-security** — passed — [result.md](jobs/review-project-catalog-security/result.md)
+- `surface-review` **review-project-catalog-verification** — passed — [result.md](jobs/review-project-catalog-verification/result.md)
+- `surface-review` **review-repo-publication-correctness** — passed — [result.md](jobs/review-repo-publication-correctness/result.md)
+- `surface-review` **review-repo-publication-failure** — passed — [result.md](jobs/review-repo-publication-failure/result.md)
+- `surface-review` **review-repo-publication-security** — passed — [result.md](jobs/review-repo-publication-security/result.md)
+- `surface-review` **review-repo-publication-verification** — passed — [result.md](jobs/review-repo-publication-verification/result.md)
+- `surface-review` **review-run-cli-observation-correctness** — passed — [result.md](jobs/review-run-cli-observation-correctness/result.md)
+- `surface-review` **review-run-cli-observation-failure** — passed — [result.md](jobs/review-run-cli-observation-failure/result.md)
+- `surface-review` **review-run-cli-observation-security** — passed — [result.md](jobs/review-run-cli-observation-security/result.md)
+- `surface-review` **review-run-cli-observation-verification** — passed — [result.md](jobs/review-run-cli-observation-verification/result.md)
+- `surface-review` **review-run-journal-fencing-correctness** — passed — [result.md](jobs/review-run-journal-fencing-correctness/result.md)
+- `surface-review` **review-run-journal-fencing-correctness-b** — passed — [result.md](jobs/review-run-journal-fencing-correctness-b/result.md)
+- `surface-review` **review-run-journal-fencing-failure** — passed — [result.md](jobs/review-run-journal-fencing-failure/result.md)
+- `surface-review` **review-run-journal-fencing-security** — passed — [result.md](jobs/review-run-journal-fencing-security/result.md)
+- `surface-review` **review-run-journal-fencing-security-b** — passed — [result.md](jobs/review-run-journal-fencing-security-b/result.md)
+- `surface-review` **review-run-journal-fencing-verification** — passed — [result.md](jobs/review-run-journal-fencing-verification/result.md)
+- `surface-review` **review-run-recovery-retention-adversarial** — passed — [result.md](jobs/review-run-recovery-retention-adversarial/result.md)
+- `surface-review` **review-run-recovery-retention-correctness** — passed — [result.md](jobs/review-run-recovery-retention-correctness/result.md)
+- `surface-review` **review-run-recovery-retention-failure** — passed — [result.md](jobs/review-run-recovery-retention-failure/result.md)
+- `surface-review` **review-run-recovery-retention-security** — passed — [result.md](jobs/review-run-recovery-retention-security/result.md)
+- `surface-review` **review-run-recovery-retention-verification** — passed — [result.md](jobs/review-run-recovery-retention-verification/result.md)
+- `surface-review` **review-shared-usecase-vocabulary-adversarial** — passed — [result.md](jobs/review-shared-usecase-vocabulary-adversarial/result.md)
+- `surface-review` **review-shared-usecase-vocabulary-correctness** — passed — [result.md](jobs/review-shared-usecase-vocabulary-correctness/result.md)
+- `surface-review` **review-shared-usecase-vocabulary-failure** — passed — [result.md](jobs/review-shared-usecase-vocabulary-failure/result.md)
+- `surface-review` **review-shared-usecase-vocabulary-security** — passed — [result.md](jobs/review-shared-usecase-vocabulary-security/result.md)
+- `surface-review` **review-shared-usecase-vocabulary-verification** — passed — [result.md](jobs/review-shared-usecase-vocabulary-verification/result.md)
+- `surface-review` **review-sprint-conformance-review-adversarial** — passed — [result.md](jobs/review-sprint-conformance-review-adversarial/result.md)
+- `surface-review` **review-sprint-conformance-review-correctness** — passed — [result.md](jobs/review-sprint-conformance-review-correctness/result.md)
+- `surface-review` **review-sprint-conformance-review-failure** — passed — [result.md](jobs/review-sprint-conformance-review-failure/result.md)
+- `surface-review` **review-sprint-conformance-review-security** — passed — [result.md](jobs/review-sprint-conformance-review-security/result.md)
+- `surface-review` **review-sprint-conformance-review-verification** — passed — [result.md](jobs/review-sprint-conformance-review-verification/result.md)
+- `surface-review` **review-sprint-execute-resume-adversarial** — passed — [result.md](jobs/review-sprint-execute-resume-adversarial/result.md)
+- `surface-review` **review-sprint-execute-resume-correctness** — passed — [result.md](jobs/review-sprint-execute-resume-correctness/result.md)
+- `surface-review` **review-sprint-execute-resume-failure** — passed — [result.md](jobs/review-sprint-execute-resume-failure/result.md)
+- `surface-review` **review-sprint-execute-resume-security** — passed — [result.md](jobs/review-sprint-execute-resume-security/result.md)
+- `surface-review` **review-sprint-execute-resume-verification** — passed — [result.md](jobs/review-sprint-execute-resume-verification/result.md)
+- `surface-review` **review-sprint-flow-state-adversarial** — passed — [result.md](jobs/review-sprint-flow-state-adversarial/result.md)
+- `surface-review` **review-sprint-flow-state-correctness** — passed — [result.md](jobs/review-sprint-flow-state-correctness/result.md)
+- `surface-review` **review-sprint-flow-state-failure** — passed — [result.md](jobs/review-sprint-flow-state-failure/result.md)
+- `surface-review` **review-sprint-flow-state-security** — passed — [result.md](jobs/review-sprint-flow-state-security/result.md)
+- `surface-review` **review-sprint-flow-state-verification** — passed — [result.md](jobs/review-sprint-flow-state-verification/result.md)
+- `surface-review` **review-sprint-planning-chain-adversarial** — passed — [result.md](jobs/review-sprint-planning-chain-adversarial/result.md)
+- `surface-review` **review-sprint-planning-chain-correctness** — passed — [result.md](jobs/review-sprint-planning-chain-correctness/result.md)
+- `surface-review` **review-sprint-planning-chain-failure** — passed — [result.md](jobs/review-sprint-planning-chain-failure/result.md)
+- `surface-review` **review-sprint-planning-chain-security** — passed — [result.md](jobs/review-sprint-planning-chain-security/result.md)
+- `surface-review` **review-sprint-planning-chain-verification** — passed — [result.md](jobs/review-sprint-planning-chain-verification/result.md)
+- `surface-review` **review-sprint-qa-investigation-adversarial** — passed — [result.md](jobs/review-sprint-qa-investigation-adversarial/result.md)
+- `surface-review` **review-sprint-qa-investigation-correctness** — passed — [result.md](jobs/review-sprint-qa-investigation-correctness/result.md)
+- `surface-review` **review-sprint-qa-investigation-failure** — passed — [result.md](jobs/review-sprint-qa-investigation-failure/result.md)
+- `surface-review` **review-sprint-qa-investigation-security** — passed — [result.md](jobs/review-sprint-qa-investigation-security/result.md)
+- `surface-review` **review-sprint-qa-investigation-verification** — passed — [result.md](jobs/review-sprint-qa-investigation-verification/result.md)
+- `surface-review` **review-sprint-smoke-gate-adversarial** — passed — [result.md](jobs/review-sprint-smoke-gate-adversarial/result.md)
+- `surface-review` **review-sprint-smoke-gate-correctness** — passed — [result.md](jobs/review-sprint-smoke-gate-correctness/result.md)
+- `surface-review` **review-sprint-smoke-gate-failure** — passed — [result.md](jobs/review-sprint-smoke-gate-failure/result.md)
+- `surface-review` **review-sprint-smoke-gate-security** — passed — [result.md](jobs/review-sprint-smoke-gate-security/result.md)
+- `surface-review` **review-sprint-smoke-gate-verification** — passed — [result.md](jobs/review-sprint-smoke-gate-verification/result.md)
+- `surface-review` **review-sprint-verify-transition-adversarial** — passed — [result.md](jobs/review-sprint-verify-transition-adversarial/result.md)
+- `surface-review` **review-sprint-verify-transition-correctness** — passed — [result.md](jobs/review-sprint-verify-transition-correctness/result.md)
+- `surface-review` **review-sprint-verify-transition-failure** — passed — [result.md](jobs/review-sprint-verify-transition-failure/result.md)
+- `surface-review` **review-sprint-verify-transition-security** — failed
+- `surface-review` **review-sprint-verify-transition-verification** — failed
+- `surface-review` **review-study-authoring-correctness** — failed
+- `surface-review` **review-study-authoring-failure** — failed
+- `surface-review` **review-study-authoring-security** — failed
+- `surface-review` **review-study-authoring-verification** — failed
+- `surface-review` **review-study-runloop-scheduler-correctness** — failed
+- `surface-review` **review-study-runloop-scheduler-correctness-b** — failed
+- `surface-review` **review-study-runloop-scheduler-failure** — failed
+- `surface-review` **review-study-runloop-scheduler-security** — failed
+- `surface-review` **review-study-runloop-scheduler-security-b** — failed
+- `surface-review` **review-study-runloop-scheduler-verification** — failed
+- `surface-review` **review-study-task-execution-adversarial** — failed
+- `surface-review` **review-study-task-execution-correctness** — failed
+- `surface-review` **review-study-task-execution-failure** — failed
+- `surface-review` **review-study-task-execution-security** — failed
+- `surface-review` **review-study-task-execution-verification** — failed
+- `surface-review` **review-tui-console-correctness** — failed
+- `surface-review` **review-tui-console-failure** — failed
+- `surface-review` **review-tui-console-security** — failed
+- `surface-review` **review-tui-console-verification** — failed
+- `surface-review` **review-web-operation-hub-sse-adversarial** — failed
+- `surface-review` **review-web-operation-hub-sse-correctness** — failed
+- `surface-review` **review-web-operation-hub-sse-failure** — failed
+- `surface-review` **review-web-operation-hub-sse-security** — failed
+- `surface-review` **review-web-operation-hub-sse-verification** — failed
+- `surface-review` **review-web-routing-projection-adversarial** — failed
+- `surface-review` **review-web-routing-projection-correctness** — failed
+- `surface-review` **review-web-routing-projection-failure** — failed
+- `surface-review` **review-web-routing-projection-security** — failed
+- `surface-review` **review-web-routing-projection-verification** — failed
+- `surface-review` **review-web-security-boundary-adversarial** — failed
+- `surface-review` **review-web-security-boundary-correctness** — failed
+- `surface-review` **review-web-security-boundary-failure** — failed
+- `surface-review` **review-web-security-boundary-security** — failed
+- `surface-review` **review-web-security-boundary-verification** — failed
+- `surface-review` **review-workspace-scaffold-defaults-correctness** — failed
+- `surface-review` **review-workspace-scaffold-defaults-failure** — failed
+- `surface-review` **review-workspace-scaffold-defaults-security** — failed
+- `surface-review` **review-workspace-scaffold-defaults-verification** — failed
 - `seam` **seam-agent-runtime-seam-fakes** — pending
 - `seam` **seam-atomicity-tier-divergence** — pending
 - `seam` **seam-cancellation-reason-parity** — pending

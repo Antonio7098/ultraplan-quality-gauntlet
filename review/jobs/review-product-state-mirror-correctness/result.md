@@ -1,0 +1,10 @@
+Now I'll build a fixture workspace to exercise the migrate command and store behavior empirically.Dry-run empirically mutates an existing DB's schema. Now testing dry-run when no DB exists, plus failure-classification cases:Now demonstrating the split-read tear mechanism in `Store.Load` (two autocommit statements, no read transaction):The torn-read mechanism is confirmed. Let me verify the authority-flip end-to-end through a real command, and check `RestoreBackup` interplay:All experiments done. Checking the gauntlet's artifact conventions before writing findings:All verification complete. Writing the review result:Target tree clean — no modifications. Review complete; result written to `review/jobs/review-product-state-mirror-correctness/result.md`.
+
+**4 findings** (all probe-verified against the frozen commit, zero test coverage existed on this surface):
+
+- **F1 (MEDIUM/HIGH)** — `Store.Load` reads header and items as two autocommit snapshots (`store.go:129-147`); a concurrent Save tearing between them yields a record that never existed, silently passing study validation and feeding mixed state to gates. Demonstrated live.
+- **F2 (LOW-MEDIUM/HIGH)** — `storage migrate --dry-run` executes DDL via `Existing→open→createSchema`, recreating dropped product tables in an existing DB. Demonstrated live.
+- **F3 (LOW/HIGH)** — dry-run text summary prints would-imports as `"3 imported"`.
+- **F4 (LOW-MEDIUM/HIGH)** — corrupt authoritative row + row-presence skip gate + never-verified hash columns = permanently bricked record with valid checkpoint ignored and no shipped repair path. Demonstrated via `study alpha status` failing while migrate reports the bad row `skipped`.
+
+**9 defended non-issues**, including: the silent-sprint-skip guard is unreachable for discovered sprints (lexical containment), DSN survives spaces/`#` in paths, duplicate-key collapse is blocked by upstream validators, and Ensure-created DBs are 0600 regardless of umask.

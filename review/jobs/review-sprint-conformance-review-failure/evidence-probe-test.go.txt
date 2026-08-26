@@ -1,0 +1,63 @@
+package sprint
+
+import (
+	"context"
+	"encoding/json"
+	"os"
+	"path/filepath"
+	"strings"
+	"testing"
+
+	pruntime "github.com/Antonio7098/ultraplan-go/internal/platform/runtime"
+)
+
+type gauntletFindingRuntime struct{ marker string }
+
+func (r *gauntletFindingRuntime) StartRun(_ context.Context, req pruntime.Request) (pruntime.Result, error) {
+	finding := ReviewFinding{
+		ID:            "F-1-" + req.Metadata["coverage"],
+		Severity:      "low",
+		Applicability: "direct",
+		Title:         "Leftover marker in changed file",
+		Detail:        "The changed file still contains a " + r.marker + " comment that must be resolved before delivery.",
+		Action:        "Remove the leftover marker and rerun verification.",
+		Citations: []ReviewCitation{{
+			Path:      ArtifactRelPath(Sprint{Project: "proj", Slug: "01-alpha"}, StageRequirements),
+			StartLine: 1,
+			EndLine:   1,
+		}},
+	}
+	data, _ := json.Marshal(ReviewCoverageResult{SchemaVersion: 1, CoverageID: req.Metadata["coverage"], Applicability: "direct", Summary: "Checked the delivered scope.", Findings: []ReviewFinding{finding}})
+	return pruntime.Result{Status: "success", Events: []pruntime.Event{{Type: "message", Payload: map[string]any{"content": string(data)}}}, Permissions: pruntime.PermissionSummary{Mode: "restricted", Default: "deny"}}, nil
+}
+
+func TestGauntletMarkerFindingCompletion(t *testing.T) {
+	marker := os.Getenv("GAUNTLET_MARKER")
+	if marker == "" {
+		marker = "followup-note"
+	}
+	root, _ := reviewFixture(t)
+	rt := &gauntletFindingRuntime{marker: marker}
+	service := NewService(root).WithRuntime(rt).WithStageRuntime(map[PlanningStage]StageRuntime{StageReview: {Model: "openai/gpt-5.6"}})
+	result, err := service.Review(context.Background(), "proj", "01-alpha", ReviewRequest{})
+	t.Logf("marker=%q status=%s verdict=%s err=%v", marker, result.Status, result.Verdict, err)
+	for _, d := range result.Diagnostics {
+		t.Logf("diagnostic %s: %s", d.Code, d.Message)
+	}
+	artifact := filepath.Join(root, filepath.FromSlash(result.Artifact))
+	data, readErr := os.ReadFile(artifact)
+	t.Logf("artifact exists=%v readErr=%v bytes=%d", result.Artifact != "" && !os.IsNotExist(readErr), readErr, len(data))
+	state, stateErr := LoadFlowState(root, Sprint{Project: "proj", Slug: "01-alpha", Path: filepath.Join(root, "projects", "proj", "sprints", "01-alpha")})
+	if stateErr == nil && state.Review != nil {
+		t.Logf("flow review status=%s verdict=%s lastAttempt=%+v", state.Review.Status, state.Review.Verdict, func() any {
+			if state.Review.LastAttempt != nil {
+				return *state.Review.LastAttempt
+			}
+			return nil
+		}())
+	}
+	if marker == "todo" && (result.Status != ReviewFailed || len(result.Findings) != 1) {
+		t.Fatalf("expected todo finding to block completion, got status=%s findings=%d", result.Status, len(result.Findings))
+	}
+	_ = strings.TrimSpace
+}

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "created_at": "2026-08-25T10:45:55.293948806Z",
-  "updated_at": "2026-08-25T17:39:27.467908891Z",
+  "updated_at": "2026-08-26T14:11:03.202824177Z",
   "model": "openrouter/stealth/ox-alpha",
   "target": {
     "label": "ultraplan-go",
-    "commit": "50d6f0d25ff273f4cb956f11e6030376108110bc",
+    "commit": "c6f01cf8ebfcfea19fe771dbf7552d838e3b8ca0",
     "dirty": true
   },
   "workspace": {
@@ -1445,10 +1445,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "run-journal-fencing",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-journal-fencing"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:14:08.908548256Z",
+          "finished_at": "2026-08-25T23:35:18.811272192Z",
+          "last_activity": "2026-08-25T23:35:18.811272192Z",
+          "runtime_run_id": "opencode-33",
+          "prompt_path": "jobs/review-run-journal-fencing-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-journal-fencing-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-run-journal-fencing-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-journal-fencing-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-journal-fencing-correctness/result.md"
     },
     {
       "id": "review-run-journal-fencing-failure",
@@ -1458,10 +1473,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "run-journal-fencing",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-journal-fencing"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:08:58.259184759Z",
+          "finished_at": "2026-08-25T23:21:59.533076573Z",
+          "last_activity": "2026-08-25T23:21:59.533076573Z",
+          "runtime_run_id": "opencode-31",
+          "prompt_path": "jobs/review-run-journal-fencing-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-journal-fencing-failure/attempt-01-result.md",
+          "events_path": "jobs/review-run-journal-fencing-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-journal-fencing-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-journal-fencing-failure/result.md"
     },
     {
       "id": "review-run-journal-fencing-security",
@@ -1471,10 +1501,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "run-journal-fencing",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-journal-fencing"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:35:18.82603288Z",
+          "finished_at": "2026-08-25T23:57:00.505287776Z",
+          "last_activity": "2026-08-25T23:57:00.505287776Z",
+          "runtime_run_id": "opencode-36",
+          "prompt_path": "jobs/review-run-journal-fencing-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-journal-fencing-security/attempt-01-result.md",
+          "events_path": "jobs/review-run-journal-fencing-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-journal-fencing-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-journal-fencing-security/result.md"
     },
     {
       "id": "review-run-journal-fencing-verification",
@@ -1484,10 +1529,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "run-journal-fencing",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-journal-fencing"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:36:29.778830046Z",
+          "finished_at": "2026-08-25T23:50:47.225481667Z",
+          "last_activity": "2026-08-25T23:50:47.225481667Z",
+          "runtime_run_id": "opencode-37",
+          "prompt_path": "jobs/review-run-journal-fencing-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-journal-fencing-verification/attempt-01-result.md",
+          "events_path": "jobs/review-run-journal-fencing-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-journal-fencing-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-journal-fencing-verification/result.md"
     },
     {
       "id": "review-run-journal-fencing-correctness-b",
@@ -1497,10 +1557,25 @@
       "lens": "Independent correctness review. Do not assume another reviewer exists; reconstruct the surface and try to disprove its behavioural guarantees from scratch.",
       "surface_id": "run-journal-fencing",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-journal-fencing"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:21:59.548719839Z",
+          "finished_at": "2026-08-25T23:36:29.764192279Z",
+          "last_activity": "2026-08-25T23:36:29.764192279Z",
+          "runtime_run_id": "opencode-34",
+          "prompt_path": "jobs/review-run-journal-fencing-correctness-b/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-journal-fencing-correctness-b/attempt-01-result.md",
+          "events_path": "jobs/review-run-journal-fencing-correctness-b/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-journal-fencing-correctness-b/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-journal-fencing-correctness-b/result.md"
     },
     {
       "id": "review-run-journal-fencing-security-b",
@@ -1510,10 +1585,25 @@
       "lens": "Independent adversarial security review. Require a concrete attacker-controlled source, path, sink/consequence, and missing control before calling something exploitable.",
       "surface_id": "run-journal-fencing",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-journal-fencing"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:26:10.560240065Z",
+          "finished_at": "2026-08-25T23:49:50.059262725Z",
+          "last_activity": "2026-08-25T23:49:50.059262725Z",
+          "runtime_run_id": "opencode-35",
+          "prompt_path": "jobs/review-run-journal-fencing-security-b/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-journal-fencing-security-b/attempt-01-result.md",
+          "events_path": "jobs/review-run-journal-fencing-security-b/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-journal-fencing-security-b/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-journal-fencing-security-b/result.md"
     },
     {
       "id": "context-run-recovery-retention",
@@ -1547,10 +1637,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "run-recovery-retention",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-recovery-retention"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T00:11:30.795885098Z",
+          "finished_at": "2026-08-26T00:34:24.220848742Z",
+          "last_activity": "2026-08-26T00:34:24.220848742Z",
+          "runtime_run_id": "opencode-41",
+          "prompt_path": "jobs/review-run-recovery-retention-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-recovery-retention-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-run-recovery-retention-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-recovery-retention-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-recovery-retention-correctness/result.md"
     },
     {
       "id": "review-run-recovery-retention-failure",
@@ -1560,10 +1665,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "run-recovery-retention",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-recovery-retention"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T00:13:51.800552955Z",
+          "finished_at": "2026-08-26T00:26:30.908056441Z",
+          "last_activity": "2026-08-26T00:26:30.908056441Z",
+          "runtime_run_id": "opencode-42",
+          "prompt_path": "jobs/review-run-recovery-retention-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-recovery-retention-failure/attempt-01-result.md",
+          "events_path": "jobs/review-run-recovery-retention-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-recovery-retention-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-recovery-retention-failure/result.md"
     },
     {
       "id": "review-run-recovery-retention-security",
@@ -1573,10 +1693,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "run-recovery-retention",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-recovery-retention"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T00:26:30.922144002Z",
+          "finished_at": "2026-08-26T00:40:37.113222078Z",
+          "last_activity": "2026-08-26T00:40:37.113222078Z",
+          "runtime_run_id": "opencode-43",
+          "prompt_path": "jobs/review-run-recovery-retention-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-recovery-retention-security/attempt-01-result.md",
+          "events_path": "jobs/review-run-recovery-retention-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-recovery-retention-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-recovery-retention-security/result.md"
     },
     {
       "id": "review-run-recovery-retention-verification",
@@ -1586,10 +1721,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "run-recovery-retention",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-recovery-retention"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:57:00.522062193Z",
+          "finished_at": "2026-08-26T00:11:30.780963632Z",
+          "last_activity": "2026-08-26T00:11:30.780963632Z",
+          "runtime_run_id": "opencode-40",
+          "prompt_path": "jobs/review-run-recovery-retention-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-recovery-retention-verification/attempt-01-result.md",
+          "events_path": "jobs/review-run-recovery-retention-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-recovery-retention-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-recovery-retention-verification/result.md"
     },
     {
       "id": "review-run-recovery-retention-adversarial",
@@ -1599,10 +1749,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "run-recovery-retention",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-recovery-retention"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:49:50.075402938Z",
+          "finished_at": "2026-08-26T00:13:51.78472432Z",
+          "last_activity": "2026-08-26T00:13:51.78472432Z",
+          "runtime_run_id": "opencode-38",
+          "prompt_path": "jobs/review-run-recovery-retention-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-recovery-retention-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-run-recovery-retention-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-recovery-retention-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-recovery-retention-adversarial/result.md"
     },
     {
       "id": "context-durable-operation-spine",
@@ -1650,10 +1815,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "durable-operation-spine",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-durable-operation-spine"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T18:44:17.402949154Z",
+          "finished_at": "2026-08-25T19:03:42.592659169Z",
+          "last_activity": "2026-08-25T19:03:42.592659169Z",
+          "runtime_run_id": "opencode-12",
+          "prompt_path": "jobs/review-durable-operation-spine-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-durable-operation-spine-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-durable-operation-spine-correctness/result.md"
     },
     {
       "id": "review-durable-operation-spine-failure",
@@ -1663,10 +1843,38 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "durable-operation-spine",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-durable-operation-spine"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T19:03:42.615140351Z",
+          "finished_at": "2026-08-25T20:09:24.277128247Z",
+          "last_activity": "2026-08-25T20:09:24.277128247Z",
+          "error_category": "orchestrator_interrupted",
+          "error": "previous orchestrator exited while this task was running; AgentWrap process ownership was lost",
+          "prompt_path": "jobs/review-durable-operation-spine-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-failure/attempt-01-result.md",
+          "events_path": "jobs/review-durable-operation-spine-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-failure/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-25T21:41:54.324454065Z",
+          "finished_at": "2026-08-25T22:21:11.710441946Z",
+          "last_activity": "2026-08-25T22:21:11.710441946Z",
+          "runtime_run_id": "opencode-18",
+          "prompt_path": "jobs/review-durable-operation-spine-failure/attempt-02-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-failure/attempt-02-result.md",
+          "events_path": "jobs/review-durable-operation-spine-failure/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-failure/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-durable-operation-spine-failure/result.md"
     },
     {
       "id": "review-durable-operation-spine-security",
@@ -1676,10 +1884,38 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "durable-operation-spine",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-durable-operation-spine"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T19:05:30.495508776Z",
+          "finished_at": "2026-08-25T20:09:24.277128247Z",
+          "last_activity": "2026-08-25T20:09:24.277128247Z",
+          "error_category": "orchestrator_interrupted",
+          "error": "previous orchestrator exited while this task was running; AgentWrap process ownership was lost",
+          "prompt_path": "jobs/review-durable-operation-spine-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-security/attempt-01-result.md",
+          "events_path": "jobs/review-durable-operation-spine-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-security/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-25T20:09:28.511154576Z",
+          "finished_at": "2026-08-25T20:24:32.565751858Z",
+          "last_activity": "2026-08-25T20:24:32.565751858Z",
+          "runtime_run_id": "opencode-1",
+          "prompt_path": "jobs/review-durable-operation-spine-security/attempt-02-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-security/attempt-02-result.md",
+          "events_path": "jobs/review-durable-operation-spine-security/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-security/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-durable-operation-spine-security/result.md"
     },
     {
       "id": "review-durable-operation-spine-verification",
@@ -1689,10 +1925,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "durable-operation-spine",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-durable-operation-spine"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:47:59.023034534Z",
+          "finished_at": "2026-08-25T22:07:54.425407637Z",
+          "last_activity": "2026-08-25T22:07:54.425407637Z",
+          "runtime_run_id": "opencode-19",
+          "prompt_path": "jobs/review-durable-operation-spine-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-verification/attempt-01-result.md",
+          "events_path": "jobs/review-durable-operation-spine-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-durable-operation-spine-verification/result.md"
     },
     {
       "id": "review-durable-operation-spine-correctness-b",
@@ -1702,10 +1953,38 @@
       "lens": "Independent correctness review. Do not assume another reviewer exists; reconstruct the surface and try to disprove its behavioural guarantees from scratch.",
       "surface_id": "durable-operation-spine",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-durable-operation-spine"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-25T18:52:39.905726607Z",
+          "finished_at": "2026-08-25T20:09:24.277128247Z",
+          "last_activity": "2026-08-25T20:09:24.277128247Z",
+          "error_category": "orchestrator_interrupted",
+          "error": "previous orchestrator exited while this task was running; AgentWrap process ownership was lost",
+          "prompt_path": "jobs/review-durable-operation-spine-correctness-b/attempt-01-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-correctness-b/attempt-01-result.md",
+          "events_path": "jobs/review-durable-operation-spine-correctness-b/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-correctness-b/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-25T20:09:28.513930065Z",
+          "finished_at": "2026-08-25T20:31:57.484795353Z",
+          "last_activity": "2026-08-25T20:31:57.484795353Z",
+          "runtime_run_id": "opencode-2",
+          "prompt_path": "jobs/review-durable-operation-spine-correctness-b/attempt-02-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-correctness-b/attempt-02-result.md",
+          "events_path": "jobs/review-durable-operation-spine-correctness-b/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-correctness-b/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-durable-operation-spine-correctness-b/result.md"
     },
     {
       "id": "review-durable-operation-spine-security-b",
@@ -1715,10 +1994,25 @@
       "lens": "Independent adversarial security review. Require a concrete attacker-controlled source, path, sink/consequence, and missing control before calling something exploitable.",
       "surface_id": "durable-operation-spine",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-durable-operation-spine"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:51:34.338531405Z",
+          "finished_at": "2026-08-25T22:07:49.875624869Z",
+          "last_activity": "2026-08-25T22:07:49.875624869Z",
+          "runtime_run_id": "opencode-20",
+          "prompt_path": "jobs/review-durable-operation-spine-security-b/attempt-01-prompt.md",
+          "result_path": "jobs/review-durable-operation-spine-security-b/attempt-01-result.md",
+          "events_path": "jobs/review-durable-operation-spine-security-b/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-durable-operation-spine-security-b/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-durable-operation-spine-security-b/result.md"
     },
     {
       "id": "context-product-state-mirror",
@@ -1752,10 +2046,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "product-state-mirror",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-product-state-mirror"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:15:01.77590165Z",
+          "finished_at": "2026-08-25T21:35:22.667124224Z",
+          "last_activity": "2026-08-25T21:35:22.667124224Z",
+          "runtime_run_id": "opencode-13",
+          "prompt_path": "jobs/review-product-state-mirror-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-product-state-mirror-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-product-state-mirror-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-product-state-mirror-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-product-state-mirror-correctness/result.md"
     },
     {
       "id": "review-product-state-mirror-failure",
@@ -1765,10 +2074,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "product-state-mirror",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-product-state-mirror"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:18:43.31959187Z",
+          "finished_at": "2026-08-25T21:39:30.559466653Z",
+          "last_activity": "2026-08-25T21:39:30.559466653Z",
+          "runtime_run_id": "opencode-14",
+          "prompt_path": "jobs/review-product-state-mirror-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-product-state-mirror-failure/attempt-01-result.md",
+          "events_path": "jobs/review-product-state-mirror-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-product-state-mirror-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-product-state-mirror-failure/result.md"
     },
     {
       "id": "review-product-state-mirror-security",
@@ -1778,10 +2102,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "product-state-mirror",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-product-state-mirror"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:27:40.02129Z",
+          "finished_at": "2026-08-25T21:41:54.307421237Z",
+          "last_activity": "2026-08-25T21:41:54.307421237Z",
+          "runtime_run_id": "opencode-15",
+          "prompt_path": "jobs/review-product-state-mirror-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-product-state-mirror-security/attempt-01-result.md",
+          "events_path": "jobs/review-product-state-mirror-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-product-state-mirror-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-product-state-mirror-security/result.md"
     },
     {
       "id": "review-product-state-mirror-verification",
@@ -1791,10 +2130,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "product-state-mirror",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-product-state-mirror"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:13:24.727410189Z",
+          "finished_at": "2026-08-25T21:27:40.001271181Z",
+          "last_activity": "2026-08-25T21:27:40.001271181Z",
+          "runtime_run_id": "opencode-12",
+          "prompt_path": "jobs/review-product-state-mirror-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-product-state-mirror-verification/attempt-01-result.md",
+          "events_path": "jobs/review-product-state-mirror-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-product-state-mirror-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-product-state-mirror-verification/result.md"
     },
     {
       "id": "review-product-state-mirror-adversarial",
@@ -1804,10 +2158,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "product-state-mirror",
       "domain_id": "durability-core",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-product-state-mirror"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T20:24:32.586477891Z",
+          "finished_at": "2026-08-25T20:39:10.783719197Z",
+          "last_activity": "2026-08-25T20:39:10.783719197Z",
+          "runtime_run_id": "opencode-4",
+          "prompt_path": "jobs/review-product-state-mirror-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-product-state-mirror-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-product-state-mirror-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-product-state-mirror-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-product-state-mirror-adversarial/result.md"
     },
     {
       "id": "context-study-authoring",
@@ -1841,9 +2210,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "study-authoring",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-authoring"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:56:20.074871008Z",
+          "finished_at": "2026-08-26T13:56:38.831523151Z",
+          "last_activity": "2026-08-26T13:56:38.831523151Z",
+          "runtime_run_id": "opencode-35",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-authoring-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-authoring-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-study-authoring-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-correctness/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -1854,9 +2239,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "study-authoring",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-authoring"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:56:57.969105429Z",
+          "finished_at": "2026-08-26T13:57:13.671730582Z",
+          "last_activity": "2026-08-26T13:57:13.671730582Z",
+          "runtime_run_id": "opencode-39",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-authoring-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-authoring-failure/attempt-01-result.md",
+          "events_path": "jobs/review-study-authoring-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-failure/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -1867,9 +2268,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "study-authoring",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-authoring"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:57:13.689181249Z",
+          "finished_at": "2026-08-26T13:57:31.608047871Z",
+          "last_activity": "2026-08-26T13:57:31.608047871Z",
+          "runtime_run_id": "opencode-41",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-authoring-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-authoring-security/attempt-01-result.md",
+          "events_path": "jobs/review-study-authoring-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -1880,9 +2297,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "study-authoring",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-authoring"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:57:31.624683348Z",
+          "finished_at": "2026-08-26T13:57:50.336074708Z",
+          "last_activity": "2026-08-26T13:57:50.336074708Z",
+          "runtime_run_id": "opencode-43",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-authoring-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-authoring-verification/attempt-01-result.md",
+          "events_path": "jobs/review-study-authoring-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -1917,9 +2350,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "study-task-execution",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-task-execution"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:58:12.972416275Z",
+          "finished_at": "2026-08-26T13:58:31.732311788Z",
+          "last_activity": "2026-08-26T13:58:31.732311788Z",
+          "runtime_run_id": "opencode-47",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-task-execution-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-task-execution-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-study-task-execution-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-correctness/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -1930,9 +2379,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "study-task-execution",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-task-execution"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:58:52.179222583Z",
+          "finished_at": "2026-08-26T13:59:13.079556871Z",
+          "last_activity": "2026-08-26T13:59:13.079556871Z",
+          "runtime_run_id": "opencode-52",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-task-execution-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-task-execution-failure/attempt-01-result.md",
+          "events_path": "jobs/review-study-task-execution-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-failure/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -1943,9 +2408,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "study-task-execution",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-task-execution"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:59:12.010971196Z",
+          "finished_at": "2026-08-26T13:59:31.743254775Z",
+          "last_activity": "2026-08-26T13:59:31.743254775Z",
+          "runtime_run_id": "opencode-55",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-task-execution-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-task-execution-security/attempt-01-result.md",
+          "events_path": "jobs/review-study-task-execution-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -1956,9 +2437,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "study-task-execution",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-task-execution"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:59:53.111336682Z",
+          "finished_at": "2026-08-26T14:00:13.028775917Z",
+          "last_activity": "2026-08-26T14:00:13.028775917Z",
+          "runtime_run_id": "opencode-64",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-task-execution-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-task-execution-verification/attempt-01-result.md",
+          "events_path": "jobs/review-study-task-execution-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -1969,9 +2466,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "study-task-execution",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-task-execution"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:59:13.094305065Z",
+          "finished_at": "2026-08-26T13:59:33.08085028Z",
+          "last_activity": "2026-08-26T13:59:33.08085028Z",
+          "runtime_run_id": "opencode-56",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-task-execution-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-task-execution-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-study-task-execution-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-adversarial/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2006,9 +2519,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "study-runloop-scheduler",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-runloop-scheduler"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:58:31.744450031Z",
+          "finished_at": "2026-08-26T13:58:52.151887775Z",
+          "last_activity": "2026-08-26T13:58:52.151887775Z",
+          "runtime_run_id": "opencode-49",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-correctness/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2019,9 +2548,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "study-runloop-scheduler",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-runloop-scheduler"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:25:27.317317294Z",
+          "finished_at": "2026-08-26T13:59:11.987130745Z",
+          "last_activity": "2026-08-26T13:59:11.987130745Z",
+          "runtime_run_id": "opencode-51",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-failure/attempt-01-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-failure/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2032,9 +2577,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "study-runloop-scheduler",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-runloop-scheduler"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:56:38.850819799Z",
+          "finished_at": "2026-08-26T13:56:57.952874125Z",
+          "last_activity": "2026-08-26T13:56:57.952874125Z",
+          "runtime_run_id": "opencode-37",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-security/attempt-01-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2045,9 +2606,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "study-runloop-scheduler",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-runloop-scheduler"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:12:20.838972752Z",
+          "finished_at": "2026-08-26T13:55:32.406000905Z",
+          "last_activity": "2026-08-26T13:55:32.406000905Z",
+          "runtime_run_id": "opencode-29",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-verification/attempt-01-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2058,9 +2635,25 @@
       "lens": "Independent correctness review. Do not assume another reviewer exists; reconstruct the surface and try to disprove its behavioural guarantees from scratch.",
       "surface_id": "study-runloop-scheduler",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-runloop-scheduler"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:01:06.57408527Z",
+          "finished_at": "2026-08-26T14:11:03.202730238Z",
+          "last_activity": "2026-08-26T14:11:03.202730238Z",
+          "runtime_run_id": "policy-26",
+          "error_category": "cancellation",
+          "error": "idle watchdog: no AgentWrap event for 20m0s",
+          "prompt_path": "jobs/review-study-runloop-scheduler-correctness-b/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-correctness-b/attempt-01-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-correctness-b/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-correctness-b/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2071,9 +2664,25 @@
       "lens": "Independent adversarial security review. Require a concrete attacker-controlled source, path, sink/consequence, and missing control before calling something exploitable.",
       "surface_id": "study-runloop-scheduler",
       "domain_id": "study-analysis",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-study-runloop-scheduler"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:57:50.352173872Z",
+          "finished_at": "2026-08-26T13:58:12.946218869Z",
+          "last_activity": "2026-08-26T13:58:12.946218869Z",
+          "runtime_run_id": "opencode-45",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-security-b/attempt-01-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-security-b/attempt-01-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-security-b/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-security-b/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2108,10 +2717,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "sprint-planning-chain",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-planning-chain"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T10:33:08.464315658Z",
+          "finished_at": "2026-08-26T10:54:45.306996381Z",
+          "last_activity": "2026-08-26T10:54:45.306996381Z",
+          "runtime_run_id": "opencode-8",
+          "prompt_path": "jobs/review-sprint-planning-chain-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-planning-chain-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-planning-chain-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-planning-chain-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-planning-chain-correctness/result.md"
     },
     {
       "id": "review-sprint-planning-chain-failure",
@@ -2121,10 +2745,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "sprint-planning-chain",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-planning-chain"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T10:34:07.499220383Z",
+          "finished_at": "2026-08-26T10:54:32.954942532Z",
+          "last_activity": "2026-08-26T10:54:32.954942532Z",
+          "runtime_run_id": "opencode-9",
+          "prompt_path": "jobs/review-sprint-planning-chain-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-planning-chain-failure/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-planning-chain-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-planning-chain-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-planning-chain-failure/result.md"
     },
     {
       "id": "review-sprint-planning-chain-security",
@@ -2134,10 +2773,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "sprint-planning-chain",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-planning-chain"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T10:47:24.41306448Z",
+          "finished_at": "2026-08-26T11:11:43.856271504Z",
+          "last_activity": "2026-08-26T11:11:43.856271504Z",
+          "runtime_run_id": "opencode-10",
+          "prompt_path": "jobs/review-sprint-planning-chain-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-planning-chain-security/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-planning-chain-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-planning-chain-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-planning-chain-security/result.md"
     },
     {
       "id": "review-sprint-planning-chain-verification",
@@ -2147,10 +2801,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "sprint-planning-chain",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-planning-chain"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T10:54:32.979539712Z",
+          "finished_at": "2026-08-26T11:24:52.079005301Z",
+          "last_activity": "2026-08-26T11:24:52.079005301Z",
+          "runtime_run_id": "opencode-11",
+          "prompt_path": "jobs/review-sprint-planning-chain-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-planning-chain-verification/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-planning-chain-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-planning-chain-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-planning-chain-verification/result.md"
     },
     {
       "id": "review-sprint-planning-chain-adversarial",
@@ -2160,10 +2829,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "sprint-planning-chain",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-planning-chain"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T10:20:31.137356959Z",
+          "finished_at": "2026-08-26T10:47:24.388192085Z",
+          "last_activity": "2026-08-26T10:47:24.388192085Z",
+          "runtime_run_id": "opencode-7",
+          "prompt_path": "jobs/review-sprint-planning-chain-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-planning-chain-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-planning-chain-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-planning-chain-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-planning-chain-adversarial/result.md"
     },
     {
       "id": "context-sprint-execute-resume",
@@ -2197,10 +2881,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "sprint-execute-resume",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-execute-resume"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T08:03:24.582581343Z",
+          "finished_at": "2026-08-26T08:47:32.132635371Z",
+          "last_activity": "2026-08-26T08:47:32.132635371Z",
+          "runtime_run_id": "opencode-55",
+          "prompt_path": "jobs/review-sprint-execute-resume-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-execute-resume-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-execute-resume-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-execute-resume-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-execute-resume-correctness/result.md"
     },
     {
       "id": "review-sprint-execute-resume-failure",
@@ -2210,10 +2909,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "sprint-execute-resume",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-execute-resume"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T08:22:29.130859556Z",
+          "finished_at": "2026-08-26T08:49:56.092293169Z",
+          "last_activity": "2026-08-26T08:49:56.092293169Z",
+          "runtime_run_id": "opencode-57",
+          "prompt_path": "jobs/review-sprint-execute-resume-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-execute-resume-failure/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-execute-resume-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-execute-resume-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-execute-resume-failure/result.md"
     },
     {
       "id": "review-sprint-execute-resume-security",
@@ -2223,10 +2937,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "sprint-execute-resume",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-execute-resume"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T08:47:32.157092972Z",
+          "finished_at": "2026-08-26T09:07:05.315770172Z",
+          "last_activity": "2026-08-26T09:07:05.315770172Z",
+          "runtime_run_id": "opencode-58",
+          "prompt_path": "jobs/review-sprint-execute-resume-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-execute-resume-security/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-execute-resume-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-execute-resume-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-execute-resume-security/result.md"
     },
     {
       "id": "review-sprint-execute-resume-verification",
@@ -2236,10 +2965,38 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "sprint-execute-resume",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-execute-resume"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T08:47:45.620236129Z",
+          "finished_at": "2026-08-26T09:41:03.869486259Z",
+          "last_activity": "2026-08-26T09:41:03.869486259Z",
+          "error_category": "orchestrator_interrupted",
+          "error": "previous orchestrator exited while this task was running; AgentWrap process ownership was lost",
+          "prompt_path": "jobs/review-sprint-execute-resume-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-execute-resume-verification/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-execute-resume-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-execute-resume-verification/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-26T10:08:27.713253173Z",
+          "finished_at": "2026-08-26T10:34:07.475330516Z",
+          "last_activity": "2026-08-26T10:34:07.475330516Z",
+          "runtime_run_id": "opencode-5",
+          "prompt_path": "jobs/review-sprint-execute-resume-verification/attempt-02-prompt.md",
+          "result_path": "jobs/review-sprint-execute-resume-verification/attempt-02-result.md",
+          "events_path": "jobs/review-sprint-execute-resume-verification/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-execute-resume-verification/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-execute-resume-verification/result.md"
     },
     {
       "id": "review-sprint-execute-resume-adversarial",
@@ -2249,10 +3006,39 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "sprint-execute-resume",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-execute-resume"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T01:53:59.166176899Z",
+          "finished_at": "2026-08-26T08:03:24.559983523Z",
+          "last_activity": "2026-08-26T08:03:24.559983523Z",
+          "runtime_run_id": "policy-54",
+          "error_category": "cancellation",
+          "error": "idle watchdog: no AgentWrap event for 20m0s",
+          "prompt_path": "jobs/review-sprint-execute-resume-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-execute-resume-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-execute-resume-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-execute-resume-adversarial/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-26T09:59:44.870828135Z",
+          "finished_at": "2026-08-26T10:20:31.112037518Z",
+          "last_activity": "2026-08-26T10:20:31.112037518Z",
+          "runtime_run_id": "opencode-4",
+          "prompt_path": "jobs/review-sprint-execute-resume-adversarial/attempt-02-prompt.md",
+          "result_path": "jobs/review-sprint-execute-resume-adversarial/attempt-02-result.md",
+          "events_path": "jobs/review-sprint-execute-resume-adversarial/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-execute-resume-adversarial/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-execute-resume-adversarial/result.md"
     },
     {
       "id": "context-sprint-conformance-review",
@@ -2286,10 +3072,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "sprint-conformance-review",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-conformance-review"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T01:04:42.952765768Z",
+          "finished_at": "2026-08-26T01:32:42.971444812Z",
+          "last_activity": "2026-08-26T01:32:42.971444812Z",
+          "runtime_run_id": "opencode-49",
+          "prompt_path": "jobs/review-sprint-conformance-review-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-conformance-review-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-conformance-review-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-conformance-review-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-conformance-review-correctness/result.md"
     },
     {
       "id": "review-sprint-conformance-review-failure",
@@ -2299,10 +3100,39 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "sprint-conformance-review",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-conformance-review"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T01:41:43.155147314Z",
+          "finished_at": "2026-08-26T08:22:29.107466122Z",
+          "last_activity": "2026-08-26T08:22:29.107466122Z",
+          "runtime_run_id": "policy-52",
+          "error_category": "cancellation",
+          "error": "idle watchdog: no AgentWrap event for 20m0s",
+          "prompt_path": "jobs/review-sprint-conformance-review-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-conformance-review-failure/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-conformance-review-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-conformance-review-failure/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-26T09:41:06.357359547Z",
+          "finished_at": "2026-08-26T10:08:27.695482586Z",
+          "last_activity": "2026-08-26T10:08:27.695482586Z",
+          "runtime_run_id": "opencode-1",
+          "prompt_path": "jobs/review-sprint-conformance-review-failure/attempt-02-prompt.md",
+          "result_path": "jobs/review-sprint-conformance-review-failure/attempt-02-result.md",
+          "events_path": "jobs/review-sprint-conformance-review-failure/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-conformance-review-failure/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-conformance-review-failure/result.md"
     },
     {
       "id": "review-sprint-conformance-review-security",
@@ -2312,10 +3142,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "sprint-conformance-review",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-conformance-review"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T01:32:42.987976529Z",
+          "finished_at": "2026-08-26T01:53:59.151016921Z",
+          "last_activity": "2026-08-26T01:53:59.151016921Z",
+          "runtime_run_id": "opencode-51",
+          "prompt_path": "jobs/review-sprint-conformance-review-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-conformance-review-security/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-conformance-review-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-conformance-review-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-conformance-review-security/result.md"
     },
     {
       "id": "review-sprint-conformance-review-verification",
@@ -2325,10 +3170,39 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "sprint-conformance-review",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-conformance-review"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T01:48:04.703810543Z",
+          "finished_at": "2026-08-26T08:07:48.396541821Z",
+          "last_activity": "2026-08-26T08:07:48.396541821Z",
+          "runtime_run_id": "policy-53",
+          "error_category": "cancellation",
+          "error": "idle watchdog: no AgentWrap event for 20m0s",
+          "prompt_path": "jobs/review-sprint-conformance-review-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-conformance-review-verification/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-conformance-review-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-conformance-review-verification/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-26T09:41:06.363824414Z",
+          "finished_at": "2026-08-26T10:10:39.05936866Z",
+          "last_activity": "2026-08-26T10:10:39.05936866Z",
+          "runtime_run_id": "opencode-3",
+          "prompt_path": "jobs/review-sprint-conformance-review-verification/attempt-02-prompt.md",
+          "result_path": "jobs/review-sprint-conformance-review-verification/attempt-02-result.md",
+          "events_path": "jobs/review-sprint-conformance-review-verification/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-conformance-review-verification/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-conformance-review-verification/result.md"
     },
     {
       "id": "review-sprint-conformance-review-adversarial",
@@ -2338,10 +3212,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "sprint-conformance-review",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-conformance-review"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T01:17:42.290208525Z",
+          "finished_at": "2026-08-26T01:48:04.688908636Z",
+          "last_activity": "2026-08-26T01:48:04.688908636Z",
+          "runtime_run_id": "opencode-50",
+          "prompt_path": "jobs/review-sprint-conformance-review-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-conformance-review-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-conformance-review-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-conformance-review-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-conformance-review-adversarial/result.md"
     },
     {
       "id": "context-sprint-smoke-gate",
@@ -2375,10 +3264,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "sprint-smoke-gate",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-smoke-gate"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T11:46:05.231535874Z",
+          "finished_at": "2026-08-26T12:14:46.641770679Z",
+          "last_activity": "2026-08-26T12:14:46.641770679Z",
+          "runtime_run_id": "opencode-18",
+          "prompt_path": "jobs/review-sprint-smoke-gate-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-smoke-gate-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-smoke-gate-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-smoke-gate-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-smoke-gate-correctness/result.md"
     },
     {
       "id": "review-sprint-smoke-gate-failure",
@@ -2388,10 +3292,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "sprint-smoke-gate",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-smoke-gate"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T12:01:00.798855758Z",
+          "finished_at": "2026-08-26T12:20:55.65407253Z",
+          "last_activity": "2026-08-26T12:20:55.65407253Z",
+          "runtime_run_id": "opencode-19",
+          "prompt_path": "jobs/review-sprint-smoke-gate-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-smoke-gate-failure/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-smoke-gate-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-smoke-gate-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-smoke-gate-failure/result.md"
     },
     {
       "id": "review-sprint-smoke-gate-security",
@@ -2401,10 +3320,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "sprint-smoke-gate",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-smoke-gate"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T11:24:52.097328256Z",
+          "finished_at": "2026-08-26T11:38:43.743116812Z",
+          "last_activity": "2026-08-26T11:38:43.743116812Z",
+          "runtime_run_id": "opencode-15",
+          "prompt_path": "jobs/review-sprint-smoke-gate-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-smoke-gate-security/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-smoke-gate-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-smoke-gate-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-smoke-gate-security/result.md"
     },
     {
       "id": "review-sprint-smoke-gate-verification",
@@ -2414,10 +3348,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "sprint-smoke-gate",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-smoke-gate"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T12:20:55.672371002Z",
+          "finished_at": "2026-08-26T12:51:43.750746008Z",
+          "last_activity": "2026-08-26T12:51:43.750746008Z",
+          "runtime_run_id": "opencode-22",
+          "prompt_path": "jobs/review-sprint-smoke-gate-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-smoke-gate-verification/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-smoke-gate-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-smoke-gate-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-smoke-gate-verification/result.md"
     },
     {
       "id": "review-sprint-smoke-gate-adversarial",
@@ -2427,10 +3376,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "sprint-smoke-gate",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-smoke-gate"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T11:42:46.927314258Z",
+          "finished_at": "2026-08-26T12:01:00.785583789Z",
+          "last_activity": "2026-08-26T12:01:00.785583789Z",
+          "runtime_run_id": "opencode-17",
+          "prompt_path": "jobs/review-sprint-smoke-gate-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-smoke-gate-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-smoke-gate-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-smoke-gate-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-smoke-gate-adversarial/result.md"
     },
     {
       "id": "context-sprint-verify-transition",
@@ -2464,10 +3428,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "sprint-verify-transition",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-verify-transition"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T12:27:06.10913108Z",
+          "finished_at": "2026-08-26T13:00:00.757202486Z",
+          "last_activity": "2026-08-26T13:00:00.757202486Z",
+          "runtime_run_id": "opencode-23",
+          "prompt_path": "jobs/review-sprint-verify-transition-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-verify-transition-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-verify-transition-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-verify-transition-correctness/result.md"
     },
     {
       "id": "review-sprint-verify-transition-failure",
@@ -2477,10 +3456,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "sprint-verify-transition",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-verify-transition"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T12:51:43.769271048Z",
+          "finished_at": "2026-08-26T13:12:20.823525837Z",
+          "last_activity": "2026-08-26T13:12:20.823525837Z",
+          "runtime_run_id": "opencode-24",
+          "prompt_path": "jobs/review-sprint-verify-transition-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-verify-transition-failure/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-verify-transition-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-verify-transition-failure/result.md"
     },
     {
       "id": "review-sprint-verify-transition-security",
@@ -2490,9 +3484,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "sprint-verify-transition",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-sprint-verify-transition"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:55:32.420638426Z",
+          "finished_at": "2026-08-26T13:56:02.016252454Z",
+          "last_activity": "2026-08-26T13:56:02.016252454Z",
+          "runtime_run_id": "opencode-31",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-sprint-verify-transition-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-verify-transition-security/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-verify-transition-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2503,9 +3513,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "sprint-verify-transition",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-sprint-verify-transition"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:56:02.026794959Z",
+          "finished_at": "2026-08-26T13:56:20.057714094Z",
+          "last_activity": "2026-08-26T13:56:20.057714094Z",
+          "runtime_run_id": "opencode-33",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-sprint-verify-transition-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-verify-transition-verification/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-verify-transition-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2516,10 +3542,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "sprint-verify-transition",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-verify-transition"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T12:14:46.653243961Z",
+          "finished_at": "2026-08-26T13:01:06.550191374Z",
+          "last_activity": "2026-08-26T13:01:06.550191374Z",
+          "runtime_run_id": "opencode-21",
+          "prompt_path": "jobs/review-sprint-verify-transition-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-verify-transition-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-verify-transition-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-verify-transition-adversarial/result.md"
     },
     {
       "id": "context-sprint-qa-investigation",
@@ -2553,10 +3594,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "sprint-qa-investigation",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-qa-investigation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T11:11:43.894853837Z",
+          "finished_at": "2026-08-26T11:46:05.208302354Z",
+          "last_activity": "2026-08-26T11:46:05.208302354Z",
+          "runtime_run_id": "opencode-13",
+          "prompt_path": "jobs/review-sprint-qa-investigation-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-qa-investigation-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-qa-investigation-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-qa-investigation-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-qa-investigation-correctness/result.md"
     },
     {
       "id": "review-sprint-qa-investigation-failure",
@@ -2566,10 +3622,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "sprint-qa-investigation",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-qa-investigation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T11:21:22.845959061Z",
+          "finished_at": "2026-08-26T11:42:46.902441629Z",
+          "last_activity": "2026-08-26T11:42:46.902441629Z",
+          "runtime_run_id": "opencode-14",
+          "prompt_path": "jobs/review-sprint-qa-investigation-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-qa-investigation-failure/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-qa-investigation-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-qa-investigation-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-qa-investigation-failure/result.md"
     },
     {
       "id": "review-sprint-qa-investigation-security",
@@ -2579,10 +3650,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "sprint-qa-investigation",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-qa-investigation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T10:10:39.076801145Z",
+          "finished_at": "2026-08-26T10:33:08.442492537Z",
+          "last_activity": "2026-08-26T10:33:08.442492537Z",
+          "runtime_run_id": "opencode-6",
+          "prompt_path": "jobs/review-sprint-qa-investigation-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-qa-investigation-security/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-qa-investigation-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-qa-investigation-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-qa-investigation-security/result.md"
     },
     {
       "id": "review-sprint-qa-investigation-verification",
@@ -2592,10 +3678,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "sprint-qa-investigation",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-qa-investigation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T11:38:43.765057382Z",
+          "finished_at": "2026-08-26T12:01:52.067314194Z",
+          "last_activity": "2026-08-26T12:01:52.067314194Z",
+          "runtime_run_id": "opencode-16",
+          "prompt_path": "jobs/review-sprint-qa-investigation-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-qa-investigation-verification/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-qa-investigation-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-qa-investigation-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-qa-investigation-verification/result.md"
     },
     {
       "id": "review-sprint-qa-investigation-adversarial",
@@ -2605,10 +3706,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "sprint-qa-investigation",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-qa-investigation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T10:54:45.324646083Z",
+          "finished_at": "2026-08-26T11:21:22.832702816Z",
+          "last_activity": "2026-08-26T11:21:22.832702816Z",
+          "runtime_run_id": "opencode-12",
+          "prompt_path": "jobs/review-sprint-qa-investigation-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-qa-investigation-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-qa-investigation-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-qa-investigation-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-qa-investigation-adversarial/result.md"
     },
     {
       "id": "context-sprint-flow-state",
@@ -2642,10 +3758,38 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "sprint-flow-state",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-flow-state"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T09:07:05.336469116Z",
+          "finished_at": "2026-08-26T09:41:03.869486259Z",
+          "last_activity": "2026-08-26T09:41:03.869486259Z",
+          "error_category": "orchestrator_interrupted",
+          "error": "previous orchestrator exited while this task was running; AgentWrap process ownership was lost",
+          "prompt_path": "jobs/review-sprint-flow-state-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-flow-state-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-flow-state-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-flow-state-correctness/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-26T09:41:06.360169545Z",
+          "finished_at": "2026-08-26T09:59:44.844753541Z",
+          "last_activity": "2026-08-26T09:59:44.844753541Z",
+          "runtime_run_id": "opencode-2",
+          "prompt_path": "jobs/review-sprint-flow-state-correctness/attempt-02-prompt.md",
+          "result_path": "jobs/review-sprint-flow-state-correctness/attempt-02-result.md",
+          "events_path": "jobs/review-sprint-flow-state-correctness/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-flow-state-correctness/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-flow-state-correctness/result.md"
     },
     {
       "id": "review-sprint-flow-state-failure",
@@ -2655,10 +3799,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "sprint-flow-state",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-flow-state"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T08:49:56.109554807Z",
+          "finished_at": "2026-08-26T09:11:25.515867901Z",
+          "last_activity": "2026-08-26T09:11:25.515867901Z",
+          "runtime_run_id": "opencode-60",
+          "prompt_path": "jobs/review-sprint-flow-state-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-flow-state-failure/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-flow-state-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-flow-state-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-flow-state-failure/result.md"
     },
     {
       "id": "review-sprint-flow-state-security",
@@ -2668,10 +3827,38 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "sprint-flow-state",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-flow-state"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T09:11:25.5352532Z",
+          "finished_at": "2026-08-26T09:41:03.869486259Z",
+          "last_activity": "2026-08-26T09:41:03.869486259Z",
+          "error_category": "orchestrator_interrupted",
+          "error": "previous orchestrator exited while this task was running; AgentWrap process ownership was lost",
+          "prompt_path": "jobs/review-sprint-flow-state-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-flow-state-security/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-flow-state-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-flow-state-security/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "passed",
+          "started_at": "2026-08-26T12:01:52.086773905Z",
+          "finished_at": "2026-08-26T12:27:06.09755129Z",
+          "last_activity": "2026-08-26T12:27:06.09755129Z",
+          "runtime_run_id": "opencode-20",
+          "prompt_path": "jobs/review-sprint-flow-state-security/attempt-02-prompt.md",
+          "result_path": "jobs/review-sprint-flow-state-security/attempt-02-result.md",
+          "events_path": "jobs/review-sprint-flow-state-security/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-flow-state-security/attempt-02/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-flow-state-security/result.md"
     },
     {
       "id": "review-sprint-flow-state-verification",
@@ -2681,10 +3868,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "sprint-flow-state",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-flow-state"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T13:00:00.774788576Z",
+          "finished_at": "2026-08-26T13:25:27.301703397Z",
+          "last_activity": "2026-08-26T13:25:27.301703397Z",
+          "runtime_run_id": "opencode-25",
+          "prompt_path": "jobs/review-sprint-flow-state-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-flow-state-verification/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-flow-state-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-flow-state-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-flow-state-verification/result.md"
     },
     {
       "id": "review-sprint-flow-state-adversarial",
@@ -2694,10 +3896,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "sprint-flow-state",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-sprint-flow-state"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T08:07:48.420203647Z",
+          "finished_at": "2026-08-26T08:47:45.598692448Z",
+          "last_activity": "2026-08-26T08:47:45.598692448Z",
+          "runtime_run_id": "opencode-56",
+          "prompt_path": "jobs/review-sprint-flow-state-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-sprint-flow-state-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-sprint-flow-state-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-flow-state-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-sprint-flow-state-adversarial/result.md"
     },
     {
       "id": "context-repo-publication",
@@ -2745,10 +3962,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "repo-publication",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-repo-publication"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:30:50.959199398Z",
+          "finished_at": "2026-08-25T22:50:39.733174612Z",
+          "last_activity": "2026-08-25T22:50:39.733174612Z",
+          "runtime_run_id": "opencode-25",
+          "prompt_path": "jobs/review-repo-publication-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-repo-publication-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-repo-publication-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-repo-publication-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-repo-publication-correctness/result.md"
     },
     {
       "id": "review-repo-publication-failure",
@@ -2758,10 +3990,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "repo-publication",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-repo-publication"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:37:40.641293971Z",
+          "finished_at": "2026-08-25T22:50:57.927977324Z",
+          "last_activity": "2026-08-25T22:50:57.927977324Z",
+          "runtime_run_id": "opencode-26",
+          "prompt_path": "jobs/review-repo-publication-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-repo-publication-failure/attempt-01-result.md",
+          "events_path": "jobs/review-repo-publication-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-repo-publication-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-repo-publication-failure/result.md"
     },
     {
       "id": "review-repo-publication-security",
@@ -2771,10 +4018,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "repo-publication",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-repo-publication"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:44:30.65548584Z",
+          "finished_at": "2026-08-25T22:58:31.914360128Z",
+          "last_activity": "2026-08-25T22:58:31.914360128Z",
+          "runtime_run_id": "opencode-27",
+          "prompt_path": "jobs/review-repo-publication-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-repo-publication-security/attempt-01-result.md",
+          "events_path": "jobs/review-repo-publication-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-repo-publication-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-repo-publication-security/result.md"
     },
     {
       "id": "review-repo-publication-verification",
@@ -2784,10 +4046,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "repo-publication",
       "domain_id": "governed-sprint-delivery",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-repo-publication"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:50:39.747744067Z",
+          "finished_at": "2026-08-25T23:08:58.244179704Z",
+          "last_activity": "2026-08-25T23:08:58.244179704Z",
+          "runtime_run_id": "opencode-28",
+          "prompt_path": "jobs/review-repo-publication-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-repo-publication-verification/attempt-01-result.md",
+          "events_path": "jobs/review-repo-publication-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-repo-publication-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-repo-publication-verification/result.md"
     },
     {
       "id": "context-cli-dispatch-exit-contract",
@@ -2821,10 +4098,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "cli-dispatch-exit-contract",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-cli-dispatch-exit-contract"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T17:56:58.001836033Z",
+          "finished_at": "2026-08-25T18:26:57.542813269Z",
+          "last_activity": "2026-08-25T18:26:57.542813269Z",
+          "runtime_run_id": "opencode-5",
+          "prompt_path": "jobs/review-cli-dispatch-exit-contract-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-cli-dispatch-exit-contract-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-cli-dispatch-exit-contract-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-cli-dispatch-exit-contract-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-cli-dispatch-exit-contract-correctness/result.md"
     },
     {
       "id": "review-cli-dispatch-exit-contract-failure",
@@ -2834,10 +4126,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "cli-dispatch-exit-contract",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-cli-dispatch-exit-contract"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T17:59:06.916657534Z",
+          "finished_at": "2026-08-25T18:35:04.079288457Z",
+          "last_activity": "2026-08-25T18:35:04.079288457Z",
+          "runtime_run_id": "opencode-6",
+          "prompt_path": "jobs/review-cli-dispatch-exit-contract-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-cli-dispatch-exit-contract-failure/attempt-01-result.md",
+          "events_path": "jobs/review-cli-dispatch-exit-contract-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-cli-dispatch-exit-contract-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-cli-dispatch-exit-contract-failure/result.md"
     },
     {
       "id": "review-cli-dispatch-exit-contract-security",
@@ -2847,10 +4154,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "cli-dispatch-exit-contract",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-cli-dispatch-exit-contract"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T20:09:28.518341165Z",
+          "finished_at": "2026-08-25T20:31:01.241734062Z",
+          "last_activity": "2026-08-25T20:31:01.241734062Z",
+          "runtime_run_id": "opencode-3",
+          "prompt_path": "jobs/review-cli-dispatch-exit-contract-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-cli-dispatch-exit-contract-security/attempt-01-result.md",
+          "events_path": "jobs/review-cli-dispatch-exit-contract-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-cli-dispatch-exit-contract-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-cli-dispatch-exit-contract-security/result.md"
     },
     {
       "id": "review-cli-dispatch-exit-contract-verification",
@@ -2860,10 +4182,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "cli-dispatch-exit-contract",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-cli-dispatch-exit-contract"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T17:39:31.838406452Z",
+          "finished_at": "2026-08-25T17:56:57.983464479Z",
+          "last_activity": "2026-08-25T17:56:57.983464479Z",
+          "runtime_run_id": "opencode-3",
+          "prompt_path": "jobs/review-cli-dispatch-exit-contract-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-cli-dispatch-exit-contract-verification/attempt-01-result.md",
+          "events_path": "jobs/review-cli-dispatch-exit-contract-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-cli-dispatch-exit-contract-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-cli-dispatch-exit-contract-verification/result.md"
     },
     {
       "id": "review-cli-dispatch-exit-contract-adversarial",
@@ -2873,10 +4210,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "cli-dispatch-exit-contract",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-cli-dispatch-exit-contract"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T17:39:31.832514148Z",
+          "finished_at": "2026-08-25T17:59:06.902244167Z",
+          "last_activity": "2026-08-25T17:59:06.902244167Z",
+          "runtime_run_id": "opencode-1",
+          "prompt_path": "jobs/review-cli-dispatch-exit-contract-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-cli-dispatch-exit-contract-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-cli-dispatch-exit-contract-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-cli-dispatch-exit-contract-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-cli-dispatch-exit-contract-adversarial/result.md"
     },
     {
       "id": "context-run-cli-observation",
@@ -2910,10 +4262,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "run-cli-observation",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-cli-observation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:50:57.942960868Z",
+          "finished_at": "2026-08-25T23:12:50.219749724Z",
+          "last_activity": "2026-08-25T23:12:50.219749724Z",
+          "runtime_run_id": "opencode-29",
+          "prompt_path": "jobs/review-run-cli-observation-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-cli-observation-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-run-cli-observation-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-cli-observation-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-cli-observation-correctness/result.md"
     },
     {
       "id": "review-run-cli-observation-failure",
@@ -2923,10 +4290,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "run-cli-observation",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-cli-observation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:58:31.929998993Z",
+          "finished_at": "2026-08-25T23:14:08.892069618Z",
+          "last_activity": "2026-08-25T23:14:08.892069618Z",
+          "runtime_run_id": "opencode-30",
+          "prompt_path": "jobs/review-run-cli-observation-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-cli-observation-failure/attempt-01-result.md",
+          "events_path": "jobs/review-run-cli-observation-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-cli-observation-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-cli-observation-failure/result.md"
     },
     {
       "id": "review-run-cli-observation-security",
@@ -2936,10 +4318,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "run-cli-observation",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-cli-observation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:21:11.73812893Z",
+          "finished_at": "2026-08-25T22:44:30.643668761Z",
+          "last_activity": "2026-08-25T22:44:30.643668761Z",
+          "runtime_run_id": "opencode-23",
+          "prompt_path": "jobs/review-run-cli-observation-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-cli-observation-security/attempt-01-result.md",
+          "events_path": "jobs/review-run-cli-observation-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-cli-observation-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-cli-observation-security/result.md"
     },
     {
       "id": "review-run-cli-observation-verification",
@@ -2949,10 +4346,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "run-cli-observation",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-run-cli-observation"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:12:50.235898221Z",
+          "finished_at": "2026-08-25T23:26:10.544941745Z",
+          "last_activity": "2026-08-25T23:26:10.544941745Z",
+          "runtime_run_id": "opencode-32",
+          "prompt_path": "jobs/review-run-cli-observation-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-run-cli-observation-verification/attempt-01-result.md",
+          "events_path": "jobs/review-run-cli-observation-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-run-cli-observation-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-run-cli-observation-verification/result.md"
     },
     {
       "id": "context-web-routing-projection",
@@ -2986,9 +4398,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "web-routing-projection",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-routing-projection"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:03:14.002634441Z",
+          "finished_at": "2026-08-26T14:03:32.518891757Z",
+          "last_activity": "2026-08-26T14:03:32.518891757Z",
+          "runtime_run_id": "opencode-103",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-routing-projection-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-routing-projection-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-web-routing-projection-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-routing-projection-correctness/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -2999,9 +4427,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "web-routing-projection",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-routing-projection"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:59:52.364922785Z",
+          "finished_at": "2026-08-26T14:00:11.654472762Z",
+          "last_activity": "2026-08-26T14:00:11.654472762Z",
+          "runtime_run_id": "opencode-63",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-routing-projection-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-routing-projection-failure/attempt-01-result.md",
+          "events_path": "jobs/review-web-routing-projection-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-routing-projection-failure/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3012,9 +4456,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "web-routing-projection",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-routing-projection"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:59:33.092544535Z",
+          "finished_at": "2026-08-26T13:59:53.100028898Z",
+          "last_activity": "2026-08-26T13:59:53.100028898Z",
+          "runtime_run_id": "opencode-60",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-routing-projection-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-routing-projection-security/attempt-01-result.md",
+          "events_path": "jobs/review-web-routing-projection-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-routing-projection-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3025,9 +4485,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "web-routing-projection",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-routing-projection"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:01:57.945114531Z",
+          "finished_at": "2026-08-26T14:02:17.870487886Z",
+          "last_activity": "2026-08-26T14:02:17.870487886Z",
+          "runtime_run_id": "opencode-87",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-routing-projection-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-routing-projection-verification/attempt-01-result.md",
+          "events_path": "jobs/review-web-routing-projection-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-routing-projection-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3038,9 +4514,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "web-routing-projection",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-routing-projection"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:00:56.629065037Z",
+          "finished_at": "2026-08-26T14:01:18.824882108Z",
+          "last_activity": "2026-08-26T14:01:18.824882108Z",
+          "runtime_run_id": "opencode-76",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-routing-projection-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-routing-projection-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-web-routing-projection-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-routing-projection-adversarial/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3075,9 +4567,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "web-operation-hub-sse",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-operation-hub-sse"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:01:18.838834806Z",
+          "finished_at": "2026-08-26T14:01:39.38659053Z",
+          "last_activity": "2026-08-26T14:01:39.38659053Z",
+          "runtime_run_id": "opencode-80",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-operation-hub-sse-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-operation-hub-sse-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-web-operation-hub-sse-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-operation-hub-sse-correctness/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3088,9 +4596,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "web-operation-hub-sse",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-operation-hub-sse"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T13:59:31.765482316Z",
+          "finished_at": "2026-08-26T13:59:52.35065912Z",
+          "last_activity": "2026-08-26T13:59:52.35065912Z",
+          "runtime_run_id": "opencode-59",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-operation-hub-sse-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-operation-hub-sse-failure/attempt-01-result.md",
+          "events_path": "jobs/review-web-operation-hub-sse-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-operation-hub-sse-failure/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3101,9 +4625,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "web-operation-hub-sse",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-operation-hub-sse"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:00:55.053152661Z",
+          "finished_at": "2026-08-26T14:01:16.905019799Z",
+          "last_activity": "2026-08-26T14:01:16.905019799Z",
+          "runtime_run_id": "opencode-75",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-operation-hub-sse-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-operation-hub-sse-security/attempt-01-result.md",
+          "events_path": "jobs/review-web-operation-hub-sse-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-operation-hub-sse-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3114,9 +4654,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "web-operation-hub-sse",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-operation-hub-sse"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:00:13.042857075Z",
+          "finished_at": "2026-08-26T14:00:32.901956902Z",
+          "last_activity": "2026-08-26T14:00:32.901956902Z",
+          "runtime_run_id": "opencode-68",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-operation-hub-sse-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-operation-hub-sse-verification/attempt-01-result.md",
+          "events_path": "jobs/review-web-operation-hub-sse-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-operation-hub-sse-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3127,9 +4683,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "web-operation-hub-sse",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-operation-hub-sse"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:01:37.707211962Z",
+          "finished_at": "2026-08-26T14:01:57.926013933Z",
+          "last_activity": "2026-08-26T14:01:57.926013933Z",
+          "runtime_run_id": "opencode-83",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-operation-hub-sse-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-operation-hub-sse-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-web-operation-hub-sse-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-operation-hub-sse-adversarial/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3164,9 +4736,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "web-security-boundary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-security-boundary"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:02:17.891308052Z",
+          "finished_at": "2026-08-26T14:02:36.931043061Z",
+          "last_activity": "2026-08-26T14:02:36.931043061Z",
+          "runtime_run_id": "opencode-91",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-security-boundary-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-security-boundary-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-web-security-boundary-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-security-boundary-correctness/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3177,9 +4765,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "web-security-boundary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-security-boundary"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:02:40.426901618Z",
+          "finished_at": "2026-08-26T14:02:58.71474542Z",
+          "last_activity": "2026-08-26T14:02:58.71474542Z",
+          "runtime_run_id": "opencode-96",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-security-boundary-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-security-boundary-failure/attempt-01-result.md",
+          "events_path": "jobs/review-web-security-boundary-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-security-boundary-failure/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3190,9 +4794,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "web-security-boundary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-security-boundary"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:01:39.404436171Z",
+          "finished_at": "2026-08-26T14:01:59.887052452Z",
+          "last_activity": "2026-08-26T14:01:59.887052452Z",
+          "runtime_run_id": "opencode-84",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-security-boundary-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-security-boundary-security/attempt-01-result.md",
+          "events_path": "jobs/review-web-security-boundary-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-security-boundary-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3203,9 +4823,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "web-security-boundary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-security-boundary"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:02:36.948371012Z",
+          "finished_at": "2026-08-26T14:02:55.520706347Z",
+          "last_activity": "2026-08-26T14:02:55.520706347Z",
+          "runtime_run_id": "opencode-95",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-security-boundary-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-security-boundary-verification/attempt-01-result.md",
+          "events_path": "jobs/review-web-security-boundary-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-security-boundary-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3216,9 +4852,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "web-security-boundary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-web-security-boundary"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:01:59.901470807Z",
+          "finished_at": "2026-08-26T14:02:20.468596676Z",
+          "last_activity": "2026-08-26T14:02:20.468596676Z",
+          "runtime_run_id": "opencode-88",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-web-security-boundary-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-web-security-boundary-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-web-security-boundary-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-web-security-boundary-adversarial/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3253,9 +4905,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "tui-console",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-tui-console"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:00:11.672141559Z",
+          "finished_at": "2026-08-26T14:00:32.380115974Z",
+          "last_activity": "2026-08-26T14:00:32.380115974Z",
+          "runtime_run_id": "opencode-67",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-tui-console-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-tui-console-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-tui-console-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-tui-console-correctness/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3266,9 +4934,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "tui-console",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-tui-console"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:00:32.396449525Z",
+          "finished_at": "2026-08-26T14:00:55.03783818Z",
+          "last_activity": "2026-08-26T14:00:55.03783818Z",
+          "runtime_run_id": "opencode-71",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-tui-console-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-tui-console-failure/attempt-01-result.md",
+          "events_path": "jobs/review-tui-console-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-tui-console-failure/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3279,9 +4963,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "tui-console",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-tui-console"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:00:32.913612658Z",
+          "finished_at": "2026-08-26T14:00:56.610495171Z",
+          "last_activity": "2026-08-26T14:00:56.610495171Z",
+          "runtime_run_id": "opencode-72",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-tui-console-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-tui-console-security/attempt-01-result.md",
+          "events_path": "jobs/review-tui-console-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-tui-console-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3292,9 +4992,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "tui-console",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-tui-console"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:01:16.924505249Z",
+          "finished_at": "2026-08-26T14:01:37.68801725Z",
+          "last_activity": "2026-08-26T14:01:37.68801725Z",
+          "runtime_run_id": "opencode-79",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-tui-console-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-tui-console-verification/attempt-01-result.md",
+          "events_path": "jobs/review-tui-console-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-tui-console-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3329,10 +5045,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "shared-usecase-vocabulary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-shared-usecase-vocabulary"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T00:34:24.237483837Z",
+          "finished_at": "2026-08-26T00:52:29.389536883Z",
+          "last_activity": "2026-08-26T00:52:29.389536883Z",
+          "runtime_run_id": "opencode-44",
+          "prompt_path": "jobs/review-shared-usecase-vocabulary-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-shared-usecase-vocabulary-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-shared-usecase-vocabulary-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-shared-usecase-vocabulary-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-shared-usecase-vocabulary-correctness/result.md"
     },
     {
       "id": "review-shared-usecase-vocabulary-failure",
@@ -3342,10 +5073,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "shared-usecase-vocabulary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-shared-usecase-vocabulary"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T00:48:46.672465486Z",
+          "finished_at": "2026-08-26T01:04:42.943106505Z",
+          "last_activity": "2026-08-26T01:04:42.943106505Z",
+          "runtime_run_id": "opencode-46",
+          "prompt_path": "jobs/review-shared-usecase-vocabulary-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-shared-usecase-vocabulary-failure/attempt-01-result.md",
+          "events_path": "jobs/review-shared-usecase-vocabulary-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-shared-usecase-vocabulary-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-shared-usecase-vocabulary-failure/result.md"
     },
     {
       "id": "review-shared-usecase-vocabulary-security",
@@ -3355,10 +5101,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "shared-usecase-vocabulary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-shared-usecase-vocabulary"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T00:52:29.405035927Z",
+          "finished_at": "2026-08-26T01:41:43.14066877Z",
+          "last_activity": "2026-08-26T01:41:43.14066877Z",
+          "runtime_run_id": "opencode-47",
+          "prompt_path": "jobs/review-shared-usecase-vocabulary-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-shared-usecase-vocabulary-security/attempt-01-result.md",
+          "events_path": "jobs/review-shared-usecase-vocabulary-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-shared-usecase-vocabulary-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-shared-usecase-vocabulary-security/result.md"
     },
     {
       "id": "review-shared-usecase-vocabulary-verification",
@@ -3368,10 +5129,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "shared-usecase-vocabulary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-shared-usecase-vocabulary"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T00:56:29.237710978Z",
+          "finished_at": "2026-08-26T01:17:42.273876275Z",
+          "last_activity": "2026-08-26T01:17:42.273876275Z",
+          "runtime_run_id": "opencode-48",
+          "prompt_path": "jobs/review-shared-usecase-vocabulary-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-shared-usecase-vocabulary-verification/attempt-01-result.md",
+          "events_path": "jobs/review-shared-usecase-vocabulary-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-shared-usecase-vocabulary-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-shared-usecase-vocabulary-verification/result.md"
     },
     {
       "id": "review-shared-usecase-vocabulary-adversarial",
@@ -3381,10 +5157,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "shared-usecase-vocabulary",
       "domain_id": "operator-interfaces",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-shared-usecase-vocabulary"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-26T00:40:37.122711912Z",
+          "finished_at": "2026-08-26T00:56:29.222076791Z",
+          "last_activity": "2026-08-26T00:56:29.222076791Z",
+          "runtime_run_id": "opencode-45",
+          "prompt_path": "jobs/review-shared-usecase-vocabulary-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-shared-usecase-vocabulary-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-shared-usecase-vocabulary-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-shared-usecase-vocabulary-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-shared-usecase-vocabulary-adversarial/result.md"
     },
     {
       "id": "context-opencode-agent-runtime",
@@ -3418,10 +5209,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "opencode-agent-runtime",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-opencode-agent-runtime"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:07:54.449035163Z",
+          "finished_at": "2026-08-25T22:30:50.937144491Z",
+          "last_activity": "2026-08-25T22:30:50.937144491Z",
+          "runtime_run_id": "opencode-22",
+          "prompt_path": "jobs/review-opencode-agent-runtime-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-opencode-agent-runtime-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-opencode-agent-runtime-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-opencode-agent-runtime-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-opencode-agent-runtime-correctness/result.md"
     },
     {
       "id": "review-opencode-agent-runtime-failure",
@@ -3431,10 +5237,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "opencode-agent-runtime",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-opencode-agent-runtime"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T23:50:47.23949444Z",
+          "finished_at": "2026-08-26T00:48:46.655442995Z",
+          "last_activity": "2026-08-26T00:48:46.655442995Z",
+          "runtime_run_id": "opencode-39",
+          "prompt_path": "jobs/review-opencode-agent-runtime-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-opencode-agent-runtime-failure/attempt-01-result.md",
+          "events_path": "jobs/review-opencode-agent-runtime-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-opencode-agent-runtime-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-opencode-agent-runtime-failure/result.md"
     },
     {
       "id": "review-opencode-agent-runtime-security",
@@ -3444,10 +5265,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "opencode-agent-runtime",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-opencode-agent-runtime"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T20:31:01.256237479Z",
+          "finished_at": "2026-08-25T20:49:00.651099643Z",
+          "last_activity": "2026-08-25T20:49:00.651099643Z",
+          "runtime_run_id": "opencode-5",
+          "prompt_path": "jobs/review-opencode-agent-runtime-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-opencode-agent-runtime-security/attempt-01-result.md",
+          "events_path": "jobs/review-opencode-agent-runtime-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-opencode-agent-runtime-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-opencode-agent-runtime-security/result.md"
     },
     {
       "id": "review-opencode-agent-runtime-verification",
@@ -3457,10 +5293,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "opencode-agent-runtime",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-opencode-agent-runtime"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T20:31:57.499330827Z",
+          "finished_at": "2026-08-25T21:01:22.291272328Z",
+          "last_activity": "2026-08-25T21:01:22.291272328Z",
+          "runtime_run_id": "opencode-6",
+          "prompt_path": "jobs/review-opencode-agent-runtime-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-opencode-agent-runtime-verification/attempt-01-result.md",
+          "events_path": "jobs/review-opencode-agent-runtime-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-opencode-agent-runtime-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-opencode-agent-runtime-verification/result.md"
     },
     {
       "id": "review-opencode-agent-runtime-adversarial",
@@ -3470,10 +5321,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "opencode-agent-runtime",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-opencode-agent-runtime"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T18:02:50.254596105Z",
+          "finished_at": "2026-08-25T18:25:53.102491926Z",
+          "last_activity": "2026-08-25T18:25:53.102491926Z",
+          "runtime_run_id": "opencode-7",
+          "prompt_path": "jobs/review-opencode-agent-runtime-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-opencode-agent-runtime-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-opencode-agent-runtime-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-opencode-agent-runtime-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-opencode-agent-runtime-adversarial/result.md"
     },
     {
       "id": "context-process-execution",
@@ -3507,10 +5373,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "process-execution",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-process-execution"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T20:49:00.665897078Z",
+          "finished_at": "2026-08-25T21:06:22.324457259Z",
+          "last_activity": "2026-08-25T21:06:22.324457259Z",
+          "runtime_run_id": "opencode-8",
+          "prompt_path": "jobs/review-process-execution-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-process-execution-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-process-execution-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-process-execution-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-process-execution-correctness/result.md"
     },
     {
       "id": "review-process-execution-failure",
@@ -3520,10 +5401,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "process-execution",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-process-execution"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T20:54:32.409972264Z",
+          "finished_at": "2026-08-25T21:15:01.761096544Z",
+          "last_activity": "2026-08-25T21:15:01.761096544Z",
+          "runtime_run_id": "opencode-9",
+          "prompt_path": "jobs/review-process-execution-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-process-execution-failure/attempt-01-result.md",
+          "events_path": "jobs/review-process-execution-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-process-execution-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-process-execution-failure/result.md"
     },
     {
       "id": "review-process-execution-security",
@@ -3533,10 +5429,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "process-execution",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-process-execution"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:01:22.313601181Z",
+          "finished_at": "2026-08-25T21:13:24.713207116Z",
+          "last_activity": "2026-08-25T21:13:24.713207116Z",
+          "runtime_run_id": "opencode-10",
+          "prompt_path": "jobs/review-process-execution-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-process-execution-security/attempt-01-result.md",
+          "events_path": "jobs/review-process-execution-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-process-execution-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-process-execution-security/result.md"
     },
     {
       "id": "review-process-execution-verification",
@@ -3546,10 +5457,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "process-execution",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-process-execution"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:06:22.345840181Z",
+          "finished_at": "2026-08-25T21:18:43.299820767Z",
+          "last_activity": "2026-08-25T21:18:43.299820767Z",
+          "runtime_run_id": "opencode-11",
+          "prompt_path": "jobs/review-process-execution-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-process-execution-verification/attempt-01-result.md",
+          "events_path": "jobs/review-process-execution-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-process-execution-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-process-execution-verification/result.md"
     },
     {
       "id": "review-process-execution-adversarial",
@@ -3559,10 +5485,25 @@
       "lens": "Fresh-context adversarial general review: assume the implementation is overconfident. Find concrete contract violations or state/failure paths that the obvious review lenses may miss.",
       "surface_id": "process-execution",
       "domain_id": "agent-execution-platform",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-process-execution"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T20:39:10.80520819Z",
+          "finished_at": "2026-08-25T20:54:32.395069923Z",
+          "last_activity": "2026-08-25T20:54:32.395069923Z",
+          "runtime_run_id": "opencode-7",
+          "prompt_path": "jobs/review-process-execution-adversarial/attempt-01-prompt.md",
+          "result_path": "jobs/review-process-execution-adversarial/attempt-01-result.md",
+          "events_path": "jobs/review-process-execution-adversarial/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-process-execution-adversarial/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-process-execution-adversarial/result.md"
     },
     {
       "id": "context-workspace-scaffold-defaults",
@@ -3596,9 +5537,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "workspace-scaffold-defaults",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-workspace-scaffold-defaults"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:02:20.481609681Z",
+          "finished_at": "2026-08-26T14:02:40.414134175Z",
+          "last_activity": "2026-08-26T14:02:40.414134175Z",
+          "runtime_run_id": "opencode-92",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-workspace-scaffold-defaults-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-workspace-scaffold-defaults-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-workspace-scaffold-defaults-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-workspace-scaffold-defaults-correctness/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3609,9 +5566,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "workspace-scaffold-defaults",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-workspace-scaffold-defaults"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:02:55.540640154Z",
+          "finished_at": "2026-08-26T14:03:13.983317467Z",
+          "last_activity": "2026-08-26T14:03:13.983317467Z",
+          "runtime_run_id": "opencode-99",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-workspace-scaffold-defaults-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-workspace-scaffold-defaults-failure/attempt-01-result.md",
+          "events_path": "jobs/review-workspace-scaffold-defaults-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-workspace-scaffold-defaults-failure/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3622,9 +5595,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "workspace-scaffold-defaults",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-workspace-scaffold-defaults"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:02:58.733251248Z",
+          "finished_at": "2026-08-26T14:03:17.018666571Z",
+          "last_activity": "2026-08-26T14:03:17.018666571Z",
+          "runtime_run_id": "opencode-100",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-workspace-scaffold-defaults-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-workspace-scaffold-defaults-security/attempt-01-result.md",
+          "events_path": "jobs/review-workspace-scaffold-defaults-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-workspace-scaffold-defaults-security/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3635,9 +5624,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "workspace-scaffold-defaults",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "failed",
       "depends_on": [
         "context-workspace-scaffold-defaults"
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "failed",
+          "started_at": "2026-08-26T14:03:17.039530673Z",
+          "finished_at": "2026-08-26T14:03:34.837030606Z",
+          "last_activity": "2026-08-26T14:03:34.837030606Z",
+          "runtime_run_id": "opencode-104",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-workspace-scaffold-defaults-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-workspace-scaffold-defaults-verification/attempt-01-result.md",
+          "events_path": "jobs/review-workspace-scaffold-defaults-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-workspace-scaffold-defaults-verification/attempt-01/opencode.db"
+        }
       ]
     },
     {
@@ -3672,10 +5677,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "config-inspection-health",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-config-inspection-health"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T18:25:53.125897364Z",
+          "finished_at": "2026-08-25T18:44:17.384967445Z",
+          "last_activity": "2026-08-25T18:44:17.384967445Z",
+          "runtime_run_id": "opencode-8",
+          "prompt_path": "jobs/review-config-inspection-health-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-config-inspection-health-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-config-inspection-health-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-config-inspection-health-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-config-inspection-health-correctness/result.md"
     },
     {
       "id": "review-config-inspection-health-failure",
@@ -3685,10 +5705,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "config-inspection-health",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-config-inspection-health"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T18:26:57.558777323Z",
+          "finished_at": "2026-08-25T18:41:52.86040308Z",
+          "last_activity": "2026-08-25T18:41:52.86040308Z",
+          "runtime_run_id": "opencode-9",
+          "prompt_path": "jobs/review-config-inspection-health-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-config-inspection-health-failure/attempt-01-result.md",
+          "events_path": "jobs/review-config-inspection-health-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-config-inspection-health-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-config-inspection-health-failure/result.md"
     },
     {
       "id": "review-config-inspection-health-security",
@@ -3698,10 +5733,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "config-inspection-health",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-config-inspection-health"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T18:35:04.096521881Z",
+          "finished_at": "2026-08-25T18:52:39.890006217Z",
+          "last_activity": "2026-08-25T18:52:39.890006217Z",
+          "runtime_run_id": "opencode-10",
+          "prompt_path": "jobs/review-config-inspection-health-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-config-inspection-health-security/attempt-01-result.md",
+          "events_path": "jobs/review-config-inspection-health-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-config-inspection-health-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-config-inspection-health-security/result.md"
     },
     {
       "id": "review-config-inspection-health-verification",
@@ -3711,10 +5761,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "config-inspection-health",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-config-inspection-health"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T18:41:52.873765375Z",
+          "finished_at": "2026-08-25T19:05:30.475946546Z",
+          "last_activity": "2026-08-25T19:05:30.475946546Z",
+          "runtime_run_id": "opencode-11",
+          "prompt_path": "jobs/review-config-inspection-health-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-config-inspection-health-verification/attempt-01-result.md",
+          "events_path": "jobs/review-config-inspection-health-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-config-inspection-health-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-config-inspection-health-verification/result.md"
     },
     {
       "id": "context-project-catalog",
@@ -3748,10 +5813,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "project-catalog",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-project-catalog"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:39:30.580637573Z",
+          "finished_at": "2026-08-25T21:51:34.317397424Z",
+          "last_activity": "2026-08-25T21:51:34.317397424Z",
+          "runtime_run_id": "opencode-17",
+          "prompt_path": "jobs/review-project-catalog-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-project-catalog-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-project-catalog-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-project-catalog-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-project-catalog-correctness/result.md"
     },
     {
       "id": "review-project-catalog-failure",
@@ -3761,10 +5841,25 @@
       "lens": "Failure/concurrency: cancellation, restart, partial progress, retry, idempotency, races, liveness, resource ownership, and unknown outcomes.",
       "surface_id": "project-catalog",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-project-catalog"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T21:35:22.688506764Z",
+          "finished_at": "2026-08-25T21:47:59.001030122Z",
+          "last_activity": "2026-08-25T21:47:59.001030122Z",
+          "runtime_run_id": "opencode-16",
+          "prompt_path": "jobs/review-project-catalog-failure/attempt-01-prompt.md",
+          "result_path": "jobs/review-project-catalog-failure/attempt-01-result.md",
+          "events_path": "jobs/review-project-catalog-failure/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-project-catalog-failure/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-project-catalog-failure/result.md"
     },
     {
       "id": "review-project-catalog-security",
@@ -3774,10 +5869,25 @@
       "lens": "Security/misuse: attacker-controlled or malformed inputs, trust transitions, filesystem/process/runtime capability abuse, unsafe defaults, secrets, and exploitability.",
       "surface_id": "project-catalog",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-project-catalog"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:07:49.894076735Z",
+          "finished_at": "2026-08-25T22:24:47.568037437Z",
+          "last_activity": "2026-08-25T22:24:47.568037437Z",
+          "runtime_run_id": "opencode-21",
+          "prompt_path": "jobs/review-project-catalog-security/attempt-01-prompt.md",
+          "result_path": "jobs/review-project-catalog-security/attempt-01-result.md",
+          "events_path": "jobs/review-project-catalog-security/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-project-catalog-security/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-project-catalog-security/result.md"
     },
     {
       "id": "review-project-catalog-verification",
@@ -3787,10 +5897,25 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "project-catalog",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-project-catalog"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T22:24:47.591938324Z",
+          "finished_at": "2026-08-25T22:37:40.617749Z",
+          "last_activity": "2026-08-25T22:37:40.617749Z",
+          "runtime_run_id": "opencode-24",
+          "prompt_path": "jobs/review-project-catalog-verification/attempt-01-prompt.md",
+          "result_path": "jobs/review-project-catalog-verification/attempt-01-result.md",
+          "events_path": "jobs/review-project-catalog-verification/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-project-catalog-verification/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-project-catalog-verification/result.md"
     },
     {
       "id": "context-code-extraction",
@@ -3824,10 +5949,25 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "code-extraction",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-code-extraction"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T17:39:31.834657648Z",
+          "finished_at": "2026-08-25T17:50:18.236396013Z",
+          "last_activity": "2026-08-25T17:50:18.236396013Z",
+          "runtime_run_id": "opencode-2",
+          "prompt_path": "jobs/review-code-extraction-correctness/attempt-01-prompt.md",
+          "result_path": "jobs/review-code-extraction-correctness/attempt-01-result.md",
+          "events_path": "jobs/review-code-extraction-correctness/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-code-extraction-correctness/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-code-extraction-correctness/result.md"
     },
     {
       "id": "review-code-extraction-assurance",
@@ -3837,10 +5977,25 @@
       "lens": "Combined security/verification review for a low-risk surface. Look for concrete misuse, missing boundary validation, and test gaps; do not invent speculative vulnerabilities.",
       "surface_id": "code-extraction",
       "domain_id": "foundation",
-      "status": "pending",
+      "status": "passed",
       "depends_on": [
         "context-code-extraction"
-      ]
+      ],
+      "attempts": [
+        {
+          "number": 1,
+          "status": "passed",
+          "started_at": "2026-08-25T17:50:18.252302098Z",
+          "finished_at": "2026-08-25T18:02:50.232943894Z",
+          "last_activity": "2026-08-25T18:02:50.232943894Z",
+          "runtime_run_id": "opencode-4",
+          "prompt_path": "jobs/review-code-extraction-assurance/attempt-01-prompt.md",
+          "result_path": "jobs/review-code-extraction-assurance/attempt-01-result.md",
+          "events_path": "jobs/review-code-extraction-assurance/attempt-01-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-code-extraction-assurance/attempt-01/opencode.db"
+        }
+      ],
+      "result": "jobs/review-code-extraction-assurance/result.md"
     },
     {
       "id": "seam-cli-acceptance-empty-digest",

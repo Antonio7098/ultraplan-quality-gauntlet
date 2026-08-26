@@ -1,0 +1,38 @@
+Surface files are unchanged since the frozen commit, so working-tree inspection is valid. Reading the core surface now.Now reading the locking layer, flow-state validation, smoke preparation, and the CLI wiring.Lease re-entrancy is context-marker based — composite flows won't self-deadlock. Now the CLI/app wiring and flow-state validation.CLI contract verified: exit-code mapping for fail/block assessments exists (sprint_commands.go:325-327). Now flow-state persistence/validation and the smoke stage state rules.State validation tolerates completed-smoke-with-active-attempt (relevant to a narrow crash window). Now the durable operation wrapper and run-control recovery.Now checking the planning workspace contracts on review freshness/currentness to test the disabled-strictness switches against the current contract.TRD lines 1846/2077 mandate fingerprint-change staleness. Checking whether the workspace records an accepted deviation for the disabled switches.Empirically confirming the freshness behavior with an overlay test (repo untouched — overlay only substitutes build inputs in memory).Finding 1 empirically confirmed: fresh=true after governed-input change (while Resumable correctly flips false — proving the fingerprint mismatch exists but the freshness comparison is switch-disabled). Now checking for any stale-lock sweep, and re-examining remaining candidates.Consolidating. Running the existing surface tests to anchor evidence in a green baseline (no code changes made).All candidates investigated and counter-evidence searched. Final report:
+
+---
+
+# Findings — `sprint-verify-transition` (failure/concurrency lens)
+
+Baseline: surface files identical to frozen commit `c6f01cf`; existing verify/review/smoke tests green. Empirical reproduction used a Go build overlay (repo untouched); artifacts in `/tmp/opencode/fresh-overlay/`.
+
+## F1 — High / High confidence: Review currentness is switch-disabled; Verify promotes on non-current review evidence
+
+- **Claim**: The only comparison between a completed review's recorded input fingerprint and the *current* governed inputs is compiled out (`strictCompletedReviewSnapshotFreshness = false`, `internal/sprint/freshness_policy.go:12`). Both halves of the promotion boundary consume it: Verify's reuse decision (`verify.go:65`, reasons built at `verify.go:176-180`) and the smoke gate (`smoke_protocol.go:186`). When the switch is off, the canonical artifact is deliberately validated against its *recorded* fingerprint, not current inputs (`verify.go:191-196`).
+- **Observable bad outcome**: edit `plan.md`/`requirements.md`/a selected contract after a passing review → `sprint verify --to smoke --yes` treats the outdated review as "current" (skips re-review, `verify.go:66-80`), passes the smoke gate, runs canonical smoke, and a pass marks the sprint delivered in roadmap (`smoke.go:39-48`). Status/JSON/TUI all report `fresh=true`.
+- **Trigger**: any post-completion change to governed inputs whose content remains valid.
+- **Evidence**: empirical reproduction (overlay test): after editing `requirements.md` post-completion, `status.Review.Fresh=true, FreshnessReasons=[]` while `Resumable=false` — proving the fingerprint mismatch is recomputed and real (`verify.go:181` still enforces it for resume) but excluded from freshness.
+- **Contract violated (CURRENT)**: TRD `docs/TRD.md:2077` "Any governed input … change makes the prior review stale. A stale review also makes smoke stale."; `TRD.md:1846` "A fingerprint mismatch makes the artifact stale." No amending decision exists in the authoritative workspace; commit `2fbce1a` is in-repo-only justification.
+- **Counter-evidence examined**: digest checks catch artifact hand-edits (not source edits); `PrepareReview` findings catch missing/invalid — not changed-but-valid — inputs; no other staleness source exists on the path. In-code comment acknowledges the divergence but does not satisfy the contract.
+- **Regression test**: assert `VerificationStatus.Review.Fresh == false` after a governed-input edit following completion (the overlay test; fails today).
+
+## F2 — Medium-low / High confidence: retry after review-leg publication failure succeeds without publishing
+
+- `Review` persists completed/fresh flow-state *before* publishing (`review.go:644-651`); a publish failure returns an error, but retrying `verify --to review` finds `Fresh && completed` and skips the leg entirely (`verify.go:65,81-86`). `publishReviewStage` has no other caller on this path and nothing records "publication pending". Result: first run exits nonzero, retry exits 0, and the review commit never reaches the publication history (publisher active unless `git.stage_completion=off`; `git_publication.go:10-13`, `sprint_commands.go:88,779`). The smoke side self-heals because smoke always reruns fully; the review side does not.
+- **Counter-evidence**: Flow's stage loop covers only planning stages + execute (`flow.go:257-282`), so it never republishes review either.
+- **Regression**: fake publisher failing once → Review fails; `Verify --to review` must re-attempt publication or fail closed.
+
+## F3 — Low / Medium confidence: PID-reuse permanently deadlocks a sprint's mutation lease
+
+- `verification_lock.go:53-55` breaks acquisition only on a *dead* PID; `AcquiredAt` is recorded and printed but never consulted for expiry, and `ReconcileInterruptedMutation` needs the same lock (`locks.go:26`) so it cannot clear its own squatter. Sprint locks have no operator unlock (documented `--force-unlock` covers studies only, `docs/cli-reference.md:210`). Crash + PID recycled to any long-lived process ⇒ every verify/review/smoke/flow on that sprint returns `ErrVerificationConflict` until manual `.ultraplan/locks/sprint/*.lock` removal. Calibrated low because TRD 2378 demands conservatism and 2667 flags this as an open design question.
+
+## F4 — Low / High confidence: crash window downgrades a committed passing smoke run
+
+- `RunSmoke` order (`smoke.go:31-38`): running-attempt write → `commitSmoke` (persists `Status=completed` **with the running ActiveAttempt**, `smoke.go:476`) → terminal attempt save. A kill -9 between the two adjacent writes leaves valid-but-contradictory state; the next reconcile marks smoke failed (`verify.go:496-508`, persisted via `locks.go:69-75`) despite `LastComplete` pass, forcing a full harness rerun, and displays the odd combination `Fresh=true, ExecutionStatus=failed`. Direction is conservative (never falsely promotes); window is milliseconds — minor robustness note.
+
+## Defended non-issues (checked, not reported)
+
+- **Lease nesting**: Verify→Review→RunSmoke triple acquisition is safe via the context marker (`locks.go:118-120`); intra-process concurrency fails typed and immediate (pinned by `TestVerificationMutationConflictIsTyped`).
+- **Override ladder parity**: Verify continuation conditions (`verify.go:74`) exactly match the smoke gate (`smoke_protocol.go:198-209`); diagnostics cannot become canonical — override-blind `deriveAssessment` (`verify.go:256`), roadmap-delivery suppression (`smoke.go:39`), publication suppression (`publication.go:115`); stale reviews remain non-overridable (`smoke_protocol.go:195-197`).
+- **Exit-code contract** for errorless fail/block assessments exists (`sprint_commands.go:325-327`); `--yes` gate for smoke execution (`sprint_commands.go:285-287`); durable-op wrapping/cancellation semantics sound (`durable_operations.go`).
+- `NonInteractive` being service-unconsumed, dry-run writing the disposable context-pack cache (`prompt_context.go:117-121`), focused-review >2h heartbeat display drift, and legacy `.run-state.json` fallback are each bounded, intentional, or conservative-direction — no concrete failure demonstrated.

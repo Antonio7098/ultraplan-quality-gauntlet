@@ -1,0 +1,15 @@
+HEAD equals the assigned frozen commit `50d6f0d`, so I can read the working tree directly. Note the context pack was built against `8eef70f` (one commit earlier) — let me see what changed since, then read the core files.Several candidates already. Continuing through the rest of sprint_commands.go.Progress callbacks are emitted from single consumer goroutines — that race hypothesis is disproven for review/QA. Now reading study commands.Now checking the remaining command files and hunting reachable error strings containing the sniffed substrings.Building the binary from the frozen HEAD (output outside the repo) to empirically probe classification paths.Confirmed: same runtime failure exits 6 without `--json` but 4 with `--json`. Now probing cancellation behavior end-to-end.The last probe hit the wrong PID (subshell). Redoing cancellation test with precise process control via Python.Baseline tests pass (`ok ... 5.058s`). Cleaning up probe artifacts and checking the review-directory conventions before writing the report.Review complete. Report written to `review/jobs/review-cli-dispatch-exit-contract-failure/{attempt-01-result.md,result.md}`.
+
+## Findings summary (failure/concurrency lens, frozen `50d6f0d`)
+
+**5 findings**, two empirically reproduced with the built CLI:
+
+1. **Flow exit class diverges by output mode** — identical provider failure: text mode exits 6, `--json` exits 4, because the `"runtime"` substring branch (sprint_commands.go:269-272) is skipped on the JSON path (:257-264). Reproduced live; review/verify/smoke apply their ladders symmetrically, so flow alone is inconsistent.
+2. **Substring sniffing misroutes real runtime failures to class 4** when the message lacks "runtime" — observed live (`structured_output` health failure → exit 4). Typed agentwrap categories exist but are ignored at exactly these arms.
+3. **Cancellation exits 7 only mid-run** — cancel during durable acceptance → 6; pre-runtime cancel in `study run/synthesize` → 6 via `statusForRuntimeFailure` zero-result default; end-phase publish/save cancel in run-all/run-loop → 4 (`mapStudyExecutionError` has no `context.Canceled` arm). Durable journal records `cancelled` while the process reports 6/4.
+4. **Successful durable commands exit 6 if terminal persistence fails** — `finishDurableCLICommand` joins a `run-control.finish` ExitRuntime into nil-error runs; terminal-proposal retry budget is only 250 ms vs 5 s for events.
+5. **Stable `verify --json` emits `"status": ""`** on early failures (reproduced verbatim) — an undocumented value on a declared compatibility-sensitive surface.
+
+**Defended/non-issues:** progress-callback races (callbacks are single-goroutine or mutex-guarded), SIGINT liveness (my apparent 2-min hang was signaling a shell wrapper — real delivery exits 7 in <0.1 s with correct journal state), empty-alias acceptance dedup, TTY-less confirmations, single-line-stderr violations (no contract promises it), write-error fallbacks.
+
+Root cause across 1–3: classification by error prose instead of typed causes already present in the chain. Target repo untouched; baseline tests green at frozen HEAD.
