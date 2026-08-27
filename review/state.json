@@ -1,11 +1,11 @@
 {
   "version": 1,
   "created_at": "2026-08-25T10:45:55.293948806Z",
-  "updated_at": "2026-08-26T14:11:03.202824177Z",
+  "updated_at": "2026-08-26T14:16:32.071971622Z",
   "model": "openrouter/stealth/ox-alpha",
   "target": {
     "label": "ultraplan-go",
-    "commit": "c6f01cf8ebfcfea19fe771dbf7552d838e3b8ca0",
+    "commit": "e61e75cfb0fad389e2f57c27502f7bde5dd8021f",
     "dirty": true
   },
   "workspace": {
@@ -2228,6 +2228,20 @@
           "result_path": "jobs/review-study-authoring-correctness/attempt-01-result.md",
           "events_path": "jobs/review-study-authoring-correctness/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-correctness/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:11:36.737910936Z",
+          "finished_at": "2026-08-26T14:12:30.401497828Z",
+          "last_activity": "2026-08-26T14:12:30.401497828Z",
+          "runtime_run_id": "opencode-6",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-authoring-correctness/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-authoring-correctness/attempt-02-result.md",
+          "events_path": "jobs/review-study-authoring-correctness/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-correctness/attempt-02/opencode.db"
         }
       ]
     },
@@ -2257,6 +2271,20 @@
           "result_path": "jobs/review-study-authoring-failure/attempt-01-result.md",
           "events_path": "jobs/review-study-authoring-failure/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-failure/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:11:36.749494811Z",
+          "finished_at": "2026-08-26T14:12:28.545908285Z",
+          "last_activity": "2026-08-26T14:12:28.545908285Z",
+          "runtime_run_id": "opencode-5",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-authoring-failure/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-authoring-failure/attempt-02-result.md",
+          "events_path": "jobs/review-study-authoring-failure/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-failure/attempt-02/opencode.db"
         }
       ]
     },
@@ -2286,6 +2314,20 @@
           "result_path": "jobs/review-study-authoring-security/attempt-01-result.md",
           "events_path": "jobs/review-study-authoring-security/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-security/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:12:28.567768442Z",
+          "finished_at": "2026-08-26T14:14:23.720078049Z",
+          "last_activity": "2026-08-26T14:14:23.720078049Z",
+          "runtime_run_id": "opencode-10",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-authoring-security/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-authoring-security/attempt-02-result.md",
+          "events_path": "jobs/review-study-authoring-security/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-security/attempt-02/opencode.db"
         }
       ]
     },
@@ -2315,6 +2357,20 @@
           "result_path": "jobs/review-study-authoring-verification/attempt-01-result.md",
           "events_path": "jobs/review-study-authoring-verification/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-verification/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:12:28.594279035Z",
+          "finished_at": "2026-08-26T14:14:23.769685443Z",
+          "last_activity": "2026-08-26T14:14:23.769685443Z",
+          "runtime_run_id": "opencode-11",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-authoring-verification/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-authoring-verification/attempt-02-result.md",
+          "events_path": "jobs/review-study-authoring-verification/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-authoring-verification/attempt-02/opencode.db"
         }
       ]
     },
@@ -2426,6 +2482,20 @@
           "result_path": "jobs/review-study-task-execution-security/attempt-01-result.md",
           "events_path": "jobs/review-study-task-execution-security/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-security/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:15:09.523644747Z",
+          "finished_at": "2026-08-26T14:15:49.388650236Z",
+          "last_activity": "2026-08-26T14:15:49.388650236Z",
+          "runtime_run_id": "opencode-23",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-task-execution-security/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-task-execution-security/attempt-02-result.md",
+          "events_path": "jobs/review-study-task-execution-security/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-security/attempt-02/opencode.db"
         }
       ]
     },
@@ -2437,7 +2507,7 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "study-task-execution",
       "domain_id": "study-analysis",
-      "status": "failed",
+      "status": "running",
       "depends_on": [
         "context-study-task-execution"
       ],
@@ -2455,6 +2525,17 @@
           "result_path": "jobs/review-study-task-execution-verification/attempt-01-result.md",
           "events_path": "jobs/review-study-task-execution-verification/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-verification/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "running",
+          "started_at": "2026-08-26T14:16:31.971845863Z",
+          "finished_at": "0001-01-01T00:00:00Z",
+          "last_activity": "2026-08-26T14:16:31.971845863Z",
+          "prompt_path": "jobs/review-study-task-execution-verification/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-task-execution-verification/attempt-02-result.md",
+          "events_path": "jobs/review-study-task-execution-verification/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-verification/attempt-02/opencode.db"
         }
       ]
     },
@@ -2484,6 +2565,20 @@
           "result_path": "jobs/review-study-task-execution-adversarial/attempt-01-result.md",
           "events_path": "jobs/review-study-task-execution-adversarial/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-adversarial/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:15:49.417988023Z",
+          "finished_at": "2026-08-26T14:16:31.930631663Z",
+          "last_activity": "2026-08-26T14:16:31.930631663Z",
+          "runtime_run_id": "opencode-29",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-task-execution-adversarial/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-task-execution-adversarial/attempt-02-result.md",
+          "events_path": "jobs/review-study-task-execution-adversarial/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-task-execution-adversarial/attempt-02/opencode.db"
         }
       ]
     },
@@ -2537,6 +2632,20 @@
           "result_path": "jobs/review-study-runloop-scheduler-correctness/attempt-01-result.md",
           "events_path": "jobs/review-study-runloop-scheduler-correctness/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-correctness/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:11:36.743080922Z",
+          "finished_at": "2026-08-26T14:12:28.545751838Z",
+          "last_activity": "2026-08-26T14:12:28.545751838Z",
+          "runtime_run_id": "opencode-4",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-correctness/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-correctness/attempt-02-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-correctness/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-correctness/attempt-02/opencode.db"
         }
       ]
     },
@@ -2566,6 +2675,20 @@
           "result_path": "jobs/review-study-runloop-scheduler-failure/attempt-01-result.md",
           "events_path": "jobs/review-study-runloop-scheduler-failure/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-failure/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:14:35.915741798Z",
+          "finished_at": "2026-08-26T14:15:18.839110339Z",
+          "last_activity": "2026-08-26T14:15:18.839110339Z",
+          "runtime_run_id": "opencode-18",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-failure/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-failure/attempt-02-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-failure/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-failure/attempt-02/opencode.db"
         }
       ]
     },
@@ -2595,6 +2718,20 @@
           "result_path": "jobs/review-study-runloop-scheduler-security/attempt-01-result.md",
           "events_path": "jobs/review-study-runloop-scheduler-security/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-security/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:15:18.981204839Z",
+          "finished_at": "2026-08-26T14:15:58.418853261Z",
+          "last_activity": "2026-08-26T14:15:58.418853261Z",
+          "runtime_run_id": "opencode-24",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-security/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-security/attempt-02-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-security/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-security/attempt-02/opencode.db"
         }
       ]
     },
@@ -2606,7 +2743,7 @@
       "lens": "Verification/operability: missing or misleading tests, fake-only confidence, observability gaps, error truth, performance/resource hazards, and bugs the current verification would allow.",
       "surface_id": "study-runloop-scheduler",
       "domain_id": "study-analysis",
-      "status": "failed",
+      "status": "running",
       "depends_on": [
         "context-study-runloop-scheduler"
       ],
@@ -2624,6 +2761,17 @@
           "result_path": "jobs/review-study-runloop-scheduler-verification/attempt-01-result.md",
           "events_path": "jobs/review-study-runloop-scheduler-verification/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-verification/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "running",
+          "started_at": "2026-08-26T14:15:58.497066803Z",
+          "finished_at": "0001-01-01T00:00:00Z",
+          "last_activity": "2026-08-26T14:15:58.497066803Z",
+          "prompt_path": "jobs/review-study-runloop-scheduler-verification/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-verification/attempt-02-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-verification/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-verification/attempt-02/opencode.db"
         }
       ]
     },
@@ -2653,6 +2801,20 @@
           "result_path": "jobs/review-study-runloop-scheduler-correctness-b/attempt-01-result.md",
           "events_path": "jobs/review-study-runloop-scheduler-correctness-b/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-correctness-b/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:14:23.880988851Z",
+          "finished_at": "2026-08-26T14:15:08.877239535Z",
+          "last_activity": "2026-08-26T14:15:08.877239535Z",
+          "runtime_run_id": "opencode-17",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-correctness-b/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-correctness-b/attempt-02-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-correctness-b/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-correctness-b/attempt-02/opencode.db"
         }
       ]
     },
@@ -2682,6 +2844,20 @@
           "result_path": "jobs/review-study-runloop-scheduler-security-b/attempt-01-result.md",
           "events_path": "jobs/review-study-runloop-scheduler-security-b/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-security-b/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:14:23.863311191Z",
+          "finished_at": "2026-08-26T14:15:09.469467438Z",
+          "last_activity": "2026-08-26T14:15:09.469467438Z",
+          "runtime_run_id": "opencode-16",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-study-runloop-scheduler-security-b/attempt-02-prompt.md",
+          "result_path": "jobs/review-study-runloop-scheduler-security-b/attempt-02-result.md",
+          "events_path": "jobs/review-study-runloop-scheduler-security-b/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-study-runloop-scheduler-security-b/attempt-02/opencode.db"
         }
       ]
     },
@@ -3502,6 +3678,20 @@
           "result_path": "jobs/review-sprint-verify-transition-security/attempt-01-result.md",
           "events_path": "jobs/review-sprint-verify-transition-security/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-security/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:12:30.42661109Z",
+          "finished_at": "2026-08-26T14:14:35.815587135Z",
+          "last_activity": "2026-08-26T14:14:35.815587135Z",
+          "runtime_run_id": "opencode-12",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-sprint-verify-transition-security/attempt-02-prompt.md",
+          "result_path": "jobs/review-sprint-verify-transition-security/attempt-02-result.md",
+          "events_path": "jobs/review-sprint-verify-transition-security/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-security/attempt-02/opencode.db"
         }
       ]
     },
@@ -3531,6 +3721,20 @@
           "result_path": "jobs/review-sprint-verify-transition-verification/attempt-01-result.md",
           "events_path": "jobs/review-sprint-verify-transition-verification/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-verification/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:15:49.180114267Z",
+          "finished_at": "2026-08-26T14:16:31.898786375Z",
+          "last_activity": "2026-08-26T14:16:31.898786375Z",
+          "runtime_run_id": "opencode-28",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-sprint-verify-transition-verification/attempt-02-prompt.md",
+          "result_path": "jobs/review-sprint-verify-transition-verification/attempt-02-result.md",
+          "events_path": "jobs/review-sprint-verify-transition-verification/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-sprint-verify-transition-verification/attempt-02/opencode.db"
         }
       ]
     },
@@ -4905,7 +5109,7 @@
       "lens": "Correctness: wrong outcomes, invariant violations, edge cases, state inconsistencies, parsing/validation mistakes, and misleading success.",
       "surface_id": "tui-console",
       "domain_id": "operator-interfaces",
-      "status": "failed",
+      "status": "running",
       "depends_on": [
         "context-tui-console"
       ],
@@ -4923,6 +5127,17 @@
           "result_path": "jobs/review-tui-console-correctness/attempt-01-result.md",
           "events_path": "jobs/review-tui-console-correctness/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-tui-console-correctness/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "running",
+          "started_at": "2026-08-26T14:16:32.037818153Z",
+          "finished_at": "0001-01-01T00:00:00Z",
+          "last_activity": "2026-08-26T14:16:32.037818153Z",
+          "prompt_path": "jobs/review-tui-console-correctness/attempt-02-prompt.md",
+          "result_path": "jobs/review-tui-console-correctness/attempt-02-result.md",
+          "events_path": "jobs/review-tui-console-correctness/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-tui-console-correctness/attempt-02/opencode.db"
         }
       ]
     },
@@ -5642,6 +5857,20 @@
           "result_path": "jobs/review-workspace-scaffold-defaults-verification/attempt-01-result.md",
           "events_path": "jobs/review-workspace-scaffold-defaults-verification/attempt-01-events.ndjson",
           "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-workspace-scaffold-defaults-verification/attempt-01/opencode.db"
+        },
+        {
+          "number": 2,
+          "status": "failed",
+          "started_at": "2026-08-26T14:15:08.933176648Z",
+          "finished_at": "2026-08-26T14:15:49.128763276Z",
+          "last_activity": "2026-08-26T14:15:49.128763276Z",
+          "runtime_run_id": "opencode-22",
+          "error_category": "runtime_exit",
+          "error": "opencode event: runtime_exit: OpenCode reported a fatal session error",
+          "prompt_path": "jobs/review-workspace-scaffold-defaults-verification/attempt-02-prompt.md",
+          "result_path": "jobs/review-workspace-scaffold-defaults-verification/attempt-02-result.md",
+          "events_path": "jobs/review-workspace-scaffold-defaults-verification/attempt-02-events.ndjson",
+          "database_path": "/home/antonioborgerees/coding/ultraplan/ultraplan-quality-gauntlet/.quality-gauntlet/jobs/review-workspace-scaffold-defaults-verification/attempt-02/opencode.db"
         }
       ]
     },

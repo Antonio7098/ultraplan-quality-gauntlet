@@ -1,22 +1,22 @@
 # UltraPlan Quality Gauntlet — Review Index
 
-- Target commit: `c6f01cf8ebfcfea19fe771dbf7552d838e3b8ca0`
+- Target commit: `e61e75cfb0fad389e2f57c27502f7bde5dd8021f`
 - Workspace commit: `ab12dc38059c9bf485f9aced9075bcd7d924cac5`
 - Model: `openrouter/stealth/ox-alpha`
-- Generated: 2026-08-26T14:11:03Z
+- Generated: 2026-08-27T08:13:25Z
 
 ## Progress
 
 ```text
 model: openrouter/stealth/ox-alpha
-target: /home/antonioborgerees/coding/ultraplan/ultraplan-go @ c6f01cf8ebfc dirty_at_init=true
+target: /home/antonioborgerees/coding/ultraplan/ultraplan-go @ e61e75cfb0fa dirty_at_init=true
 workspace: /home/antonioborgerees/coding/ultraplan/ultraplan-workspace @ ab12dc38059c dirty_at_init=false
 opencode: /home/antonioborgerees/.opencode/bin/opencode
 baseline: passed
 map               6 total |   6 passed   0 running   0 failed   0 pending
 map-arbiter       1 total |   1 passed   0 running   0 failed   0 pending
 context          28 total |  28 passed   0 running   0 failed   0 pending
-surface-review  133 total |  93 passed   0 running  40 failed   0 pending
+surface-review  133 total |  93 passed   3 running  37 failed   0 pending
 seam             28 total |   0 passed   0 running   0 failed  28 pending
 invariant        12 total |   0 passed   0 running   0 failed  12 pending
 tribunal         28 total |   0 passed   0 running   0 failed  28 pending
@@ -199,13 +199,13 @@ next: surface-review
 - `surface-review` **review-study-runloop-scheduler-failure** — failed
 - `surface-review` **review-study-runloop-scheduler-security** — failed
 - `surface-review` **review-study-runloop-scheduler-security-b** — failed
-- `surface-review` **review-study-runloop-scheduler-verification** — failed
+- `surface-review` **review-study-runloop-scheduler-verification** — running
 - `surface-review` **review-study-task-execution-adversarial** — failed
 - `surface-review` **review-study-task-execution-correctness** — failed
 - `surface-review` **review-study-task-execution-failure** — failed
 - `surface-review` **review-study-task-execution-security** — failed
-- `surface-review` **review-study-task-execution-verification** — failed
-- `surface-review` **review-tui-console-correctness** — failed
+- `surface-review` **review-study-task-execution-verification** — running
+- `surface-review` **review-tui-console-correctness** — running
 - `surface-review` **review-tui-console-failure** — failed
 - `surface-review` **review-tui-console-security** — failed
 - `surface-review` **review-tui-console-verification** — failed

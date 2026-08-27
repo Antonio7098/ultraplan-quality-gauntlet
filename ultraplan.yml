@@ -1,0 +1,38 @@
+version: 1
+runtime:
+  default: opencode
+models:
+  default: provider/model
+  primary: provider/model
+  backup: provider/model
+execution:
+  default_variant: high
+  default_parallel: 3
+  default_timeout: 30m
+  default_retries: 3
+planning:
+  code_context_model: provider/model
+  code_context_variant: high
+  smoke_model: provider/model
+  smoke_variant: high
+smoke:
+  discovery_timeout: 30s
+  run_timeout: 30m
+  stdout_limit: 4194304
+  stderr_limit: 1048576
+  cleanup_grace: 5s
+  environment:
+    - PATH
+    - HOME
+    - TMPDIR
+    - LANG
+    - LC_ALL
+logging:
+  format: text
+  level: info
+agentwrap:
+  executable: opencode
+  required_health:
+    - runtime_available
+    - structured_output
+    - workdir
